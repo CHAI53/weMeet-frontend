@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './SeeMore.scss';
+import './MemberHomeHead.scss';
 
-export class SeeMore extends Component {
+export class MemberHomeHead extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ export class SeeMore extends Component {
     }
 }
 
-export default SeeMore
+export default MemberHomeHead

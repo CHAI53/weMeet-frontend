@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import HostEvents from '../../components/HostEvents';
+import MemberHomeHead from '../../components/MemberHomeHead';
+import FindNavbar from '../../components/FindNavbar';
+import HostLocalEvents from '../../components/HostLocalEvents';
 import NewStepWithMeetup from '../../components/NewStepWithMeetup';
-import SeeMore from '../../components/SeeMore';
+import SeeMoreBtn from '../../components/SeeMoreBtn';
+import SimpleEventFilter from '../../components/SimpleEventFilter';
 
 export class AfterLoginMain extends Component {
     render() {
         return (
             <div className="after-login-main-page">
-                <div className="pre-alm-page"></div>
+                <div className="pre-alm-page">
+                    <MemberHomeHead/>
+                    <FindNavbar/>
+                </div>
                 <div classname="alm-page">
                     <div className="alm-left">
                         <ul>
@@ -15,7 +21,7 @@ export class AfterLoginMain extends Component {
                             <li></li>
                             <li></li>
                             <li></li>
-                            <HostEvents/>
+                            <HostLocalEvents/>
                             <li></li>
                             <li></li>
                             <li></li>
@@ -32,9 +38,11 @@ export class AfterLoginMain extends Component {
                             <li></li>
                             <li></li>
                         </ul>
-                        <SeeMore/>
+                        <SeeMoreBtn/>
                     </div>
-                    <div className="alm-right"></div>
+                    <div className="alm-right">
+                        <SimpleEventFilter/>
+                    </div>
                 </div>
             </div>
         )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './HostEvents.scss';
+import './HostLocalEvents.scss';
 
-export class HostEvent extends Component {
+export class HostLocalEvents extends Component {
     render() {
         return (
             <div>
@@ -20,4 +20,4 @@ export class HostEvent extends Component {
     }
 }
 
-export default HostEvent
+export default HostLocalEvents
