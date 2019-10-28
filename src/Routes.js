@@ -4,6 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import AfterLoginMain from "./Pages/AfterLoginMain"
 
 
 class Routes extends React.Component {
@@ -11,8 +12,7 @@ class Routes extends React.Component {
     return (
       <Router>
         <Switch>
-          {/* <Route exact path="/" component={Home} />
-          <Route exact path="/signup" component={Signup} /> */}
+          <Route exact path="/" component={AfterLoginMain} />
         </Switch>
       </Router>
     )
