@@ -1,12 +1,28 @@
 import React, { Component } from 'react';
-import MemberHomeHead from '../../components/MemberHomeHead';
-import FindNavbar from '../../components/FindNavbar';
-import HostLocalEvents from '../../components/HostLocalEvents';
-import NewStepWithMeetup from '../../components/NewStepWithMeetup';
-import SeeMoreBtn from '../../components/SeeMoreBtn';
-import SimpleEventFilter from '../../components/SimpleEventFilter';
+import './AfterLoginMain.scss';
+import MemberHomeHead from 'components/MemberHomeHead';
+import FindNavbar from 'components/FindNavbar';
+import HostLocalEvents from 'components/HostLocalEvents';
+import NewStepWithMeetup from 'components/NewStepWithMeetup';
+import SeeMoreBtn from 'components/SeeMoreBtn';
+import SimpleEventFilter from 'components/SimpleEventFilter';
 
 export class AfterLoginMain extends Component {
+    constructor() {
+        super()
+        this.state = {
+        }
+
+        const getCurrentDate = () => {
+            let week = ['일', '월', '화', '수', '목', '금', '토'];
+            let today = new Date();
+            let year = String(today.getFullYear());
+            let month = String(today.getMonth() + 1);
+            let day = String(today.getDate());
+            let dayName = week[today.getDay()];
+            return `${year}${'년 '}${month}${'월 '}${day}${'일 '}${dayName}${'요일'}`
+        }
+    }
     render() {
         return (
             <div className="after-login-main-page">
@@ -14,10 +30,10 @@ export class AfterLoginMain extends Component {
                     <MemberHomeHead/>
                     <FindNavbar/>
                 </div>
-                <div classname="alm-page">
+                <div className="alm-page">
                     <div className="alm-left">
                         <ul>
-                            <li></li>
+                            <li>{this.getCurrentDate()}</li>
                             <li></li>
                             <li></li>
                             <li></li>
