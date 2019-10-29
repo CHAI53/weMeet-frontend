@@ -1,0 +1,15 @@
+.pictures-wrapper {
+  margin-top: 50px;
+  .picture {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .pictures {
+    margin-top: 20px;
+    img {
+      width: 190px;
+      border-radius: 8px;
+      margin: 10px 10px;
+    }
+  }
+}

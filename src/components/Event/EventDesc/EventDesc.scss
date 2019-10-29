@@ -1,0 +1,19 @@
+.description {
+  width: 720px;
+  .event-img {
+    display: inline-flex;
+    background-size: 100%;
+    width: 600px;
+    height: 340px;
+    margin-bottom: 30px;
+  }
+  .details {
+    line-height: 2;
+    white-space: normal;
+    .detail {
+      line-height: 4;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}

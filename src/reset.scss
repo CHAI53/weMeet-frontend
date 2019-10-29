@@ -129,7 +129,34 @@ table {
 }
 * {
   box-sizing: border-box;
+  button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    color: inherit;
+    font: inherit;
+
+    line-height: normal;
+
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    -webkit-appearance: none;
+
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  /* Remove excess padding and border in Firefox 4+ */
 }
 
 $theme-color-red: #f64060;
 $theme-color-blue: #00a2c7;
+$default-font-color: #757575;

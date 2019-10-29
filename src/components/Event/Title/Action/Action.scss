@@ -1,0 +1,108 @@
+@import "../../../../reset.scss";
+
+div {
+  .event-status {
+    margin-bottom: 20px;
+    .question {
+    }
+    .vacancy {
+      margin-left: 10px;
+      color: $default-font-color;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    button {
+      width: 130px;
+      height: 30px;
+      background-color: $theme-color-blue;
+      border-radius: 8px;
+      margin-right: 20px;
+      padding-top: 7px;
+
+      .accept {
+        display: inline-flex;
+        background-image: url("../../../../Images/check.png");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+      }
+      .refuse {
+        display: inline-flex;
+        background-image: url("../../../../Images/refuse.png");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    div {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(46, 62, 72, 0.12);
+      border-radius: 8px;
+      background-color: rgba(46, 62, 72, 0.12);
+      opacity: 0.5;
+
+      .favorite {
+        display: inline-flex;
+        background-image: url("../../../../Images/favorite.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+.share {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  span {
+    margin-right: 10px;
+  }
+  .icons {
+    .facebook {
+      display: inline-flex;
+      background-image: url("https://cdn.freebiesupply.com/images/large/2x/facebook-logo-circle-black.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      opacity: 0.4;
+    }
+    .tweeter {
+      display: inline-flex;
+      background-image: url("../../../../Images/tweet.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      opacity: 0.4;
+    }
+    .instagram {
+      display: inline-flex;
+      background-image: url("https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 20px;
+      height: 20px;
+      opacity: 0.4;
+    }
+  }
+}

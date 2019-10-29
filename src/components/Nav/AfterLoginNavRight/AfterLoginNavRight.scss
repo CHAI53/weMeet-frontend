@@ -9,12 +9,11 @@ $default-font-color: #757575;
   span {
     margin-right: 10px;
     padding-right: 10px;
-    display: flex;
   }
 
   .start-new-group {
     font-size: $default-font-size;
-    color: $theme-color-red;
+    color: $theme-color-blue;
     border-right: 1px solid rgba(0, 0, 0, 0.12);
     height: fit-content;
     text-align: center;
@@ -22,7 +21,6 @@ $default-font-color: #757575;
 
     &:hover {
       cursor: pointer;
-      color: $theme-color-red;
     }
   }
 
@@ -32,7 +30,7 @@ $default-font-color: #757575;
 
     &:hover {
       cursor: pointer;
-      color: $theme-color-red;
+      color: $theme-color-blue;
     }
   }
 
