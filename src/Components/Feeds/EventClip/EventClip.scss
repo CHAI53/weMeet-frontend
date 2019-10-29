@@ -4,6 +4,9 @@
     border-radius: 8px;
     width:340px;
     float:left;
+
+    
+
     
     min-height: 160px;
     position: relative;
@@ -95,6 +98,18 @@ img{
             margin-right: 10px;
             font-weight: 500;
             line-height: 20px;
+            cursor: pointer;
         }
+        .clip-button:hover{
+            background-color: rgb(0, 152, 171);
+            color:#fff;
+        }
+
     }
+}
+.clip-wrapper:hover{
+    transition: all 500ms linear;
+    z-index: 1px;
+    border:1px solid #757575c9;
+    transform: translateY(-1px);
 }

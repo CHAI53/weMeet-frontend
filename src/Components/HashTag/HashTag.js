@@ -16,7 +16,7 @@ class HashTag extends Component{
     }
     render(){
         return(
-            <div>
+            
                 <div className="hashtag-large-group">
                     <div className="hashtag-small-group">
                     <button className="first-left">
@@ -42,7 +42,7 @@ class HashTag extends Component{
                     </button>
                     </div>
                 </div>
-            </div>
+            
         )
     }
 }

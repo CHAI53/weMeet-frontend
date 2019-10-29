@@ -4,7 +4,7 @@ import './MainVideo.scss'
 class MainVideo extends Component{
     render(){
         return(
-            <div>
+            
                 <div className="main-wrapper">
                     <div className="video-wrapper">
                         <video className="main-video" loop autoPlay>
@@ -18,7 +18,7 @@ class MainVideo extends Component{
                         </div>
                
                 </div>
-            </div>
+            
         )
     }
 }

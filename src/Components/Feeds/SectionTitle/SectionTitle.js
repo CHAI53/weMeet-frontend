@@ -12,7 +12,7 @@ class SectionTitle extends Component{
     }
     render(){
         return(
-            <div>
+            
                 <div className="all-wrapper">
                     <div className="first-line">
                         <span className="first-line-name">
@@ -26,7 +26,7 @@ class SectionTitle extends Component{
                             {this.state.Secondline}
                         </div>
                     </div>
-            </div>
+            
         )
     }
 }
