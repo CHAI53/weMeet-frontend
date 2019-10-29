@@ -1,0 +1,23 @@
+.hashtag-large-group{
+    position: relative;
+    border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+    .hashtag-small-group{
+        max-width:1000px;
+        margin: 25px auto 0 auto;
+        height:50px;
+        
+        button{
+            border: 1px solid #c5c4c4;
+            border-radius: 5px;
+            background-color: #f6f7f8;
+            float:left;
+            color: #757575;
+            font-size: 14px;
+            padding:5px 10px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            
+        }
+    }
+    
+}

@@ -1,0 +1,100 @@
+.clip-wrapper{
+    margin:20px 0px 10px 16px;
+    border: 1px solid rgba(46,62,72,.12);
+    border-radius: 8px;
+    width:340px;
+    float:left;
+    
+    min-height: 160px;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    background-clip: padding-box;
+    background-size: cover;
+    .clip-inside-wrapper{
+        margin:16px 8px 16px 16px;
+    }
+img{
+    width: 20px;
+    margin-right: 8px;
+}
+    .clip-header{
+        width:300;
+        div{
+            margin-bottom: 8px;
+        }
+        .date{
+            height:20px;
+            font-size: 14px;
+            color: #0098ab;
+            font-weight: 500;
+            letter-spacing: -.02em;
+            word-spacing: .1em;
+            overflow-x:hidden;
+            overflow-y:hidden;
+            text-size-adjust: 100%;
+        }
+        .clip-name{
+            width:300px;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space:normal;
+            height: 48px;
+            -webkit-line-clamp:2;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            word-wrap: break-word;
+        }
+        .clip-desc{
+            font-size: 16px;
+            width:300px;
+            font-weight: 400;
+            line-height: 24px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space:normal;
+            height: 24px;
+            -webkit-line-clamp:1;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            word-wrap: break-word;
+        }
+        .clip-location{
+            // padding-left: 10px;
+            font-weight: 400;
+            color:rgb(117, 117, 117);
+            font-size: 14px;
+        }
+    }
+    .clip-footer{
+        font-size: 14px;
+        margin: 20px auto;
+        position: relative;
+        height:42px;
+        .people-count{
+            color:rgb(117, 117, 117);
+            font-weight: 400;
+            line-height: 2.5rem;
+
+        }
+        .clip-button{
+            // width: 28px;
+            // height: 20px;
+            
+            padding:10px 20px;
+            background-color: #fff;
+            border: 1px solid rgb(0, 152, 171);
+            color: rgb(0, 152, 171);
+            border-radius: 8px;
+            float:right;
+            bottom:0;
+            right:0;
+            margin-right: 10px;
+            font-weight: 500;
+            line-height: 20px;
+        }
+    }
+}

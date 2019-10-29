@@ -1,0 +1,56 @@
+.nav-top{
+    position: relative;
+    width: 100%;
+    margin: 0;
+    height:45px;
+    padding:20px;
+    border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+}
+.nav-logo{
+    height:44px;
+    float: left;
+    cursor:pointer;
+}
+.nav-right{
+    position: absolute;
+    display: block;
+    right:50px;
+    font-size: 14px;
+    
+    span {
+        margin-right: 10px;
+        padding-right: 5px;
+        line-height: 3rem;
+    }
+    button{
+        border: 0;
+        background-color: #fff;
+        cursor: pointer;
+        font-size: 14px;
+        
+        
+    }
+    a{
+        font-style: none;
+        color: black;
+        text-decoration: none;
+        
+    }
+    .new-group{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-right: 1px solid rgba(46, 62, 72, 0.12);
+        font-weight: bold;
+        a{
+            color : rgb(0, 162, 199);
+        }
+        .new{
+            padding-right: 10px;
+        }
+    }
+    .nav-login{
+        a{
+            padding-left: 5px;
+        }
+    }
+}
