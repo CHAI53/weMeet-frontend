@@ -1,0 +1,85 @@
+@import "../../../reset.scss";
+$thinFont: 400;
+
+.card {
+  width: 320px;
+  height: 380px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px;
+
+  .time-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .time-icon {
+      background-image: url("../../../Images/clock.png");
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      background-size: 100%;
+      opacity: 0.5;
+      margin-right: 20px;
+    }
+    .timeline-wrapper {
+      margin-bottom: 20px;
+      div {
+        line-height: 1.5;
+      }
+      .date {
+        font-weight: $thinFont;
+        font-size: $default-font-size;
+      }
+      .timeline {
+        font-weight: $thinFont;
+        font-size: $default-font-size;
+      }
+      .day {
+        font-weight: $thinFont;
+        font-size: $default-font-size;
+      }
+    }
+  }
+
+  .location-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    .location-icon {
+      background-image: url("../../../Images/location.png");
+      display: inline-flex;
+      width: 130px;
+      height: 130px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      margin-right: 20px;
+    }
+
+    .address-wrapper {
+      div {
+        line-height: 1.5;
+      }
+
+      .address {
+        font-size: $default-font-size;
+        font-weight: $thinFont;
+        color: $default-font-color;
+        margin-bottom: 5px;
+        span {
+          font-weight: 600;
+          color: black;
+          &:hover {
+            cursor: pointer;
+            color: $theme-color-blue;
+          }
+        }
+      }
+
+      .findLocation {
+        font-weight: $thinFont;
+        font-size: $default-font-size;
+      }
+    }
+  }
+}
