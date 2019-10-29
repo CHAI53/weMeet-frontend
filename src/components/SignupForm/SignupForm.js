@@ -39,7 +39,16 @@ class SignupForm extends Component {
           <div id="loc-display" class="chunk">
             <div className="row row-nogutters">
               <div className="row-item row-item-shrink">
-
+                <span className="location-icon-span">
+                  <img className="location-icon"
+                        alt="location-icon"
+                        src="https://wecode-bootcamp.slack.com/files/UNP0S59JM/FPX4FQQN4/location.png" />
+                </span>                
+                <div class="row-item">
+                  <span class="text-small text-secondary text-heavy">
+                    Sejong, KR (변경)
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -57,7 +66,7 @@ class SignupForm extends Component {
             <p class="text-small text-secondary">'계속'을 선택하면 Meetup의 이용약관에 동의하는 것으로 간주됩니다. 회원님의 정보는 Meetup의 개인정보처리방침 및 쿠키정책에 따라 처리됩니다.</p>
           </div>
           <div className="chunk">
-            <p class="text-small text-secondary">이미 회원이신가요? 로그인.</p>
+            <p class="text-small text-secondary text-center">이미 회원이신가요? 로그인.</p>
           </div>
         </form>
       </div>

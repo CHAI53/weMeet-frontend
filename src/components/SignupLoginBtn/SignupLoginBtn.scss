@@ -8,7 +8,7 @@ SignupLoginBtn {
 
 .button-icon {
   width: 20px;
-  height: 20px;
+  height: 18px;
   align-items: flex-start;
 }
 
@@ -23,6 +23,7 @@ SignupLoginBtn {
   text-decoration: none;
   font-weight: bold;
   border-radius: 3px;
+  padding: 8px;
 }
 
 .button-google {
@@ -34,6 +35,7 @@ SignupLoginBtn {
   text-decoration: none;
   font-weight: bold;
   border-radius: 3px;
+  padding: 8px;
 }
 
 .button-fullwidth {
@@ -58,4 +60,13 @@ SignupLoginBtn {
   user-select: none;
   cursor: pointer;
   text-decoration: none !important;
+}
+
+.svg-button {
+  width: 24px;
+  display: inline-block;
+}
+
+.text-center {
+  text-align: center;
 }
