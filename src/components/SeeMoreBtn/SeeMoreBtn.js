@@ -4,10 +4,10 @@ import './SeeMoreBtn.scss';
 export class SeeMoreBtn extends Component {
     render() {
         return (
-            <div>
-                <span>더보기</span>
+            <div className="see-more-infinity">
+                <span className="see-more-btn">더보기</span>
             </div>
-        )
+        );
     }
 }
 

@@ -17,12 +17,21 @@
     text-align: center;
 }
 
-.alm-page {}
+.alm-page {
+    width: 960px;
+    padding-top: 16px;
+    font-size: 13px;
+    padding-bottom: 1.25em;
+    margin: 0 auto;
+    padding: 0 1em;
+}
 
 .alm-left {
-    float: left
+    float: left;
+    width: 72%;
+    padding-right: 16px;
 }
 
 .alm-right {
-    float: left
+    float: left;
 }

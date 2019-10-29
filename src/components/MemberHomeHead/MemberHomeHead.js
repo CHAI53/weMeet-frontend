@@ -15,7 +15,7 @@ export class MemberHomeHead extends Component {
                     </span>
                 </p>
             </div>
-        )
+        );
     }
 }
 

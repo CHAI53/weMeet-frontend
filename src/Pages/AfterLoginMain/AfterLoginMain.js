@@ -13,15 +13,15 @@ export class AfterLoginMain extends Component {
         this.state = {
         }
 
-        const getCurrentDate = () => {
-            let week = ['일', '월', '화', '수', '목', '금', '토'];
-            let today = new Date();
-            let year = String(today.getFullYear());
-            let month = String(today.getMonth() + 1);
-            let day = String(today.getDate());
-            let dayName = week[today.getDay()];
-            return `${year}${'년 '}${month}${'월 '}${day}${'일 '}${dayName}${'요일'}`
-        }
+        // const getCurrentDate = () => {
+        //     let week = ['일', '월', '화', '수', '목', '금', '토'];
+        //     let today = new Date();
+        //     let year = String(today.getFullYear());
+        //     let month = String(today.getMonth() + 1);
+        //     let day = String(today.getDate());
+        //     let dayName = week[today.getDay()];
+        //     return `${year}${'년 '}${month}${'월 '}${day}${'일 '}${dayName}${'요일'}`
+        // }
     }
     render() {
         return (
@@ -33,7 +33,7 @@ export class AfterLoginMain extends Component {
                 <div className="alm-page">
                     <div className="alm-left">
                         <ul>
-                            <li>{this.getCurrentDate()}</li>
+                            <li value={this.getCurrentDate}></li>
                             <li></li>
                             <li></li>
                             <li></li>
@@ -61,7 +61,7 @@ export class AfterLoginMain extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 
