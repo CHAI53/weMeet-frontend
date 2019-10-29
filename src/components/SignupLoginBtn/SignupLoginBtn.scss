@@ -1,0 +1,61 @@
+SignupLoginBtn {
+  display: flex;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.button-icon {
+  width: 20px;
+  height: 20px;
+  align-items: flex-start;
+}
+
+.button-facebook {
+  display: block;
+  position: relative;
+  color: #fff !important;
+  background: #3b5998;
+  border-color: #3b5998;
+  width: 428px;
+  height: 42px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.button-google {
+  display: block;
+  border: 1px solid rgba(0, 0, 0, 0.26) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  width: 428px;
+  height: 42px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.button-fullwidth {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+}
+
+.button {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.15s;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  min-height: 36px;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none !important;
+}

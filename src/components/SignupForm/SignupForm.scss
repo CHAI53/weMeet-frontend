@@ -1,0 +1,74 @@
+.bounds {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 840px;
+  padding: 24px 16px 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.margin-bottom {
+  margin-bottom: 16px;
+}
+
+.sign-up-text {
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: bold;
+}
+
+.register-fieldset {
+  width: 100%;
+}
+
+.padding-top {
+  padding-top: 16px;
+}
+
+.chunk {
+  display: block;
+  margin-bottom: 16px !important;
+}
+
+.text-small {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.text-secondary {
+  color: rgba(0, 0, 0, 0.54);
+  text-align: left;
+}
+
+p {
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.button-primary {
+  color: #fff !important;
+  background: #ed1c40;
+  border-color: #ed1c40;
+}
+
+.button {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.15s;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.45;
+  min-height: 36px;
+  outline: 0;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.row-item {
+  min-width: 0;
+}

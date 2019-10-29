@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
@@ -31,7 +32,6 @@
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
-    "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0"
   }
 }
