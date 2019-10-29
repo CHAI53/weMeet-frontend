@@ -1,8 +1,6 @@
 .find-navbar-wrap {
     width: 100%;
-    z-index: 2;
     position: absolute;
-    top: auto;
     bottom: -42px;
 
     .find-navbar {
@@ -13,7 +11,7 @@
         text-align: unset;
 
         .find-navbar-left {
-            width: 71.42855%;
+            width: 72%;
             float: left;
             min-height: 1px;
             text-align: left;
