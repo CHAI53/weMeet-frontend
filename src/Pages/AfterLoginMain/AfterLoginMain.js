@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './AfterLoginMain.scss';
 import MemberHomeHead from 'components/MemberHomeHead';
 import FindNavbar from 'components/FindNavbar';
-import HostLocalEvents from 'components/HostLocalEvents';
-import NewStepWithMeetup from 'components/NewStepWithMeetup';
+import EventLists from 'components/EventLists';
 import SeeMoreBtn from 'components/SeeMoreBtn';
 import SimpleEventFilter from 'components/SimpleEventFilter';
 
@@ -32,28 +31,7 @@ export class AfterLoginMain extends Component {
                 </div>
                 <div className="alm-page">
                     <div className="alm-left">
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <HostLocalEvents/>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li>
-                                <NewStepWithMeetup/>
-                            </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <EventLists/>
                         <SeeMoreBtn/>
                     </div>
                     <div className="alm-right">
