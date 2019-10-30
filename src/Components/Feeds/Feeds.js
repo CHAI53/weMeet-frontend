@@ -27,14 +27,14 @@ class Feeds extends Component{
             name:'Gyeongki3',
             desc:'learning3',
             location:'seoul3',
-            people:'7'
-        }]
+            people:'7'  
+        }]      
         }
     }
     render(){
         return(
             
-                <div className="Feeds">
+                <div className="feeds">
                     <SectionTitle/>
                     {this.state.example.map(e =>(
                         <EventClip date={e.date} name={e.name} desc={e.desc} location={e.location} people={e.people}/>

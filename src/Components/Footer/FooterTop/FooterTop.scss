@@ -4,6 +4,10 @@
     color: #fff;
     position: relative;
     margin-top: 20px;
+    a{
+        text-decoration: none;
+        color: rgb(0, 162, 199);
+    }
     .banner-top{
         top:0;
         width:240px;
@@ -27,6 +31,9 @@
         .banner-bottom-right{
             width:520px;
             float:left;
+            img{
+                width: 50px;
+            }
         }
     }
     .title{
@@ -50,7 +57,7 @@
     }
     .link{
         font-size: 16px;
-        color: rgb(0, 162, 199);
+        
         padding-left: 60px;
         margin-left: 20px;
         font-weight: 500;

@@ -4,7 +4,6 @@ import './BeforeLoginNav.scss'
 class BeforeLoginNav extends Component{
     render(){
         return(
-            <div>
                 <div className="nav-top">
                     <img className="nav-logo" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt=""></img>
                     
@@ -20,7 +19,6 @@ class BeforeLoginNav extends Component{
                         </span>
                     </div>
                 </div>
-            </div>
         )
     }
 }
