@@ -54,8 +54,8 @@ class GoogleMap extends Component {
         <Map
           style={mapStyles}
           google={google}
-          zoom={9}
-          initialCenter={{ lat: 37.5, lng: 127.053 }}
+          zoom={11}
+          initialCenter={{ lat: 37.537, lng: 127.0123 }}
           disableDefaultUI={true}
         >
           {renderMarker()}

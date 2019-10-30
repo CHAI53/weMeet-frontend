@@ -26,6 +26,11 @@ div {
       margin-right: 20px;
       padding-top: 7px;
 
+      &:hover {
+        cursor: pointer;
+        background-color: #007994;
+      }
+
       .accept {
         display: inline-flex;
         background-image: url("../../../../Images/check.png");
@@ -53,6 +58,11 @@ div {
       border-radius: 8px;
       background-color: rgba(46, 62, 72, 0.12);
       opacity: 0.5;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
 
       .favorite {
         display: inline-flex;
