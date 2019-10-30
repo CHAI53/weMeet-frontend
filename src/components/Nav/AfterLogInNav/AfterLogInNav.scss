@@ -6,6 +6,9 @@ $default-font-color: #757575;
   border-bottom: 1px solid rgba(46, 62, 72, 0.12);
   background-color: #fff;
 
+  @media #{$device-small} {
+    display: none;
+  }
   .nav-align {
     display: flex;
     height: 69px;

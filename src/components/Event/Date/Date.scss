@@ -8,6 +8,10 @@
   border-radius: 8px;
   margin-right: 20px;
 
+  @media #{$device-large} {
+    display: none;
+  }
+
   time {
     display: flex;
     flex-direction: column;

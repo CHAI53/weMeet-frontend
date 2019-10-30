@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../../../Images/logo.svg";
+import Logo from "Images/logo.svg";
 import "./NavLogo.scss";
 
 class NavLogo extends Component {

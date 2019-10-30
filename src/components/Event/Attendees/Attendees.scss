@@ -1,4 +1,4 @@
-@import "../../../reset.scss";
+@import "reset.scss";
 
 .attendees-box {
   margin-top: 50px;
@@ -24,9 +24,14 @@
   .attendees-wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media #{$device-large} {
+      width: 800px;
+    }
 
     .attendees {
-      width: 130px;
+      width: 22%;
       height: 180px;
       background-color: white;
       border-radius: 8px;
@@ -35,6 +40,10 @@
       align-items: center;
       transition: all ease 0.5s;
       margin: 20px 14px 0 0;
+
+      @media #{$device-large} {
+        width: 22%;
+      }
 
       .attendee {
         img {

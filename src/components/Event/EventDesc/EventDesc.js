@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { desc, pictures } from "./EventData";
+import { desc } from "./EventData";
 import "./EventDesc.scss";
 import Attendees from "../Attendees/";
 import EventDetail from "./EventDetail";
-import Pictures from "../Pictures";
 
 class EventDesc extends Component {
   constructor() {
@@ -13,18 +12,16 @@ class EventDesc extends Component {
         image:
           "https://secure.meetupstatic.com/photos/event/6/0/f/highres_486181551.jpeg",
         description: desc
-      },
-      pictures: pictures
+      }
     };
   }
 
   render() {
-    const { detail, pictures } = this.state;
+    const { detail } = this.state;
     return (
       <div className="description">
         <EventDetail props={detail} />
         <Attendees />
-        {/* <Pictures images={pictures} /> */}
       </div>
     );
   }
