@@ -33,7 +33,7 @@ export class AfterLoginMain extends Component {
                 <div className="alm-page">
                     <div className="alm-left">
                         <ul>
-                            <li value={this.getCurrentDate}></li>
+                            <li></li>
                             <li></li>
                             <li></li>
                             <li></li>

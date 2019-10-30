@@ -101,7 +101,7 @@
             float: none;
             width: auto;
 
-            .view-selector:after {
+            .view-selector::after {
                 clear: both;
                 display: block;
                 visibility: hidden;

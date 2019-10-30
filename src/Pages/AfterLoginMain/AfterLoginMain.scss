@@ -1,37 +1,38 @@
-.after-login-page-main {
-    background: #fafafa;
+.after-login-main-page {
+    // background: #fafafa;
     padding-bottom: 20px;
     min-width: 960px;
     font-size: 16px;
     line-height: 1.45;
     font-family: "Graphik Meetup",helvetica,arial,sans-serif;
     font-weight: 400;
-}
 
-.pre-alm-page {
-    background: #00455d;
-    position: relative;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-bottom: 44px;
-    text-align: center;
-}
+    .pre-alm-page {
+        background: #00455d;
+        position: relative;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-bottom: 44px;
+        text-align: center;
+    }
 
-.alm-page {
-    width: 960px;
-    padding-top: 16px;
-    font-size: 13px;
-    padding-bottom: 20px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
-.alm-left {
-    float: left;
-    width: 72%;
-    padding-right: 16px;
-}
-
-.alm-right {
-    float: left;
+    .alm-page {
+        width: 960px;
+        padding-top: 16px;
+        font-size: 13px;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    
+        .alm-left {
+            float: left;
+            width: 71%;
+            padding-right: 19px;
+        }
+    
+        .alm-right {
+            float: left;
+            width: 27%;
+            margin-top: 40px;
+        }
+    }
 }
