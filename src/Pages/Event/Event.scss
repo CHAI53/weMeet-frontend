@@ -1,0 +1,29 @@
+.event {
+  .event-main {
+    .header {
+      background: #fff;
+      border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .header-wrapper {
+        display: flex;
+      }
+    }
+  }
+  main {
+    background-color: #f6f7f8;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+
+    .main-left {
+      display: flex;
+      justify-content: center;
+    }
+    .main-right {
+    }
+  }
+}

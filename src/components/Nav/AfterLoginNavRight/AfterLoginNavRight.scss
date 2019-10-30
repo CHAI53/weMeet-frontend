@@ -1,0 +1,42 @@
+@import "../../../reset.scss";
+
+.right {
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .start-new-group {
+    font-size: $default-font-size;
+    color: $theme-color-blue;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    height: fit-content;
+    text-align: center;
+    line-height: 1.5;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .search {
+    font-size: $default-font-size;
+    color: $default-font-color;
+
+    &:hover {
+      cursor: pointer;
+      color: $theme-color-blue;
+    }
+  }
+
+  .profile {
+    background-image: url("https://cdn2.vectorstock.com/i/1000x1000/23/81/default-avatar-profile-icon-vector-18942381.jpg");
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    border-radius: 50%;
+  }
+}
