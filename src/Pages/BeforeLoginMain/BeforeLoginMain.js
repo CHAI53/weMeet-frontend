@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import BeforeLoginNav from '../../Components/BeforeLoginNav/BeforeLoginNav';
-import MainVideo from '../../Components/MainVideo/MainVideo';
-import HashTag from '../../Components/HashTag/HashTag'
-import Feeds from '../../Components/Feeds';
-import Footer from '../../Components/Footer';
+import BeforeLoginNav from 'components/BeforeLoginNav';
+import MainVideo from 'components/MainVideo';
+import HashTag from 'components/HashTag'
+import Feeds from 'components/Feeds';
+import Footer from 'components/Footer';
 
 class BeforeLoginMain extends Component{
     render(){
