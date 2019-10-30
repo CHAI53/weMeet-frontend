@@ -2,6 +2,20 @@ import React, { Component } from 'react';
 import "./SignupInput.scss";
 
 class SignupInput extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      button: true
+    }
+    this.handleClick =  this.handleClick.bind(this);
+  }
+
+  handleClick(){
+    this.setState({
+      
+    })
+  }
+
   render(){
     return(             
         <div className="SignupInput">
