@@ -1,0 +1,47 @@
+@import "../../../../reset.scss";
+$default-font-color: rgb(117, 117, 117);
+
+.host-info {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+
+  .host-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  span {
+    color: $default-font-color;
+    font-size: 12px;
+    line-height: 18px;
+    align-content: center;
+    display: flex;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .link {
+    color: $theme-color-blue;
+    &:hover {
+      cursor: pointer;
+    }
+    margin-left: 5px;
+  }
+
+  .question-mark {
+    display: inline-flex;
+    background-image: url("../../../../Images/questionmark.png");
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
+    opacity: 0.3;
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+}
