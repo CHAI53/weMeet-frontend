@@ -1,15 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import Logo from "Images/logo.svg";
 import "./NavLogo.scss";
 
-class NavLogo extends Component {
-  render() {
-    return (
-      <div className="logo">
-        <img className="logo-img" src={Logo} alt="Meetup" />
-      </div>
-    );
-  }
+function NavLogo() {
+  return (
+    <div className="logo">
+      <span className="logo-img" />
+    </div>
+  );
 }
 
 export default NavLogo;

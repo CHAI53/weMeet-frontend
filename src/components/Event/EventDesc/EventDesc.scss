@@ -1,20 +1,21 @@
 @import "reset.scss";
 
 .description {
-  width: 720px;
-  padding-right: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
 
   @media #{$device-large} {
     padding: 20px;
-    width: 100%;
   }
 
   .event-img {
-    display: flex;
-    background-size: 100%;
+    display: inline-flex;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 340px;
-    margin-bottom: 30px;
+    min-height: 400px;
 
     @media #{$device-large} {
       width: 100%;

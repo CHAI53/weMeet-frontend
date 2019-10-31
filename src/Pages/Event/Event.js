@@ -6,8 +6,9 @@ import Card from "components/Event/Card";
 import "./Event.scss";
 import GoogleMap from "components/Event/GoogleMap/";
 import StickyHeader from "./StickyHeader";
+import SmallHeader from "./SmallHeader";
 
-export default class Event extends Component {
+class Event extends Component {
   state = {
     sticky: false
   };
@@ -30,6 +31,7 @@ export default class Event extends Component {
 
     return (
       <div className="event">
+        <SmallHeader />
         <Nav />
         <div className="event-header">
           <EventHeader />
@@ -50,3 +52,5 @@ export default class Event extends Component {
     );
   }
 }
+
+export default Event;
