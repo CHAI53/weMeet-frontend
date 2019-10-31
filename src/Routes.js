@@ -1,10 +1,6 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-} from 'react-router-dom';
-import BeforeLoginMain from './Pages/BeforeLoginMain'
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import BeforeLoginMain from "./Pages/BeforeLoginMain";
 import Event from "./Pages/Event";
 
 class Routes extends React.Component {

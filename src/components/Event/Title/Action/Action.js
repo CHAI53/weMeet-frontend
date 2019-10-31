@@ -15,7 +15,7 @@ class Action extends Component {
   render() {
     const { eventStatus, vacancy } = this.state;
     return (
-      <div>
+      <div className="action">
         <EventStatus props={(eventStatus, vacancy)} />
         <EventButtons />
         <EventShare />
