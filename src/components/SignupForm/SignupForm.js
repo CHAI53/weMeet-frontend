@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./SignupForm.scss";
 import SignupLoginBtn from "components/SignupLoginBtn";
-import SignupInput from '../SignupInput/SignupInput';
+import SignupInput from 'components/SignupInput';
 
 class SignupForm extends Component {
   render() {
@@ -47,8 +47,8 @@ class SignupForm extends Component {
                     Sejong, KR
                   </span>
                   <a id="loc-change"
-                      class="link text-small loc-change"
-                      href="">(변경)</a>
+                      class="link loc-change text-small"
+                      href="/">(변경)</a>
                 </div>
               </div>
             </div>
@@ -57,7 +57,7 @@ class SignupForm extends Component {
             </div>
             <div className="chunk">
               <p>
-                <button type="submit" class="button button-fullwidth button-primary">
+                <button type="submit" class="button button-fullwidth button-primary text-heavy">
                   계속
                 </button>
               </p>
@@ -75,7 +75,7 @@ class SignupForm extends Component {
                     에 따라 처리됩니다.</p>
             </div>
           </div>
-          <div className="chunk margin-top padding-top">
+          <div className="chunk border-top">
             <p class="text-small">이미 회원이신가요? 
               <a href="https://secure.meetup.com/ko-KR/login/?returnUri=https%3A%2F%2Fwww.meetup.com%2Ffind%2Fevents%2F"
                   class="link">
