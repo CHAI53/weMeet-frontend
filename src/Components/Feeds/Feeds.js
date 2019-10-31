@@ -39,25 +39,25 @@ class Feeds extends Component{
             people:'13'  
         },
         {
-            date:5,
-            name:'Gyeongki3',
-            desc:'learning3',
-            location:'seoul3',
+            date:'2019년 11월 3일 일요일',
+            name:'모찌케이크교실 [Korean Sweets] Mochi Cake Class',
+            desc:'Korean, Japanese, Expats International Friends and Parties',
+            location:'잠실동 40 갤러리아팰리스',
             people:'7'  
         },
         {
-            date:6,
-            name:'Gyeongki3',
-            desc:'learning3',
-            location:'seoul3',
-            people:'7'  
+            date:'2019년 11월 6일 수요일',
+            name:'Monthly Data Science Meetup',
+            desc:'Data Scientist Meetup in Seoul',
+            location:'Dunkin Donuts Seolleung(던킨도너츠)',
+            people:'11'  
         },
         {
-            date:7,
-            name:'Gyeongki3',
-            desc:'learning3',
-            location:'seoul3',
-            people:'7'  
+            date:'2019년 11월 6일 수요일',
+            name:'Gangnam Language Exchange? Better: 회화 영어 + Public Speaking + Joy = 😍Amazing!',
+            desc:'An Unforgettable Journey - South River Toastmasters SRTM',
+            location:'코지 모임 공간 (강남 2호점)',
+            people:'5'  
         }]      
         }
     }

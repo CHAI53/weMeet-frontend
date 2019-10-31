@@ -18,7 +18,7 @@ class FooterBottom extends Component{
                                 <a href="/">회원가입</a>
                             </div>
                             <div className="text">
-                                <a href="/">로그인</a>
+                                <a href="/login">로그인</a>
                             </div>
                             <div className="text">
                                 <a href="/">도움말</a>
@@ -69,10 +69,10 @@ class FooterBottom extends Component{
                                 <span>팔로우하기</span>
                             </div>
                             <div className="icon">
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/fb.png" alt=""></img>
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/insta.png" alt=""></img>
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/yt.png" alt=""></img>
-                                <img src={require('./twitter.png')} alt=""></img>
+                                <a href="https://ko-kr.facebook.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/fb.png" alt=""></img></a>
+                                <a href="https://www.instagram.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/insta.png" alt=""></img></a>
+                                <a href="https://www.youtube.com/meetup"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/yt.png" alt="" ></img></a>
+                                <a href="https://twitter.com/meetup"><img src={require('./twitter.png')} alt=""></img></a>
                             </div>
                         </div>
                             

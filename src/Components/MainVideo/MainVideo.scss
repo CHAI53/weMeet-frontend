@@ -12,7 +12,7 @@
 .main-wrapper{
     position: relative;
     .video-in-text{
-        width: 700px;
+        max-width: 700px;
         position: absolute;
         left:50%;
         transform:translateX(-50%);
