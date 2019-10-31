@@ -1,0 +1,18 @@
+@import "../../../reset.scss";
+$default-font-size: 14px;
+$default-font-color: #757575;
+
+.nav {
+  border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+  background-color: #fff;
+
+  @media #{$device-small} {
+    display: none;
+  }
+  .nav-align {
+    display: flex;
+    height: 69px;
+    justify-content: space-between;
+    padding: 16px 16px 8px 16px;
+  }
+}

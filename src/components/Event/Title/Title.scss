@@ -1,0 +1,15 @@
+@import "reset.scss";
+
+.title-wrapper {
+  width: 600px;
+  margin: 0;
+  flex-wrap: wrap;
+
+  @media #{$device-small} {
+    width: 100%;
+  }
+
+  div {
+    margin-bottom: 5px;
+  }
+}

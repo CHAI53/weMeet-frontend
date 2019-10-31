@@ -1,0 +1,34 @@
+@import "../../../reset.scss";
+
+.date-wrapper {
+  width: 56px;
+  height: 46px;
+  background: #f6f7f8;
+  border: 1px solid rgba(46, 62, 72, 0.12);
+  border-radius: 8px;
+  margin-right: 20px;
+
+  @media #{$device-large} {
+    display: none;
+  }
+
+  time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 5px;
+
+    .date {
+      color: $theme-color-red;
+      font-size: 20px;
+      display: flexbox;
+      font-weight: bold;
+    }
+    .month {
+      color: $default-font-color;
+      font-size: 12px;
+      display: flexbox;
+    }
+  }
+}

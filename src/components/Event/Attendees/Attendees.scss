@@ -1,0 +1,75 @@
+@import "reset.scss";
+
+.attendees-box {
+  margin-top: 50px;
+
+  .attendees-nav {
+    display: flex;
+    justify-content: space-between;
+
+    .attendees-count {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .see-all {
+      color: $theme-color-blue;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .attendees-wrapper {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+
+    .attendees {
+      height: 180px;
+      background-color: white;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: all ease 0.5s;
+      margin: 20px 14px 0 0;
+
+      @media #{$device-large} {
+        width: 150px;
+      }
+
+      .attendee {
+        width: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        img {
+          height: 72px;
+          width: 72px;
+          border-radius: 36px;
+          margin-bottom: 20px;
+        }
+        .name {
+          text-align: center;
+          font-weight: bold;
+          margin-bottom: 10px;
+          font-size: 16px;
+        }
+
+        .role {
+          text-align: center;
+          font-size: 12px;
+          color: $default-font-color;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 3px 5px 0.5px #b9b9b9;
+      }
+    }
+  }
+}
