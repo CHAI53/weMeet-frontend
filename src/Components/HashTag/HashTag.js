@@ -7,13 +7,13 @@ class HashTag extends Component{
         super()
         this.state={
             example:[
-                {name:'뭘로할까요'},
-                {name:'데이터를 받아야'},
-                {name:'되나요'},
-                {name:'map 함수'},
-                {name:'사용해서'},
-                {name:'늘렸습니다'},
-                {name:'Ipsum Lorein'},
+                {name:'사회 운동 참여'},
+                {name:'요리 배우기'},
+                {name:'마라톤 대비 트레이닝'},
+                {name:'모바일 앱 개발'},
+                {name:'산악 하이킹'},
+                {name:'프론트-엔드 개발'},
+                {name:'백-엔드 개발'},
             ]
         }
     }

@@ -36,8 +36,9 @@
         }
         .video-in-signup{
             margin: 43px auto 120px auto;
-            width:135px;
-            height:25px;
+            // width:150px;
+            // height:25px;
+            width:400px;
             padding:12px 112px;
             font-weight: 500;
             background-color: #f13a59;
@@ -46,23 +47,16 @@
             cursor:pointer;
             
             p{
+                display: block;
                 color:#fff;
+                // text-align: center;
+                // width:200px;
+                
                 
             }
             
         }
-        // .video-in-signup{
-        //     width:135px;
-        //     font-size: 16px;
-        //     padding:12px 112px;
-        //     margin-top: 36px;
-        //     background-color: #f13a59;
-        //     margin-bottom: 120px;
-            
-        //     p{
-                
-        //     }
-        // }
+        
         }
     p{
         color:#eedcdc;

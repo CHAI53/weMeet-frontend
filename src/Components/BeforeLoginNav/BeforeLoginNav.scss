@@ -1,8 +1,10 @@
 .nav-top{
-    position: relative;
+    // position: relative;
     height:45px;
-    padding:20px;
-    border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+    margin:20px;
+    // padding: 20px;
+    // border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+    
     .nav-logo{
         height:44px;
         float: left;
@@ -14,6 +16,9 @@
         right:50px;
         font-size: 14px;
         
+        .nav-signup{
+            color: #757575;
+        }
         span {
             margin-right: 10px;
             padding-right: 5px;

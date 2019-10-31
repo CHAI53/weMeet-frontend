@@ -4,7 +4,6 @@
     height:625px;
     color: #fff;
     font-size: 16px;
-
     .bottom-wrapper-top{
         width:1100px;
         height:525px;
@@ -12,9 +11,9 @@
         margin:0 auto;
         .bottom-wrapper-top-top{
             width:1060px;
-            height:44px;
+            // min-height:24px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 40px 0 20px 0;
+            padding: 40px 0 50px 0;
             margin:0 auto;
             a{
                 color: #fff;
@@ -30,14 +29,32 @@
             width:1060px;
             margin:0 auto;
             padding:40px 0 20px 0;
+            a{
+                text-decoration: none;
+                color:rgba(255, 255, 255, 0.7);
+            }
+            .bottom-wrapper-top-bottom-icon-group{
+                width:350px;
+                float:left;
+                padding-right: 20px;
+                img{
+                    width:28px;
+                    height:28px;
+                    filter:opacity(.5) drop-shadow(0 0 0 #ffffff);
+                    margin-right: 30px;
+                }
+            }
+
+
             .bottom-wrapper-top-bottom-group{
                 width:220px;
                 float:left;
                 padding-right: 20px;
                 img{
                     width:30px;
+                    height:30px;
                     filter:opacity(.5) drop-shadow(0 0 0 #ffffff);
-                    padding-right: 30px;
+                    margin-right: 30px;
                 }
             }
             .text{
@@ -56,10 +73,23 @@
     }
     .bottom-wrapper-bottom{
         
+        margin:0 auto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
         height: 100px;
         background-color: #2f363f;
         border-bottom: 1px solid rgba(46, 62, 72, 0.12);
-        
+        .bottom-wrapper-bottom-first{
+            width: 1100px;
+            margin: 0 auto;
+            padding:20px 0 5px 25px;
+        }
+        .bottom-wrapper-bottom-second{
+            padding:15px 0 10px 25px;
+            width:1100px;
+            margin: 0 auto;
+        }
     }
 }
 img{
