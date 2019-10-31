@@ -1,5 +1,4 @@
-@import "../../../../reset.scss";
-$default-font-color: rgb(117, 117, 117);
+@import "reset.scss";
 
 .host-info {
   display: flex;
@@ -24,6 +23,13 @@ $default-font-color: rgb(117, 117, 117);
   .info {
     display: flex;
     flex-direction: column;
+
+    span {
+      text-overflow: ellipsis;
+      @media #{$device-large} {
+        text-overflow: ellipsis;
+      }
+    }
   }
 
   .link {
