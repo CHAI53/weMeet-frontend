@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "./SignupForm.scss";
 import SignupLoginBtn from "components/SignupLoginBtn";
 import SignupInput from 'components/SignupInput';
+import "./SignupForm.scss";
 
 class SignupForm extends Component {
   render() {
@@ -22,7 +22,7 @@ class SignupForm extends Component {
             message="구글 계정으로 로그인"
             imgPath="https://secure.meetupstatic.com/s/img/09976452261947836380738/logo_google.svg"
             moveTo="https://accounts.google.com/o/oauth2/auth?access_type=offline&client_id=855636443875-pmqkjkrj33pvp0t1ghecgp4f3l746856.apps.googleusercontent.com&redirect_uri=https://secure.meetup.com/ties/google/&response_type=code&scope=profile%20email&state=returnUri%3D" />
-          <div className="register-fieldset chunk padding-top chunk">
+          <div className="register-fieldset chunk padding-top">
             <div className="chunk">
             <SignupInput
               name="이름" />
@@ -36,20 +36,18 @@ class SignupForm extends Component {
               name="비밀번호" />
             </div>          
             <div id="loc-display" class="chunk">
-              <div className="row">
-                <div className="row-item">
-                  <span className="location-icon-span">
-                    <img className="location-icon"
-                          alt="location-icon"
-                          src="https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png" />
-                  </span>                
-                  <span class="text-small text-secondary text-heavy">
-                    Sejong, KR
-                  </span>
-                  <a id="loc-change"
-                      class="link loc-change text-small"
-                      href="/">(변경)</a>
-                </div>
+              <div className="row-item">
+                <span className="location-icon-span">
+                  <img className="location-icon"
+                        alt="location-icon"
+                        src="https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png" />
+                </span>                
+                <span class="text-small text-secondary text-heavy">
+                  Sejong, KR
+                </span>
+                <a id="loc-change"
+                    class="link loc-change text-small"
+                    href="/">(변경)</a>
               </div>
             </div>
             <div className="chunk">
@@ -78,8 +76,7 @@ class SignupForm extends Component {
           <div className="chunk border-top">
             <p class="text-small">이미 회원이신가요? 
               <a href="https://secure.meetup.com/ko-KR/login/?returnUri=https%3A%2F%2Fwww.meetup.com%2Ffind%2Fevents%2F"
-                  class="link">
-                  로그인.</a>
+                  class="link"> 로그인.</a>
             </p>
           </div>
         </form>

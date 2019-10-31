@@ -10,18 +10,21 @@ class SignupInput extends Component {
       value:''
     }
     this.handleClick =  this.handleClick.bind(this);
-    this.noValueInput = this.noValueInput.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleClick(){
     this.setState({
       name: "register-field-name-turn",
+      hidden: false
     })
   }
 
-  noValueInput(){
+  handleChange(event){
+    console.dir(event.target.value.length);
     this.setState({
-      hidden: false,
+      value: event.target.value,
+      name: "register-field-name"
     })
   }
  
@@ -32,9 +35,10 @@ class SignupInput extends Component {
         <input type="text"        
                 className={this.state.name}
                 onClick={this.handleClick}
-                onChange={this.noValueInput}
+                onChange={this.handleChange}
+                value={this.state.value}
                 />
-        {!this.state.hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
+        {this.state.value.length === 0 && !this.state.hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
       </div>
     );  
   }
