@@ -1,0 +1,27 @@
+@import "reset.scss";
+
+.grid-list {
+  list-style: 0;
+  margin: 0 -16px 0 0;
+
+  .grid-list-item {
+    width: 25%;
+
+    .grid-inner {
+      height: 100%;
+      padding: 0 16px 16px 0;
+
+      .category-cards {
+        background-image: url({bgImg});
+        user-select: none;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .card-subject {
+        font-weight: bold;
+        margin-top: 8px;
+      }
+    }
+  }
+}
