@@ -9,6 +9,7 @@ import GoogleMap from "components/Event/GoogleMap/";
 import StickyHeader from "./StickyHeader";
 import SmallHeader from "./SmallHeader";
 import mockUpData from "./EventData";
+import * as Utils from "utils/common.js";
 
 class Event extends Component {
   state = {
