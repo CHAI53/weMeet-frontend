@@ -71,12 +71,41 @@
 
       .header-wrapper {
         display: flex;
+        width: 90vw;
+        justify-content: center;
         @media #{$device-large} {
           width: 100vw;
           padding: 30px;
         }
         @media #{$device-small} {
           flex-direction: column;
+        }
+
+        .no-vacancy {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 30vw;
+          font-size: 18px;
+
+          .event-status {
+            margin-bottom: 40px;
+            color: $default-font-color;
+            @media #{$device-small} {
+              margin: 20px 0 0 0;
+              font-size: 14px;
+            }
+          }
+
+          .share {
+            @media #{$device-large} {
+              display: none;
+            }
+            @media #{$device-small} {
+              display: none;
+            }
+          }
         }
       }
     }
@@ -192,32 +221,6 @@
         background-repeat: no-repeat;
         width: 20px;
         height: 20px;
-      }
-    }
-
-    div {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 30px;
-      height: 30px;
-      border: 1px solid rgba(46, 62, 72, 0.12);
-      border-radius: 8px;
-      background-color: rgba(46, 62, 72, 0.12);
-      opacity: 0.5;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 1;
-      }
-
-      .favorite {
-        display: inline-flex;
-        background-image: url("../../Images/favorite.png");
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 15px;
-        height: 15px;
       }
     }
   }
