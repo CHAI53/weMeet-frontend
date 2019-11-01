@@ -1,4 +1,5 @@
 import React from "react";
+import './SingleEvent.scss';
 
 export default function SingleEvent(props) {
     const {groupName, eventName, expectMembers} = props;
