@@ -1,20 +1,36 @@
 import React, { Component } from "react";
+import verifyAttendStatus from "utils/common.js";
 
-export default class StickyHeader extends Component {
-  constructor() {
-    super();
+class StickyHeader extends Component {
+  constructor(props) {
+    super(props);
+    const { limitUser, attendeesCount, attendStatus, title, date } = props;
+    const { getDate } = this;
     this.state = {
       timeline: {
-        time: "1572256800000",
-        date: "28일",
-        month: "10월"
+        time: props.date,
+        date: `${getDate(date)}일`,
+        month: `${date.slice(5, 7)}월`
       },
       title: {
-        status: true,
-        title: "Gangnam, Meetup en Español Spanish Language Meet up"
+        status: verifyAttendStatus(
+          limitUser - attendeesCount,
+          attendStatus,
+          date
+        ),
+        title: title
       }
     };
   }
+
+  getDate = date => {
+    if (date[8] === "0") {
+      return date.slice(9, 10);
+    } else {
+      return date.slice(8, 10);
+    }
+  };
+
   render() {
     const { time, date, month } = this.state.timeline;
     const { title, status } = this.state.title;
@@ -29,22 +45,26 @@ export default class StickyHeader extends Component {
         </div>
         <div className="title-wrapper">
           <div className="status">
-            {status ? "지금 진행 중" : "지난 이벤트"}
+            {status ? "지금 진행 중" : "지원할 수 없습니다"}
           </div>
           <div className="event-title">{title}</div>
         </div>
-        <div className="buttons">
-          <button>
-            <span className="accept" />
-          </button>
-          <button>
-            <span className="refuse" />
-          </button>
-          <div>
-            <span className="favorite" />
+        {status && (
+          <div className="buttons">
+            <button>
+              <span className="accept" />
+            </button>
+            <button>
+              <span className="refuse" />
+            </button>
+            <div>
+              <span className="favorite" />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   }
 }
+
+export default StickyHeader;

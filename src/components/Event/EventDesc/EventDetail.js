@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function EventDetail(data) {
-  const { image, description } = data.props;
+export default function EventDetail(props) {
+  const { image, description } = props.detail;
 
   return (
     <>
