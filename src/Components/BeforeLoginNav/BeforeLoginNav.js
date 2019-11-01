@@ -5,7 +5,7 @@ class BeforeLoginNav extends Component{
     render(){
         return(
                 <div className="nav-top">
-                    <a href="/"><img className="nav-logo" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt=""></img></a>
+                    <a href="/"><img className="nav-logo" src={require('./wemeet.jpg')} alt="" rotate="270"></img></a>
                     
                     <div className="nav-right">
                         <span className="new-group">
