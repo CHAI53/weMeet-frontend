@@ -1,0 +1,66 @@
+.video-wrapper{
+    width:100%;
+    height:460px;
+    overflow: hidden;
+    position: relative;
+
+    .main-video{
+        min-width:100%;
+     }
+}
+
+.main-wrapper{
+    position: relative;
+    .video-in-text{
+        max-width: 700px;
+        position: absolute;
+        left:50%;
+        transform:translateX(-50%);
+        bottom:0;
+        // bottom:0;
+        
+        // float:none;
+        
+        .large-text{
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .small-text{
+            font-size: 20px;
+            margin-top: 12px;
+            font-weight: 600;
+        }
+        .video-in-signup:hover{background-color:#e72444;
+                
+        }
+        .video-in-signup{
+            margin: 43px auto 120px auto;
+            // width:150px;
+            // height:25px;
+            width:400px;
+            padding:12px 112px;
+            font-weight: 500;
+            background-color: #f13a59;
+            border-radius: 5px;
+            line-height: 1.5rem;
+            cursor:pointer;
+            
+            p{
+                display: block;
+                color:#fff;
+                // text-align: center;
+                // width:200px;
+                
+                
+            }
+            
+        }
+        
+        }
+    p{
+        color:#eedcdc;
+        text-align: center;
+        
+    }
+}
