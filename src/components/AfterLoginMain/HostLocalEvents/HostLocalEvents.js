@@ -7,7 +7,7 @@ export class HostLocalEvents extends Component {
             <div className="host-local-events">
                 <div className="host-local-events-header">
                     <h2 className="host-local-events-header-title">
-                        Seoul에서 이벤트 주최하기
+                        Seolleung II에서 이벤트 주최하기
                     </h2>
                     <p className="host-local-events-header-description">
                         내가 찾고 있는 주제의 그룹이 없나요? 그룹을 직접 만들고 로컬 이벤트를 직접 주최해 보세요.

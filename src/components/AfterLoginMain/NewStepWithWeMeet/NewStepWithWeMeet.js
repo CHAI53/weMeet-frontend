@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import './NewStepWithMeetup.scss';
+import './NewStepWithWeMeet.scss';
 // import CardGreen from 'Images/motivation_green.png';
 // import CardYellow from 'Images/motivation_yellow.png';
 // import CardRed from 'Images/motivation_red.png';
 // import CardBlue from 'images/motivation_blue.png';
 
-export class NewStepWithMeetup extends Component {
+export class NewStepWithWeMeet extends Component {
     render() {
         return (
             <div className="new-step">
                 <div className="new-step-header">
                     <h2 className="new-step-header-title">
-                        Meetup과 함께 새로운 발걸음 내딛기
+                        WeMeet과 함께 새로운 발걸음 내딛기
                     </h2>
                     <p className="new-step-header-discription">
                         새로운 그룹을 만들고 마음 맞는 사람들을 모아 보세요.
@@ -80,4 +80,4 @@ export class NewStepWithMeetup extends Component {
     }
 }
 
-export default NewStepWithMeetup
+export default NewStepWithWeMeet
