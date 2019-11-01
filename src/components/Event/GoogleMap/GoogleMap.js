@@ -13,6 +13,18 @@ class GoogleMap extends Component {
     };
   }
 
+  // getData = () => {
+  //   const { eventId } = this.props.match.params;
+  //   fetch(`http://localhost:8000/event/${eventId}`)
+  //     .then(res => res.json())
+  //     .then(res => console.log(res));
+  // };
+
+  componentDidMount = () => {
+    const { getData } = this;
+    // getData();
+  };
+
   shouldComponentUpdate = (nextProps, nextState) => {
     return nextState !== this.state;
   };

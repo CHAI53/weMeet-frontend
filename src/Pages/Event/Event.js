@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Nav from "components/Nav/AfterLogInNav";
 import EventHeader from "./EventHeader";
 import EventDesc from "components/Event/EventDesc";
@@ -12,6 +13,13 @@ class Event extends Component {
   state = {
     sticky: false
   };
+
+  // getData = () => {
+  //   const { eventId } = this.props.match.params;
+  //   fetch(`http://localhost:8000/event/${eventId}`)
+  //     .then(res => res.json())
+  //     .then(res => console.log(res));
+  // };
 
   componentDidMount() {
     const { handleScroll } = this;
@@ -53,4 +61,4 @@ class Event extends Component {
   }
 }
 
-export default Event;
+export default withRouter(Event);
