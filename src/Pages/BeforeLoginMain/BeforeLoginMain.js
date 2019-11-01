@@ -8,14 +8,13 @@ import Footer from 'components/Footer';
 class BeforeLoginMain extends Component{
     render(){
         return(
-            <div>
-                
+            <>
                 <BeforeLoginNav/>
                 <MainVideo/>
                 <HashTag/>
                 <Feeds/>
                 <Footer/>
-            </div>
+            </>
         )
     }
 }

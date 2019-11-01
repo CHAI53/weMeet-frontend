@@ -4,7 +4,7 @@ import './HashTagButton.scss'
 class HashTagButton extends Component{
     render(){
         return(
-            <button>
+            <button className="tag-button">
                 {this.props.name}
             </button>
         )

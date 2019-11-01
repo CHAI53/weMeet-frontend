@@ -5,14 +5,14 @@ class BeforeLoginNav extends Component{
     render(){
         return(
                 <div className="nav-top">
-                    <img className="nav-logo" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt=""></img>
+                    <a href="/"><img className="nav-logo" src="https://secure.meetupstatic.com/s/img/5455565085016210254/logo/svg/logo--script.svg" alt=""></img></a>
                     
                     <div className="nav-right">
                         <span className="new-group">
                             <a href="/" className="new">새 그룹 시작하기</a>
                         </span>
                         <span className="nav-login">
-                            <a href="/">로그인</a>
+                            <a href="/login">로그인</a>
                         </span>
                         <span className="nav-signup">
                             <button>회원가입</button>
