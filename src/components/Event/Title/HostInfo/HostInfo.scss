@@ -1,5 +1,4 @@
-@import "../../../../reset.scss";
-$default-font-color: rgb(117, 117, 117);
+@import "reset.scss";
 
 .host-info {
   display: flex;
@@ -13,35 +12,40 @@ $default-font-color: rgb(117, 117, 117);
     margin-right: 20px;
   }
 
-  span {
-    color: $default-font-color;
-    font-size: 12px;
-    line-height: 18px;
-    align-content: center;
-    display: flex;
-  }
-
   .info {
     display: flex;
     flex-direction: column;
-  }
 
-  .link {
-    color: $theme-color-blue;
-    &:hover {
-      cursor: pointer;
+    span {
+      text-overflow: ellipsis;
+      color: $default-font-color;
+      font-size: 12px;
+      line-height: 18px;
+      align-content: center;
+      display: flex;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      .link {
+        color: $theme-color-blue;
+        text-overflow: ellipsis;
+
+        &:hover {
+          cursor: pointer;
+        }
+        margin-left: 5px;
+      }
+
+      .question-mark {
+        display: inline-flex;
+        background-image: url("../../../../Images/questionmark.png");
+        width: 15px;
+        height: 15px;
+        background-size: 100%;
+        opacity: 0.3;
+        margin-left: 5px;
+        margin-top: 2px;
+      }
     }
-    margin-left: 5px;
-  }
-
-  .question-mark {
-    display: inline-flex;
-    background-image: url("../../../../Images/questionmark.png");
-    width: 15px;
-    height: 15px;
-    background-size: 100%;
-    opacity: 0.3;
-    margin-left: 5px;
-    margin-top: 2px;
   }
 }

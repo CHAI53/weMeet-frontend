@@ -5,9 +5,9 @@ export default function EventShare() {
     <div className="share">
       <span>공유하기:</span>
       <div className="icons">
-        <span className="facebook"></span>
-        <span className="tweeter"></span>
-        <span className="instagram"></span>
+        <span className="facebook" />
+        <span className="tweeter" />
+        <span className="instagram" />
       </div>
     </div>
   );

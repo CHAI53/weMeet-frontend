@@ -1,66 +1,74 @@
 import React, { Component } from "react";
 import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
-
-const mapStyles = {
-  width: "320px",
-  height: "280px"
-};
+import mapStyles from "./GoogleMap.scss";
 
 class GoogleMap extends Component {
   constructor() {
     super();
     this.state = {
-      wework: [
-        {
-          lat: 37.5,
-          lng: 127.053
-        },
-        {
-          lat: 37.570588,
-          lng: 126.9836
-        },
-        {
-          lat: 37.565075,
-          lng: 126.987189
-        }
-      ]
+      geo: {
+        lat: 37.5,
+        lng: 127.053
+      }
     };
   }
 
-  renderMarker = () => {
-    const { wework } = this.state;
-    const { google } = this.props;
+  // getData = () => {
+  //   const { eventId } = this.props.match.params;
+  //   fetch(`http://localhost:8000/event/${eventId}`)
+  //     .then(res => res.json())
+  //     .then(res => console.log(res));
+  // };
 
-    return wework.map((el, index) => {
-      return (
-        <Marker
-          key={index}
-          position={{
-            lat: el.lat,
-            lng: el.lng
-          }}
-          draggable={true}
-          animation={google.maps.Animation.DROP}
-        />
-      );
-    });
+  componentDidMount = () => {
+    const { getData } = this;
+    // getData();
   };
 
+  shouldComponentUpdate = (nextProps, nextState) => {
+    return nextState !== this.state;
+  };
+
+  // renderMarker = () => {
+  //   const { wework } = this.state;
+  //   const { google } = this.props;
+
+  //   return wework.map((el, index) => {
+  //     return (
+  //       <Marker
+  //         key={index}
+  //         position={{
+  //           lat: el.lat,
+  //           lng: el.lng
+  //         }}
+  //         draggable={true}
+  //         animation={google.maps.Animation.DROP}
+  //       />
+  //     );
+  //   });
+  // };
+
   render() {
-    const { renderMarker } = this;
+    // const { renderMarker } = this;
     const { google } = this.props;
+    const { geo } = this.state;
     return (
-      <>
+      <div className="map">
         <Map
           style={mapStyles}
           google={google}
-          zoom={11}
-          initialCenter={{ lat: 37.537, lng: 127.0123 }}
+          zoom={16}
+          initialCenter={geo}
           disableDefaultUI={true}
+          featureType={"road"}
         >
-          {renderMarker()}
+          <Marker
+            position={geo}
+            draggable={true}
+            animation={google.maps.Animation.DROP}
+          />
         </Map>
-      </>
+      </div>
     );
   }
 }

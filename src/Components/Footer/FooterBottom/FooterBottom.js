@@ -15,13 +15,13 @@ class FooterBottom extends Component{
                                 <span>내 계정</span>
                             </div>
                             <div className="text">
-                                회원가입
+                                <a href="/">회원가입</a>
                             </div>
                             <div className="text">
-                                로그인
+                                <a href="/login">로그인</a>
                             </div>
                             <div className="text">
-                                도움말
+                                <a href="/">도움말</a>
                             </div>
                         </div>
                         <div className="bottom-wrapper-top-bottom-group">
@@ -29,16 +29,16 @@ class FooterBottom extends Component{
                                 <span>탐색</span>
                             </div>
                             <div className="text">
-                                그룹
+                                <a href="/">그룹</a>
                             </div>
                             <div className="text">
-                                캘린더
+                                <a href="/">캘린더</a>
                             </div>
                             <div className="text">
-                                주제
+                                <a href="/">주제</a>
                             </div>
                             <div className="text">
-                                도시
+                                <a href="/">도시</a>
                             </div>
                         </div>
                         <div className="bottom-wrapper-top-bottom-group">
@@ -46,43 +46,45 @@ class FooterBottom extends Component{
                                 <span>We:Meet</span>
                             </div>
                             <div className="text">
-                                정보
+                                <a href="/">정보</a>
                             </div>
                             <div className="text">
-                                We:Meet Pro
+                                <a href="/">We:Meet Pro</a>
                             </div>
                             <div className="text">
-                                채용정보
+                                <a href="/">채용정보</a>
                             </div>
                             <div className="text">
-                                앱
+                                <a href="/event">앱</a>
                             </div>
                             <div className="text">
-                                API
+                                <a href="/">API</a>
                             </div>
                             <div className="text">
-                                접근성
+                                <a href="/">접근성</a>
                             </div>
                         </div>
-                        <div className="bottom-wrapper-top-bottom-group">
+                        <div className="bottom-wrapper-top-bottom-icon-group">
                             <div className="text">
                                 <span>팔로우하기</span>
                             </div>
                             <div className="icon">
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/fb.png" alt=""></img>
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/insta.png" alt=""></img>
-                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/yt.png" alt=""></img>
+                                <a href="https://ko-kr.facebook.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/fb.png" alt=""></img></a>
+                                <a href="https://www.instagram.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/insta.png" alt=""></img></a>
+                                <a href="https://www.youtube.com/meetup"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/yt.png" alt="" ></img></a>
+                                <a href="https://twitter.com/meetup"><img src={require('./twitter.png')} alt=""></img></a> 
                             </div>
-                        </div>
                             
+                        </div>
+                           
                     </div>
                 </div>
                 <div className="bottom-wrapper-bottom">
                     <div className="bottom-wrapper-bottom-first">
-                    © Meetup 2019Meetup은 WeWork Companies Inc.의 전액출자 자회사입니다.
+                    © We:Meet 2019 ㆍ We:Meet은 Graceful_rain Companies Inc.의 전액출자 자회사입니다.
                     </div>
                     <div className="bottom-wrapper-bottom-second">
-                    이용약관ㆍ개인정보처리방침ㆍ쿠키 정책
+                    이용약관 ㆍ 개인정보처리방침 ㆍ 쿠키 정책
                     </div>     
                 </div>
             </div>

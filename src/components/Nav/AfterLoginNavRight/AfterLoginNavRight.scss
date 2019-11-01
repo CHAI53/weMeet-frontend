@@ -1,4 +1,4 @@
-@import "../../../reset.scss";
+@import "reset.scss";
 
 .right {
   display: inline-flex;
@@ -38,5 +38,9 @@
     width: 30px;
     background-size: 100%;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

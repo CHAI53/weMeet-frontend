@@ -1,12 +1,16 @@
-@import "../../../reset.scss";
+@import "reset.scss";
 $thinFont: 400;
 
 .card {
-  width: 320px;
-  height: 380px;
+  width: 340px;
+  height: 360px;
   border-radius: 8px;
   background-color: white;
   padding: 20px;
+  @media #{$device-large} {
+    width: 100%;
+    height: fit-content;
+  }
 
   .time-wrapper {
     display: flex;
@@ -54,6 +58,10 @@ $thinFont: 400;
       background-repeat: no-repeat;
       opacity: 0.5;
       margin-right: 20px;
+      @media #{$device-large} {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     .address-wrapper {
@@ -79,6 +87,9 @@ $thinFont: 400;
       .findLocation {
         font-weight: $thinFont;
         font-size: $default-font-size;
+        @media #{$device-large} {
+          display: none;
+        }
       }
     }
   }

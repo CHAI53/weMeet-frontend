@@ -1,7 +1,14 @@
 .logo {
-  display: inline;
+  display: inline-flex;
 
   .logo-img {
-    height: 40px;
+    width: 110px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../../Images/logo.svg");
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
