@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './NewStepWithWeMeet.scss';
-// import CardGreen from 'Images/motivation_green.png';
-// import CardYellow from 'Images/motivation_yellow.png';
-// import CardRed from 'Images/motivation_red.png';
-// import CardBlue from 'images/motivation_blue.png';
 
 export class NewStepWithWeMeet extends Component {
     render() {

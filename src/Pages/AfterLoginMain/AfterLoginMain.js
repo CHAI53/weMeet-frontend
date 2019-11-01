@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './AfterLoginMain.scss';
-import MemberHomeHead from 'components/MemberHomeHead';
-import FindNavbar from 'components/FindNavbar';
-import EventLists from 'components/EventLists';
-import SeeMoreBtn from 'components/SeeMoreBtn';
-import SimpleEventFilter from 'components/SimpleEventFilter';
+import MemberHomeHead from 'components/AfterLoginMain/MemberHomeHead';
+import FindNavbar from 'components/AfterLoginMain/FindNavbar';
+import EventLists from 'components/AfterLoginMain/EventLists';
+import SeeMoreBtn from 'components/AfterLoginMain/SeeMoreBtn';
+import SimpleEventFilter from 'components/AfterLoginMain/SimpleEventFilter';
 
 export class AfterLoginMain extends Component {
     constructor() {
