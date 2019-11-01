@@ -9,7 +9,7 @@ class Routes extends React.Component {
       <Router>
         <Switch>
           <Route exact path="/" component={BeforeLoginMain} />
-          <Route exact path="/event" component={Event} />
+          <Route exact path="/event/:eventId" component={Event} />
         </Switch>
       </Router>
     );

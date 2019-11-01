@@ -12,11 +12,12 @@ class Action extends Component {
       vacancy: 39
     };
   }
+
   render() {
     const { eventStatus, vacancy } = this.state;
     return (
       <div className="action">
-        <EventStatus props={(eventStatus, vacancy)} />
+        <EventStatus eventStatus={eventStatus} vacancy={vacancy} />
         <EventButtons />
         <EventShare />
       </div>
