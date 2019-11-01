@@ -3,7 +3,7 @@ import "./Card.scss";
 import Timeline from "./Timeline";
 
 function Card(props) {
-  const { address, findGroup, startDate, endDate } = props;
+  const { address, findGroup, startDate, endDate, geo } = props;
 
   return (
     <section className="card">
@@ -14,10 +14,14 @@ function Card(props) {
       <div className="location-wrapper">
         <div className="location-icon" />
         <div className="address-wrapper">
-          <div className="address">
+          <a
+            href={`https://www.google.com/maps/place/${geo.lat} ${geo.lng}`}
+            target="blank"
+            className="address"
+          >
             <span>{address.first}</span>
             <br /> {address.second}
-          </div>
+          </a>
           <div className="findLocation">
             이벤트 장소 찾는 법<br />
             {findGroup}

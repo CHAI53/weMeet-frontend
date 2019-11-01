@@ -14,7 +14,7 @@ function Attendees(props) {
       </div>
       <div className="attendees-wrapper">
         {data.map(attendee => {
-          return <SingleAttendee props={attendee} key={attendee.id} />;
+          return <SingleAttendee attendee={attendee} key={attendee.id} />;
         })}
       </div>
     </div>

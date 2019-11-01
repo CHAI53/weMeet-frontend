@@ -45,7 +45,7 @@ class StickyHeader extends Component {
         </div>
         <div className="title-wrapper">
           <div className="status">
-            {status ? "지금 진행 중" : "지원할 수 없습니다"}
+            {status ? "다가올 이벤트" : "지원할 수 없습니다"}
           </div>
           <div className="event-title">{title}</div>
         </div>

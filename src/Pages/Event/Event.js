@@ -73,6 +73,7 @@ class Event extends Component {
                 endDate={data.endDate}
                 address={data.address}
                 findGroup={data.findGroup}
+                geo={{ lat: data.lat, lng: data.lng }}
               />
               <GoogleMap geo={{ lat: data.lat, lng: data.lng }} />
             </div>
