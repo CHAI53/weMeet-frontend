@@ -1,0 +1,70 @@
+.nav-top{
+    height:45px;
+    margin:20px 0;;
+    
+    .nav-logo{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100px;
+        padding-left: 20px;
+        padding-top: 0px;
+        padding-bottom: 1px;
+        padding-right: 7px;
+        margin-left: 11px;
+        float: left;
+        cursor:pointer;
+        -webkit-transform: rotate(270deg);
+        overflow: hidden;
+    }
+    .nav-right{
+        position: absolute;
+        display: block;
+        right:50px;
+        font-size: 14px;
+        
+        .nav-signup{
+            color: #757575;
+        }
+        span {
+            margin-right: 10px;
+            padding-right: 5px;
+            line-height: 3rem;
+        }
+        button{
+            border: 0;
+            background-color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            
+            
+        }
+        button:hover{
+            color:rgb(0, 152, 171);
+        }
+        a{
+            font-style: none;
+            color: #757575;
+            text-decoration: none;
+            
+        }
+        a:hover{
+            color:rgb(0, 152, 171);
+        }
+        .new-group{
+            border-right: 1px solid rgba(46, 62, 72, 0.12);
+            font-weight: bold;
+            a{
+                color : rgb(0, 162, 199);
+            }
+            .new{
+                padding-right: 10px;
+            }
+        }
+        .nav-login{
+            a{
+                padding-left: 5px;
+            }
+        }
+    }
+}
