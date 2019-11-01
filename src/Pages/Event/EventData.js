@@ -13,7 +13,7 @@ const mockUpData = {
     limitUser: 20,
     startDate: "2019-11-03 19:00",
     endDate: "2019-11-03 23:00",
-    attendStatus: 1, //0 => 아직 참석 X, 1 => 참석
+    attendStatus: 0, //0 => 아직 참석 X, 1 => 참석
     hostInfo: {
       hostImg:
         "https://secure.meetupstatic.com/photos/member/9/1/a/e/thumb_273277294.jpeg",
