@@ -8,26 +8,36 @@ import SimpleEventFilter from 'components/SimpleEventFilter';
 
 export class AfterLoginMain extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
+            inverted: true
         }
-
-        // const getCurrentDate = () => {
-        //     let week = ['일', '월', '화', '수', '목', '금', '토'];
-        //     let today = new Date();
-        //     let year = String(today.getFullYear());
-        //     let month = String(today.getMonth() + 1);
-        //     let day = String(today.getDate());
-        //     let dayName = week[today.getDay()];
-        //     return `${year}${'년 '}${month}${'월 '}${day}${'일 '}${dayName}${'요일'}`
-        // }
     }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+    
+    handleScroll = (e) => {
+        let lastScrollTop = 0;
+        let currentScrollTop = FindNavbar.scrollTop;
+        if (currentScrollTop > lastScrollTop) {
+            this.setState({inverted: false});
+        } else {
+            this.setState({inverted: true});
+        }
+    }
+
     render() {
         return (
             <div className="after-login-main-page">
                 <div className="pre-alm-page">
                     <MemberHomeHead/>
-                    <FindNavbar/>
+                    <FindNavbar inverted={this.state.inverted ? "find-navbar-wrap" : "find-navbar-wrap-fixed"}/>
                 </div>
                 <div className="alm-page">
                     <div className="alm-left">

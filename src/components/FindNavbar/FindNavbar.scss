@@ -1,3 +1,9 @@
+.find-navbar-wrap-fixed {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
 .find-navbar-wrap {
     width: 100%;
     position: absolute;
@@ -9,20 +15,17 @@
         background-color: #0f1721;
         color: #fff;
         text-align: unset;
+        display: flex;
+        justify-content: space-between;
 
         .find-navbar-left {
-            width: 72%;
-            float: left;
             min-height: 1px;
             text-align: left;
-            margin-left: -8px;
 
             .left-form {
-                display: table;
                 width: 100%;
                 padding: 12px;
                 font-size: 0;
-                margin-bottom: 0;
             
                 div {
                     vertical-align: middle;
@@ -36,6 +39,7 @@
                     max-height: 45px;
                     position: relative;
                     width: auto;
+                    padding-left: 0;
 
                     .input-dropdown {
                         margin: 0 3px 0 0;
@@ -43,7 +47,7 @@
                         padding: 8px 32px 8px 8px;
                         border: 1px solid #000;
                         font-size: 16px;
-                        height: 27px;
+                        height: 45px;
                         width: 280px;
                         color: #353e48;
                         background-color: #FFF;
@@ -97,20 +101,7 @@
 
         .find-navbar-right {
             padding: 12px 12px 12px 15px;
-            display: table-cell;
-            float: none;
             width: auto;
-
-            .view-selector::after {
-                clear: both;
-                display: block;
-                visibility: hidden;
-                overflow: hidden;
-                height: 0!important;
-                line-height: 0;
-                font-size: xx-large;
-                content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
-            }
 
             .view-selector {
                 border-radius: 3px;
@@ -122,45 +113,35 @@
                 padding: 0;
                 list-style-type: none;
                 list-style-position: outside;
+                display: flex;
+                justify-content: space-between;
 
                 .view-selector-group {
-                    float: left;
-                    width: 50%;
                     text-align: center;
                     font-size: 16px;
-                    margin: 0;
-                    padding: 0;
-                    display: list-item;
 
                     .view-selector-group-anc {
                         text-decoration: none;
                         display: block;
-                        height: 43px;
                         line-height: 43px;
-                        padding: 0;
                         color: rgba(255,255,255,.7);
+                        padding: 0 52px;
                     }
                 }
 
                 .view-selector-calendar {
-                    float: left;
-                    width: 50%;
                     text-align: center;
                     font-size: 16px;
-                    margin: 0;
-                    padding: 0;
-                    display: list-item;
 
                     .view-selector-calendar-anc {
                         text-decoration: none;
                         display: block;
-                        height: 43px;
                         line-height: 43px;
-                        padding: 0;
                         background: rgba(255,255,255,.2);
                         color: #fff;
                         box-shadow: inset -1px 1px 2px 0 rgba(0,0,0,.54);
                         font-weight: 500;
+                        padding: 0 45px;
                     }
                 }
             }            

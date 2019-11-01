@@ -4,7 +4,7 @@ import './FindNavbar.scss';
 export class FindNavbar extends Component {
     render() {
         return (
-            <div className="find-navbar-wrap">
+            <div className={this.props.inverted}>
                 <div className="find-navbar">
                     <div className="find-navbar-left">
                         <div className="left-form">
@@ -53,8 +53,6 @@ export class FindNavbar extends Component {
                                     </li> */}
                                 </ul>
                             </div>
-                            {/* <a className="icon-x" href></a>
-                            <a className="icon-search-glass"href></a> */}
                             <div>반경</div>
                             <div className="dropdown-center">5km</div>
                             <div>지역:</div>
