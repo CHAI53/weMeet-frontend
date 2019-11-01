@@ -1,4 +1,4 @@
-export const isValidEvent = function(date) {
+export const isValidEvent = date => {
   const x = new Date(date);
   const now = new Date();
   return x > now;

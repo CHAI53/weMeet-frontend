@@ -10,6 +10,7 @@ import StickyHeader from "./StickyHeader";
 import SmallHeader from "./SmallHeader";
 import mockUpData from "./EventData";
 import * as Utils from "utils/common.js";
+import FooterBottom from "components/BeforeLoginMain/Footer/FooterBottom";
 
 class Event extends Component {
   state = {
@@ -86,6 +87,7 @@ class Event extends Component {
             />
           </div>
         </main>
+        <FooterBottom />
       </div>
     );
   }
