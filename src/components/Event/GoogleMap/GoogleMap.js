@@ -3,43 +3,13 @@ import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 import mapStyles from "./GoogleMap.scss";
 
 class GoogleMap extends Component {
-  constructor() {
-    super();
-    this.state = {
-      geo: {
-        lat: 37.5,
-        lng: 127.053
-      }
-    };
-  }
-
   shouldComponentUpdate = (nextProps, nextState) => {
-    return nextState !== this.state;
+    return nextProps === this.props;
   };
 
-  // renderMarker = () => {
-  //   const { wework } = this.state;
-  //   const { google } = this.props;
-
-  //   return wework.map((el, index) => {
-  //     return (
-  //       <Marker
-  //         key={index}
-  //         position={{
-  //           lat: el.lat,
-  //           lng: el.lng
-  //         }}
-  //         draggable={true}
-  //         animation={google.maps.Animation.DROP}
-  //       />
-  //     );
-  //   });
-  // };
-
   render() {
-    // const { renderMarker } = this;
-    const { google } = this.props;
-    const { geo } = this.state;
+    const { google, geo } = this.props;
+
     return (
       <div className="map">
         <Map

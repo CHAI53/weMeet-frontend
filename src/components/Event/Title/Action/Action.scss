@@ -1,6 +1,7 @@
 @import "reset.scss";
 
 .action {
+  width: 20vw;
   @media #{$device-large} {
     width: 40%;
   }
@@ -15,7 +16,6 @@
       color: $default-font-color;
     }
   }
-
   .buttons {
     display: flex;
     align-items: center;
@@ -96,6 +96,7 @@
   border-bottom: 1px solid rgba(46, 62, 72, 0.12);
   padding-bottom: 20px;
   margin-bottom: 20px;
+  color: $default-font-color;
 
   @media #{$device-small} {
     border-bottom: none;
@@ -133,7 +134,7 @@
     }
     .instagram {
       display: inline-flex;
-      background-image: url("https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png");
+      background-image: url("../../../../Images/instagram.png");
       background-size: 100%;
       background-repeat: no-repeat;
       width: 20px;

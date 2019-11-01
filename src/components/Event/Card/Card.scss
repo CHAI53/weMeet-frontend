@@ -8,7 +8,7 @@ $thinFont: 400;
   background-color: white;
   padding: 20px;
   @media #{$device-large} {
-    width: 100vw;
+    width: 100%;
     height: fit-content;
   }
 
