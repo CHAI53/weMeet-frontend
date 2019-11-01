@@ -72,10 +72,11 @@ class FooterBottom extends Component{
                                 <a href="https://ko-kr.facebook.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/fb.png" alt=""></img></a>
                                 <a href="https://www.instagram.com/meetup/"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/insta.png" alt=""></img></a>
                                 <a href="https://www.youtube.com/meetup"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/yt.png" alt="" ></img></a>
-                                <a href="https://twitter.com/meetup"><img src={require('./twitter.png')} alt=""></img></a>
+                                <a href="https://twitter.com/meetup"><img src={require('./twitter.png')} alt=""></img></a> 
                             </div>
-                        </div>
                             
+                        </div>
+                           
                     </div>
                 </div>
                 <div className="bottom-wrapper-bottom">
