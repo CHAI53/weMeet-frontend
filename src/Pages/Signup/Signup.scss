@@ -1,0 +1,20 @@
+.view {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Graphik Meetup", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.register-panels {
+  margin-top: 70px;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.register-panel-center {
+  width: 460px;
+  margin: 0 auto;
+}

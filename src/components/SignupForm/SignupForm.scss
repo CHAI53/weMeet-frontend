@@ -1,0 +1,90 @@
+.bounds {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 840px;
+  padding: 24px 16px 8px;
+  width: 100%;
+  text-align: center;
+
+  .link {
+    text-decoration: none;
+  }
+
+  .margin-bottom {
+    margin-bottom: 16px;
+  }
+
+  .sign-up-text {
+    font-size: 28px;
+    line-height: 1.25;
+    font-weight: bold;
+  }
+
+  .register-fieldset {
+    width: 100%;
+  }
+
+  .padding-top {
+    padding-top: 16px;
+  }
+
+  .border-top {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .location-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    display: inline-flex;
+    vertical-align: bottom;
+  }
+
+  .chunk {
+    display: block;
+    margin-bottom: 16px;
+
+    .row-item {
+      text-align: left;
+    }
+
+    .text-small {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-top: 20px;
+
+      .text-secondary.text-heavy {
+        display: inline-block;
+      }
+    }
+
+    .text-secondary {
+      color: rgba(0, 0, 0, 0.54);
+      text-align: left;
+    }
+
+    .text-heavy {
+      font-weight: bold;
+    }
+
+    .button-primary {
+      color: #fff;
+      background: #ed1c40;
+      border-color: #ed1c40;
+      transition: background 0.15s;
+      font-size: 16px;
+    }
+
+    .button-primary:hover {
+      background: #d01031;
+    }
+
+    .button-fullwidth {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.5em;
+      border-radius: 3px;
+    }
+  }
+}

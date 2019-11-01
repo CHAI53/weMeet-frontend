@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import BeforeLoginNav from 'components/BeforeLoginNav';
+import BeforeLoginNav from 'components/BeforeLoginMain/BeforeLoginNav';
 
 import './Login.scss'
 import LoginMain from './LoginMain';

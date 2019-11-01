@@ -3,22 +3,29 @@ import "./Action.scss";
 import EventStatus from "./EventStatus";
 import EventButtons from "./EventButtons";
 import EventShare from "./EventShare";
+import verifyAttendStatus from "utils/common.js";
 
 class Action extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    const { limitUser, attendeesCount, attendStatus, status, eventId } = props;
     this.state = {
-      eventStatus: false,
-      vacancy: 39
+      attendStatus: verifyAttendStatus(
+        limitUser - attendeesCount,
+        attendStatus,
+        status
+      ),
+      vacancy: props.limitUser - props.attendeesCount
     };
   }
 
   render() {
-    const { eventStatus, vacancy } = this.state;
+    const { attendStatus, vacancy } = this.state;
+
     return (
-      <div className="action">
-        <EventStatus eventStatus={eventStatus} vacancy={vacancy} />
-        <EventButtons />
+      <div className={attendStatus ? "action" : "no-vacancy"}>
+        <EventStatus attendStatus={attendStatus} vacancy={vacancy} />
+        {attendStatus && <EventButtons />}
         <EventShare />
       </div>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function SingleAttendee(props) {
-  const { image, name, role } = props.props;
+  const { image, name, role } = props.attendee;
 
   return (
     <div className="attendees">

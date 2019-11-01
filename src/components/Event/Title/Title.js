@@ -5,21 +5,30 @@ import EventTitle from "./EventTitle/EventTitle";
 import HostInfo from "./HostInfo/HostInfo";
 
 class Title extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    const { isValidEvent } = this;
+
     this.state = {
-      status: true,
-      title: "Gangnam, Meetup en Español Spanish Language Meet up"
+      status: isValidEvent(props.status)
     };
   }
+
+  isValidEvent = date => {
+    const x = new Date(date);
+    const now = new Date();
+    return x > now;
+  };
+
   render() {
-    const { title, status } = this.state;
+    const { status } = this.state;
+    const { hostInfo, title } = this.props;
 
     return (
       <div className="title-wrapper">
         <Status status={status} />
         <EventTitle title={title} />
-        <HostInfo />
+        <HostInfo hostInfo={hostInfo} />
       </div>
     );
   }
