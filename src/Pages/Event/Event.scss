@@ -89,9 +89,14 @@
           width: 30vw;
           font-size: 18px;
 
+          @media #{$device-small} {
+            width: 100%;
+          }
+
           .event-status {
             margin-bottom: 40px;
             color: $default-font-color;
+
             @media #{$device-small} {
               margin: 20px 0 0 0;
               font-size: 14px;

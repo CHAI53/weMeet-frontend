@@ -17,7 +17,6 @@ class Event extends Component {
     sticky: false,
     data: mockUpData
   };
-
   // getData = () => {
   //   const { eventId } = this.props.match.params;
   //   fetch(`http://localhost:8000/event/${eventId}`)
@@ -31,11 +30,9 @@ class Event extends Component {
   }
 
   handleScroll = () => {
-    if (window.scrollY >= 69 + 220) {
-      this.setState({ sticky: true });
-    } else {
-      this.setState({ sticky: false });
-    }
+    window.scrollY >= 260
+      ? this.setState({ sticky: true })
+      : this.setState({ sticky: false });
   };
 
   render() {
