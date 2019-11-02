@@ -12,6 +12,7 @@ export default function EventHeader(props) {
           status={props.date}
           title={props.title}
           hostInfo={props.hostInfo}
+          node={props.node}
         />
         <Action
           status={props.date}

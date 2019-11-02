@@ -39,12 +39,18 @@
       .question-mark {
         display: inline-flex;
         background-image: url("../../../../Images/questionmark.png");
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
         background-size: 100%;
-        opacity: 0.3;
         margin-left: 5px;
         margin-top: 2px;
+        position: relative;
+        background-color: rgb(195, 195, 195);
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

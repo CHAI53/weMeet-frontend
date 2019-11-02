@@ -1,0 +1,44 @@
+.triangle {
+  position: absolute;
+  border-bottom: 11px solid #2c4662;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  width: 0;
+  top: 12px;
+  left: 1px;
+
+  &:hover {
+    cursor: default;
+  }
+}
+.tool-tip {
+  position: absolute;
+  top: 23px;
+  left: -10px;
+  z-index: 1;
+  opacity: 1;
+
+  &:hover {
+    cursor: default;
+  }
+
+  .box {
+    background-color: #2c4662;
+    padding: 20px;
+    width: 400px;
+    opacity: 1;
+
+    span {
+      white-space: normal;
+      color: white;
+      font-size: 18px;
+      line-height: 1.5;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
