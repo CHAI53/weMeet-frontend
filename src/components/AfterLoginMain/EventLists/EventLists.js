@@ -20,7 +20,6 @@ export class EventLists extends Component {
             let start = i*5
             for (let j = start; j < start + 5; j++) {
                 eventSingle.push(<SingleEvent
-                    key={this.state.data[j].eventId}
                     groupName={this.state.data[j].groupName}
                     eventName={this.state.data[j].eventName}
                     expectMembers={this.state.data[j].expectMembers}

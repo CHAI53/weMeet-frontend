@@ -2,9 +2,36 @@ import React, { Component } from 'react';
 import './FindNavbar.scss';
 
 export class FindNavbar extends Component {
+    constructor() {
+        super();
+        this.state = {
+            inverted: true
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll)
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    handleScroll = () => {
+        const currentScrollY = window.scrollY;
+        console.log(currentScrollY);
+        if (currentScrollY >= 212) {
+            this.setState({inverted: false})
+        } else {
+            this.setState({inverted: true})
+        }
+    }
+
     render() {
+        let normal = "find-navbar-wrap"
+        let fixed = "find-navbar-wrap-fixed"
         return (
-            <div className={this.props.inverted}>
+            <div className={this.state.inverted ? normal : fixed}>
                 <div className="find-navbar">
                     <div className="find-navbar-left">
                         <div className="left-form">
@@ -70,7 +97,6 @@ export class FindNavbar extends Component {
                         </ul>
                     </div>
                 </div>
-                <div className="event-day-showing"></div>
             </div>
         );
     }
