@@ -27,7 +27,7 @@ class CreatingEventDatePicker extends Component {
           selected={startDate}
           onChange={handleChange}
           calendarClassName="rasta-stripes"
-          dateFormat="yyyy d MMMM"
+          dateFormat="yyyy년 MM월 d일"
         />
         <DatePicker
           className="time"

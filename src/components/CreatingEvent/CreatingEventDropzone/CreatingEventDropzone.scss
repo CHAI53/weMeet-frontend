@@ -1,0 +1,29 @@
+@import "reset.scss";
+
+.input-label {
+  margin-bottom: 10px;
+}
+
+.dropzone-wrapper {
+  width: 600px;
+  height: 300px;
+  border: 2px dashed rgba(46, 62, 72, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  .dropzone-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $theme-color-blue;
+    background-color: white;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+  }
+}
