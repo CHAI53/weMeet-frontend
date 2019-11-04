@@ -2,6 +2,7 @@
     min-height: 724px;
     border-top: 1px solid rgba(46, 62, 72, 0.12);
     background-color: #fafafa;
+    
 
     .login-wrapper{
         max-width: 460px;
@@ -15,6 +16,10 @@
             .login-top-group{
                 padding: 16px 16px 0 16px;
                 border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+                a{
+                    color: rgba(0, 0, 0, 0.35);
+                    text-decoration: none;
+                }
 
                 .login-text{
                     display: block;
@@ -103,7 +108,7 @@
                 display: flex;
                 flex-basis: 100%;
                 align-items: center;
-                color: rgba(0, 0, 0, 0.35);
+                color: black;
                 font-size: 12px;
                 margin: 8px 0px;
             }
@@ -154,6 +159,10 @@
                 }
             }
             .login-google{
+                .login-google-button:hover{
+                    background-color: #d4d1d1;
+                }
+
                 .login-google-icon{
                     position: absolute;
                     width: 30px;
@@ -164,6 +173,7 @@
                     border-right: 1px solid rgb(104, 106, 107);
                 }
                 .login-google-button{
+                    cursor: pointer;
                     width:100%;
                     padding:16px 14px 13px 56px;
                     font-size: 16px;
@@ -174,6 +184,7 @@
                     background-color: #fff;
                     color:rgba(0,0,0,.54);
                     margin-bottom: 16px;
+                    border: 1px solid rgba(46, 62, 72, 0.12);
                 }
             }
         }

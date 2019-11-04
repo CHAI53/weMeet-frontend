@@ -14,7 +14,7 @@ class MainVideo extends Component{
                         <div className="video-in-text">
                             <div className="large-text"><p className="large-text">직접 만나 함께하는 즐거움</p></div>
                             <div className="small-text"><p className="small-text">로컬 그룹에 가입하고 사람들과 코딩을 함께 하며 새로운 경험을 즐겨보세요.</p></div>
-                            <div className="video-in-signup" type="button"><p className="video-in-signup-text">We:Meet 가입하기</p></div>
+                            <div className="video-in-signup" type="button"><a href="/signup"><p className="video-in-signup-text">We:Meet 가입하기</p></a></div>
                         </div>
                
                 </div>

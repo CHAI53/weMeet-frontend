@@ -15,7 +15,7 @@ class BeforeLoginNav extends Component{
                             <a href="/login">로그인</a>
                         </span>
                         <span className="nav-signup">
-                            <button>회원가입</button>
+                            <a href="/signup"><button>회원가입</button></a>
                         </span>
                     </div>
                 </div>

@@ -15,7 +15,7 @@ class FooterBottom extends Component{
                                 <span>내 계정</span>
                             </div>
                             <div className="text">
-                                <a href="/">회원가입</a>
+                                <a href="/signup">회원가입</a>
                             </div>
                             <div className="text">
                                 <a href="/login">로그인</a>

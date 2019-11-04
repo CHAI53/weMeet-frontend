@@ -8,7 +8,6 @@ class CommonFooter extends Component{
                 <div className="common-footer-feed">
                     <div className="common-footer-feed-top">
                         <span className="common-footer-feed-top-newgroup">새 그룹 시작하기</span>
-                        <span className="common-footer-feed-top-login">로그인</span>
                     </div>
                     <div className="common-footer-feed-top-under">
                         <span className="common-footer-text">도움말</span>  
