@@ -14,8 +14,8 @@ export class DropdownMenu extends Component {
         let dropdownGroup = [];
         for (let i = 0; i < 4; i++) {
             let dropdownSingle = [];
-            let start = i*7;
-            for (let j = start; j < start + 7; j++) {
+            let start = i*6;
+            for (let j = start; j < start + 6; j++) {
                 dropdownSingle.push(
                 <li>
                     <a href>
