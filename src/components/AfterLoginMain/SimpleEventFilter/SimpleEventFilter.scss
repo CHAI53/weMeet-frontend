@@ -1,0 +1,40 @@
+.simple-event-filter {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 3px;
+
+    li {
+        position: relative;
+        display: block;
+        line-height: 1.5;
+
+        span {
+            display: block;
+            background: #FFF;
+            font-size: 13px;
+            box-shadow: rgba(255,255,255,.2) 1px 1px 0 0 inset, rgba(0,0,0,.1) 0 -1px 0 0 inset;
+            padding: 8px 19px 6px;
+            cursor: pointer;
+
+            &:hover {
+                color: #353e48
+            }
+        }
+        span.selected::before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px;
+            background: #1f24cc;
+            content: '';
+        }
+
+        span.selected {
+            background-color: rgba(0,0,255,.05);
+            color: #1f24cc;
+            font-weight: 600;
+        }
+    }
+}
