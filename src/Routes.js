@@ -1,11 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import AfterLoginMain from "./Pages/AfterLoginMain";
-import BeforeLoginMain from "./Pages/BeforeLoginMain";
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 import Signup from "Pages/Signup";
+import AfterLoginMain from "./Pages/AfterLoginMain";
 import Event from "./Pages/Event";
-import Login from "./Pages/Login";
-import Categories from "./components/Categories";
+import Categories from "components/Categories";
+import BeforeLoginMain from "./Pages/BeforeLoginMain";
+import Login from "./Pages/Login"
 
 class Routes extends React.Component {
   render() {
