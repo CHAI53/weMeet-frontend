@@ -9,6 +9,7 @@ import GoogleMap from "components/Event/GoogleMap/";
 import StickyHeader from "./StickyHeader";
 import SmallHeader from "./SmallHeader";
 import mockUpData from "./EventData";
+import FooterBottom from "components/BeforeLoginMain/Footer/FooterBottom";
 
 class Event extends Component {
   state = {
@@ -18,9 +19,9 @@ class Event extends Component {
 
   // getData = () => {
   //   const { eventId } = this.props.match.params;
-  //   fetch(`http://localhost:8000/event/${eventId}`)
+  //   fetch(`http://localhost:8000/api/event/${eventId}`)
   //     .then(res => res.json())
-  //     .then(res => console.log(res));
+  //     .then(res => this.setState({data: res.data}))
   // };
 
   componentDidMount() {
@@ -29,11 +30,9 @@ class Event extends Component {
   }
 
   handleScroll = () => {
-    if (window.scrollY >= 69 + 220) {
-      this.setState({ sticky: true });
-    } else {
-      this.setState({ sticky: false });
-    }
+    window.scrollY >= 260
+      ? this.setState({ sticky: true })
+      : this.setState({ sticky: false });
   };
 
   render() {
@@ -85,6 +84,7 @@ class Event extends Component {
             />
           </div>
         </main>
+        <FooterBottom />
       </div>
     );
   }

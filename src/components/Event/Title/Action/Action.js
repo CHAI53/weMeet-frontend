@@ -3,7 +3,7 @@ import "./Action.scss";
 import EventStatus from "./EventStatus";
 import EventButtons from "./EventButtons";
 import EventShare from "./EventShare";
-import verifyAttendStatus from "utils/common.js";
+import { verifyAttendStatus } from "utils/common.js";
 
 class Action extends Component {
   constructor(props) {
