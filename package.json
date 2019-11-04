@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.13.0",
     "google-maps-react": "^2.0.2",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
+    "react-datepicker": "^2.9.6",
     "react-dom": "^16.11.0",
     "react-flickity-component": "^3.4.0",
     "react-router-dom": "^5.1.2",

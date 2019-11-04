@@ -1,0 +1,17 @@
+@import "reset.scss";
+
+.create-event {
+  &-main {
+    background-color: $theme-background-color;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .main-left {
+      .choices {
+        flex-direction: column;
+      }
+    }
+  }
+}
