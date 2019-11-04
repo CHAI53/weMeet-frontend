@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import verifyAttendStatus from "utils/common.js";
+import { verifyAttendStatus } from "utils/common.js";
 
 class StickyHeader extends Component {
   constructor(props) {
@@ -49,19 +49,21 @@ class StickyHeader extends Component {
           </div>
           <div className="event-title">{title}</div>
         </div>
-        {status && (
-          <div className="buttons">
-            <button>
-              <span className="accept" />
-            </button>
-            <button>
-              <span className="refuse" />
-            </button>
-            <div>
-              <span className="favorite" />
-            </div>
-          </div>
-        )}
+
+        <div className="buttons">
+          {status ? (
+            <>
+              <button>
+                <span className="accept" />
+              </button>
+              <button>
+                <span className="refuse" />
+              </button>
+            </>
+          ) : (
+            <div>이벤트에 참석할 수 없습니다</div>
+          )}
+        </div>
       </div>
     );
   }
