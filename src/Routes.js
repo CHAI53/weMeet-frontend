@@ -6,6 +6,7 @@ import Signup from "Pages/Signup";
 import Event from "./Pages/Event";
 import Login from "./Pages/Login";
 import CreatingEvent from "./Pages/CreatingEvent";
+import Myprofile from "./Pages/Myprofile";
 
 class Routes extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class Routes extends React.Component {
           <Route exact path="/" component={BeforeLoginMain} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/myprofile" component={Myprofile} />
           <Route exact path="/after_login_main" component={AfterLoginMain} />
           <Route
             exact
