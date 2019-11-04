@@ -9,7 +9,8 @@ import AfterLoginMain from "./Pages/AfterLoginMain";
 import Event from "./Pages/Event";
 import Categories from "components/Categories";
 import BeforeLoginMain from "./Pages/BeforeLoginMain";
-import Login from "./Pages/Login"
+import Login from "./Pages/Login";
+import Myprofile from "./Pages/Myprofile"
 
 class Routes extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class Routes extends React.Component {
           <Route exact path="/test" component={Categories} />
           <Route exact path="/after_login_main" component={AfterLoginMain} />
           <Route exact path="/event/:id" component={Event} />
+          <Route exact path="/myprofile" component={Myprofile}/>
           </Switch>
       </Router>
     );
