@@ -49,6 +49,10 @@
                         display: block;
                         overflow: hidden;
                         line-height: 1.45;
+                        
+                        &:focus {
+                            outline: none;
+                        }
                     }
                 }
 
@@ -177,6 +181,10 @@
                         display: block;
                         overflow: hidden;
                         line-height: 1.45;
+
+                        &:focus {
+                            outline: none;
+                        }
                     }
                 }
 

@@ -18,8 +18,8 @@ export class FindNavbar extends Component {
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
-    
-    toggleeOnClick = () => {
+
+    toggleDropdown = () => {
         if (this.state.invertedDropdown === false) {
             this.setState({invertedDropdown: true});
         } else {
@@ -47,7 +47,7 @@ export class FindNavbar extends Component {
                     <div className="find-navbar-left">
                         <div className="left-form">
                             <div className="dropdown-bar">
-                                <input className="input-dropdown" onClick={this.toggleeOnClick} placeholder="검색"></input>
+                                <input className="input-dropdown" onClick={this.toggleDropdown} placeholder="검색"></input>
                                 <DropdownMenu className={this.state.invertedDropdown ? focus : blur}/>
                             </div>
                             <div>반경</div>
