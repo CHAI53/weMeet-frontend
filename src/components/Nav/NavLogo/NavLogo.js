@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "Images/logo.svg";
 import "./NavLogo.scss";
 
 function NavLogo() {

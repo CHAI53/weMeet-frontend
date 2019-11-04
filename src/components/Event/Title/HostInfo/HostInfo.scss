@@ -15,6 +15,7 @@
   .info {
     display: flex;
     flex-direction: column;
+    line-height: 18px;
 
     span {
       text-overflow: ellipsis;
@@ -35,16 +36,28 @@
         }
         margin-left: 5px;
       }
+    }
+    div {
+      color: $default-font-color;
+      font-size: 12px;
+      align-content: center;
+      display: flex;
 
       .question-mark {
         display: inline-flex;
         background-image: url("../../../../Images/questionmark.png");
-        width: 15px;
-        height: 15px;
+        width: 12px;
+        height: 12px;
         background-size: 100%;
-        opacity: 0.3;
         margin-left: 5px;
         margin-top: 2px;
+        position: relative;
+        background-color: rgb(195, 195, 195);
+        border-radius: 50%;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
