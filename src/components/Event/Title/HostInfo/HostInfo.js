@@ -31,12 +31,12 @@ class HostInfo extends Component {
             그룹:
             <span className="link">{hostGroup}</span>
           </span>
-          <span>
+          <div>
             공개 그룹
             <span className="question-mark" onClick={handleClick}>
               {toolTip && <ToolTip />}
             </span>
-          </span>
+          </div>
         </div>
       </div>
     );

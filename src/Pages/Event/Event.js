@@ -9,7 +9,6 @@ import GoogleMap from "components/Event/GoogleMap/";
 import StickyHeader from "./StickyHeader";
 import SmallHeader from "./SmallHeader";
 import mockUpData from "./EventData";
-import * as Utils from "utils/common.js";
 import FooterBottom from "components/BeforeLoginMain/Footer/FooterBottom";
 
 class Event extends Component {
@@ -17,11 +16,12 @@ class Event extends Component {
     sticky: false,
     data: mockUpData
   };
+
   // getData = () => {
   //   const { eventId } = this.props.match.params;
-  //   fetch(`http://localhost:8000/event/${eventId}`)
+  //   fetch(`http://localhost:8000/api/event/${eventId}`)
   //     .then(res => res.json())
-  //     .then(res => console.log(res));
+  //     .then(res => this.setState({data: res.data}))
   // };
 
   componentDidMount() {

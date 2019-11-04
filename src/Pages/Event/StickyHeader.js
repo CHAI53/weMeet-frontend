@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as Utils from "utils/common.js";
+import { verifyAttendStatus } from "utils/common.js";
 
 class StickyHeader extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class StickyHeader extends Component {
         month: `${date.slice(5, 7)}월`
       },
       title: {
-        status: Utils.verifyAttendStatus(
+        status: verifyAttendStatus(
           limitUser - attendeesCount,
           attendStatus,
           date

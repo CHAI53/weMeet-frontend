@@ -3,14 +3,14 @@ import "./Action.scss";
 import EventStatus from "./EventStatus";
 import EventButtons from "./EventButtons";
 import EventShare from "./EventShare";
-import * as Utils from "utils/common.js";
+import { verifyAttendStatus } from "utils/common.js";
 
 class Action extends Component {
   constructor(props) {
     super(props);
     const { limitUser, attendeesCount, attendStatus, status, eventId } = props;
     this.state = {
-      attendStatus: Utils.verifyAttendStatus(
+      attendStatus: verifyAttendStatus(
         limitUser - attendeesCount,
         attendStatus,
         status

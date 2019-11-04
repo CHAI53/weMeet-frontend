@@ -11,8 +11,8 @@ const mockUpData = {
     lat: 37.508119,
     lng: 127.023642,
     limitUser: 20,
-    startDate: "2019-11-01 19:00",
-    endDate: "2019-11-03 23:00",
+    startDate: "2019-11-07 19:00",
+    endDate: "2019-11-09 23:00",
     attendStatus: 0, //0 => 아직 참석 X, 1 => 참석
     hostInfo: {
       hostImg:
@@ -24,7 +24,7 @@ const mockUpData = {
       first: "GSM Terrace",
       second: "Nonhyeon-Dong 164-14, 3rd floor · 서울"
     },
-    attendeesCount: 19,
+    attendeesCount: 10,
     attendeesInfo: [
       {
         id: 1, // userId
