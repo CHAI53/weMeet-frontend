@@ -4,6 +4,7 @@ import Signup from "Pages/Signup";
 import BeforeLoginMain from "./Pages/BeforeLoginMain";
 import Event from "./Pages/Event";
 import Login from "./Pages/Login";
+import Categories from "./components/Categories";
 
 class Routes extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class Routes extends React.Component {
           <Route exact path="/" component={BeforeLoginMain} />
           <Route exact path="/event/:eventId" component={Event} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/test" component={Categories} />
         </Switch>
       </Router>
     );
