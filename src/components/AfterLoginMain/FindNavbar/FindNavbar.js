@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './FindNavbar.scss';
+import DropdownMenu from 'components/AfterLoginMain/DropdownMenu';
 
 export class FindNavbar extends Component {
     constructor() {
         super();
         this.state = {
-            inverted: true
+            invertedNavbar: true,
+            invertedDropdown: false
         }
     }
 
@@ -16,69 +18,37 @@ export class FindNavbar extends Component {
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
+    
+    toggleeOnClick = () => {
+        if (this.state.invertedDropdown === false) {
+            this.setState({invertedDropdown: true});
+        } else {
+            this.setState({invertedDropdown: false})
+        }
+    }
 
     handleScroll = () => {
         const currentScrollY = window.scrollY;
-        console.log(currentScrollY);
         if (currentScrollY >= 212) {
-            this.setState({inverted: false})
+            this.setState({invertedNavbar: false})
         } else {
-            this.setState({inverted: true})
+            this.setState({invertedNavbar: true})
         }
     }
 
     render() {
         let normal = "find-navbar-wrap"
         let fixed = "find-navbar-wrap-fixed"
+        let focus = "dropdown-menu-focus"
+        let blur = "dropdown-menu-blur"
         return (
-            <div className={this.state.inverted ? normal : fixed}>
+            <div className={this.state.invertedNavbar ? normal : fixed}>
                 <div className="find-navbar">
                     <div className="find-navbar-left">
                         <div className="left-form">
                             <div className="dropdown-bar">
-                                <input className="input-dropdown" placeholder="검색"></input>
-                                <ul className="dropdown-menu">
-                                    {/* <li>
-                                        <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <ul>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                            <li></li>
-                                        </ul>
-                                    </li> */}
-                                </ul>
+                                <input className="input-dropdown" onClick={this.toggleeOnClick} placeholder="검색"></input>
+                                <DropdownMenu className={this.state.invertedDropdown ? focus : blur}/>
                             </div>
                             <div>반경</div>
                             <div className="dropdown-center">5km</div>

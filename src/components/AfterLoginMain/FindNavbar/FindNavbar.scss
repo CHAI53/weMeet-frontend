@@ -50,24 +50,6 @@
                         overflow: hidden;
                         line-height: 1.45;
                     }
-
-                    .dropdown-menu {
-                        margin-top: 15px;
-                        box-shadow: rgba(0,0,0,.5) 0 3px 40px 0;
-                        font-size: 16px;
-                        width: 936px;
-                        border: none;
-                        padding-top: 16px;
-                        border-radius: 3px;
-                        display: none;
-                        position: absolute;
-                        min-width: 100%;
-                        background-color: #FFF;
-                        top: 100%;
-                        padding: 0 8px 16px;
-                        list-style: none;
-                        margin: 0 0 16px;
-                    }
                 }
 
                 .dropdown-center {
@@ -148,6 +130,7 @@
     width: 100%;
     position: absolute;
     bottom: -42px;
+    z-index: 1;
 
     .find-navbar {
         width: 960px;
@@ -194,24 +177,6 @@
                         display: block;
                         overflow: hidden;
                         line-height: 1.45;
-                    }
-
-                    .dropdown-menu {
-                        margin-top: 15px;
-                        box-shadow: rgba(0,0,0,.5) 0 3px 40px 0;
-                        font-size: 16px;
-                        width: 936px;
-                        border: none;
-                        padding-top: 16px;
-                        border-radius: 3px;
-                        display: none;
-                        position: absolute;
-                        min-width: 100%;
-                        background-color: #FFF;
-                        top: 100%;
-                        padding: 0 8px 16px;
-                        list-style: none;
-                        margin: 0 0 16px;
                     }
                 }
 

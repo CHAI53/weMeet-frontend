@@ -17,7 +17,7 @@ export class EventLists extends Component {
         let eventGroup = [];
         for (let i = 0; i < 3; i++) {
             let eventSingle = [];
-            let start = i*5
+            let start = i*5;
             for (let j = start; j < start + 5; j++) {
                 eventSingle.push(<SingleEvent
                     groupName={this.state.data[j].groupName}

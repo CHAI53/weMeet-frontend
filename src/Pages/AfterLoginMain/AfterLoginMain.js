@@ -6,6 +6,7 @@ import EventLists from 'components/AfterLoginMain/EventLists';
 import SeeMoreBtn from 'components/AfterLoginMain/SeeMoreBtn';
 import SimpleEventFilter from 'components/AfterLoginMain/SimpleEventFilter';
 import AfterLogInNav from 'components/Nav/AfterLogInNav';
+// import CommonFooter from 'components/CommonFooter';
 
 export class AfterLoginMain extends Component {
     render() {
@@ -24,6 +25,7 @@ export class AfterLoginMain extends Component {
                     <div className="alm-right">
                         <SimpleEventFilter/>
                     </div>
+                    {/* <CommonFooter/> */}
                 </div>
             </div>
         );
