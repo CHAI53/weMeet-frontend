@@ -1,5 +1,4 @@
 .after-login-main-page {
-    padding-bottom: 20px;
     min-width: 960px;
     font-size: 16px;
     line-height: 1.45;
@@ -16,6 +15,7 @@
     }
 
     .alm-page {
+        overflow: hidden;
         width: 960px;
         padding-top: 16px;
         font-size: 13px;
