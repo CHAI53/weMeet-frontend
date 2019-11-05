@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Signup.scss";
-import SignupHeader from "components/SignupHeader";
-import SignupForm from "components/SignupForm";
+import SignupHeader from "components/Signup/SignupHeader";
+import SignupForm from "components/Signup/SignupForm";
 
 class Signup extends Component {
   render(){

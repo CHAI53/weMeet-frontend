@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html,
 body,
 div,
@@ -127,7 +126,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+a {
+  text-decoration: none;
+  outline: 0;
+  color: inherit;
+}
 * {
   box-sizing: border-box;
   button {
@@ -138,39 +141,29 @@ table {
     overflow: visible;
     outline: none;
     background: transparent;
-
     color: inherit;
     font: inherit;
-
     line-height: normal;
-
     -webkit-font-smoothing: inherit;
     -moz-osx-font-smoothing: inherit;
-
     -webkit-appearance: none;
-
     &::-moz-focus-inner {
       border: 0;
       padding: 0;
     }
   }
-
   /* Remove excess padding and border in Firefox 4+ */
 }
-
 $theme-color-red: #f64060;
 $theme-color-blue: #00a2c7;
 $default-font-color: #757575;
 $default-font-size: 14px;
-
 $device-large: "only screen and (max-width : 840px)";
 $device-small: "only screen and (max-width : 640px)";
-
 // @font-face {
 //   font-family: "we-meet";
 //   src: url("Font/Regular.woff2") format("woff2");
 // }
-
 // @font-face {
 //   font-family: "we-meet";
 //   src: url("Font/Medium.woff2") format("woff2");
