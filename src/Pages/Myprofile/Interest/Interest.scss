@@ -1,0 +1,19 @@
+.interest-wrapper {
+  width: 500px;
+  border: 1px solid #554f4fc9;
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 10px;
+  box-shadow: 3px 2px 3px -2px gray;
+  display: block;
+  float: left;
+  margin: auto 0;
+  .interest-title {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    font-weight: 700;
+  }
+}

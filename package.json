@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "node-sass": "^4.13.0",
     "google-maps-react": "^2.0.2",
+    "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-dropzone-uploader": "^2.10.2",
     "react-flickity-component": "^3.4.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0"
