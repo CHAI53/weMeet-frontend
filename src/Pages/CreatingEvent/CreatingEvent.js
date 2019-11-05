@@ -8,7 +8,8 @@ import CreatingEventDatePicker from "components/CreatingEvent/CreatingEventDateP
 import CreatingEventDuration from "components/CreatingEvent/CreatingEventDuration";
 import CreatingEventDropzone from "components/CreatingEvent/CreatingEventDropzone";
 import ImagePreview from "./ImagePreview";
-import CreatingEventDesc from "../../components/CreatingEvent/CreatingEventDesc/CreatingEventDesc";
+import CreatingEventDesc from "components/CreatingEvent/CreatingEventDesc/CreatingEventDesc";
+import CreatingEventOptions from "components/CreatingEvent/CreatingEventOptions/CreatingEventOptions";
 
 class CreatingEvent extends Component {
   constructor(props) {
@@ -54,6 +55,7 @@ class CreatingEvent extends Component {
                 <CreatingEventDropzone accept={"image/*"} onDrop={handleDrop} />
               )}
               <CreatingEventDesc />
+              <CreatingEventOptions />
             </div>
           </div>
         </main>

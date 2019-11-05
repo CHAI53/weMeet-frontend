@@ -20,7 +20,7 @@ class CreatingEventDatePicker extends Component {
     const { handleChange } = this;
 
     return (
-      <div className="date">
+      <div className="datePicker">
         <div className="input-label">날짜 및 시간</div>
         <DatePicker
           className="calender"
