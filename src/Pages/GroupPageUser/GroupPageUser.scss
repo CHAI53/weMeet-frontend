@@ -1,0 +1,24 @@
+.group-page {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100vh;
+    font-family: "Graphik Meetup",helvetica,arial,sans-serif;
+}
+
+.group-main {
+    position: relative;
+    flex-basis: auto;
+    flex-grow: 1;
+    padding-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #f6f7f8;
+}
+
+.group-main-contents-wrapper {}
+
+.group-main-contents {}
+
+.group-main-contents-in {}
