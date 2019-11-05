@@ -1,181 +1,176 @@
-.login-main-wrapper{
-    min-height: 724px;
-    border-top: 1px solid rgba(46, 62, 72, 0.12);
-    background-color: #fafafa;
+.login-main-wrapper {
+  min-height: 724px;
+  border-top: 1px solid rgba(46, 62, 72, 0.12);
+  background-color: #fafafa;
 
-    .login-wrapper{
-        max-width: 460px;
-        height:532px;
-        margin: 80px auto 16px auto;
-        border: 1px solid rgba(46, 62, 72, 0.12);
-        background-color: #ffffff;
-        border-radius: 10px;
+  .login-wrapper {
+    max-width: 460px;
+    height: 532px;
+    margin: 80px auto 16px auto;
+    border: 1px solid rgba(46, 62, 72, 0.12);
+    background-color: #ffffff;
+    border-radius: 10px;
 
-        .login-top{
-            .login-top-group{
-                padding: 16px 16px 0 16px;
-                border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+    .login-top {
+      .login-top-group {
+        padding: 16px 16px 0 16px;
+        border-bottom: 1px solid rgba(46, 62, 72, 0.12);
 
-                .login-text{
-                    display: block;
-                    font-size: 34px;
-                    line-height: 1.25;
-                    font-weight: 500;
-                    padding-bottom: 8px;
-                }
-                .login-sign-up{
-                    display: block;
-                    font-size: 13px;
-                    line-height: 1.6;
-                    font-weight: 500;
-                    margin-bottom: 16px;
-                }
-            }
+        .login-text {
+          display: block;
+          font-size: 34px;
+          line-height: 1.25;
+          font-weight: 500;
+          padding-bottom: 8px;
         }
-
-
-        .login-mid{
-            padding: 16px 16px 0 16px;
-            // border-bottom: 1px solid #3b5998; 로그인 밑에 라인
-            .login-mid-email{
-                font-size: 13px;
-                line-height: 1.45;
-                font-weight: 500;
-                margin-bottom: 5px;
-            }
-            .login-email{
-                width:100%;
-                padding: 4px;
-                border: 1px solid rgba(46, 62, 72, 0.12);
-                margin-bottom: 16px;
-                font-size: 16px;
-                line-height: 1.45;
-                border-radius: 3px;
-                background-color: #fafafa;
-                color:rgba(0,0,0,.87);
-            }
-            .login-mid-password{
-                font-size: 13px;
-                line-height: 1.45;
-                font-weight: 500;
-                margin-bottom: 5px;
-            }
-            .login-password{
-                width:100%;
-                padding: 4px;
-                border: 1px solid rgba(46, 62, 72, 0.12);
-                margin-bottom: 16px;
-                font-size: 16px;
-                line-height: 1.45;
-                border-radius: 3px;
-                background-color: #fafafa;
-                color:rgba(0,0,0,.87);
-            }
-            .login-check{
-                width: 16px;
-                height: 16px;
-                cursor: pointer;
-                margin: 3px;
-            }
-            .login-keepgoing{
-                font-size: 13px;
-                line-height: 1.6;
-                font-weight: 600;
-
-            }
-            .login-login-button{
-                background-color: #f13a59;
-                color: #ffffff;
-                display: block;
-                padding: 0 16px;
-                font-size: 16px;
-                font-weight: 600;
-                height: 34px;
-                border: none;
-                border-radius: 3px;
-                margin: 12px 0;
-                width:100%;
-            }
-            .login-login-button:hover{
-                background-color: #e72444;
-            }
-            .login-or{
-                display: flex;
-                flex-basis: 100%;
-                align-items: center;
-                color: rgba(0, 0, 0, 0.35);
-                font-size: 12px;
-                margin: 8px 0px;
-            }
-            .login-or::before,
-            .login-or::after {
-                content: "";
-                flex-grow: 1;
-                background: rgba(0, 0, 0, 0.35);
-                height: 1px;
-                font-size: 0px;
-                line-height: 0px;
-                margin: 0px 16px;
-            }
+        .login-sign-up {
+          display: block;
+          font-size: 13px;
+          line-height: 1.6;
+          font-weight: 500;
+          margin-bottom: 16px;
         }
-        .login-bot{
-            height: 180px;
-            padding:16px;
-            position: relative;
-
-            
-
-            .login-facebook{
-                .login-facebook-button:hover{
-                    background-color: #1e4392;
-                }
-                .login-facebook-icon{
-                    position: absolute;
-                    width: 38px;
-                    // background-color: black;
-                    left: 24px;
-                    top: 20px;
-                    padding: 7px 7px 7px 0px;
-                    border-right: 1px solid rgb(104, 106, 107);
-                }
-                .login-facebook-button{
-                    
-                    cursor: pointer;
-                    width:100%;
-                    padding:16px 14px 13px 56px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 16px;
-                    border-radius: 3px;
-                    text-align: center;
-                    background-color: #3b5998;
-                    color:#fff;
-                    margin-bottom: 16px;
-                }
-            }
-            .login-google{
-                .login-google-icon{
-                    position: absolute;
-                    width: 30px;
-                    // background-color: black;
-                    left: 32px;
-                    bottom: 52px;
-                    padding: 14px 12px 14px 0px;
-                    border-right: 1px solid rgb(104, 106, 107);
-                }
-                .login-google-button{
-                    width:100%;
-                    padding:16px 14px 13px 56px;
-                    font-size: 16px;
-                    font-weight: 600;
-                    line-height: 16px;
-                    // border-radius: 3px;
-                    // text-align: center;
-                    background-color: #fff;
-                    color:rgba(0,0,0,.54);
-                    margin-bottom: 16px;
-                }
-            }
-        }
+      }
     }
+
+    .login-mid {
+      padding: 16px 16px 0 16px;
+      // border-bottom: 1px solid #3b5998; 로그인 밑에 라인
+      .login-mid-email {
+        font-size: 13px;
+        line-height: 1.45;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .login-email {
+        width: 100%;
+        padding: 4px;
+        border: 1px solid rgba(46, 62, 72, 0.12);
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.45;
+        border-radius: 3px;
+        background-color: #fafafa;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .login-mid-password {
+        font-size: 13px;
+        line-height: 1.45;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .login-password {
+        width: 100%;
+        padding: 4px;
+        border: 1px solid rgba(46, 62, 72, 0.12);
+        margin-bottom: 16px;
+        font-size: 16px;
+        line-height: 1.45;
+        border-radius: 3px;
+        background-color: #fafafa;
+        color: rgba(0, 0, 0, 0.87);
+      }
+      .login-check {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        margin: 3px;
+      }
+      .login-keepgoing {
+        font-size: 13px;
+        line-height: 1.6;
+        font-weight: 600;
+      }
+      .login-login-button {
+        background-color: #f13a59;
+        color: #ffffff;
+        display: block;
+        padding: 0 16px;
+        font-size: 16px;
+        font-weight: 600;
+        height: 34px;
+        border: none;
+        border-radius: 3px;
+        margin: 12px 0;
+        width: 100%;
+      }
+      .login-login-button:hover {
+        background-color: #e72444;
+      }
+      .login-or {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        margin: 8px 0px;
+      }
+      .login-or::before,
+      .login-or::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
+    }
+    .login-bot {
+      height: 180px;
+      padding: 16px;
+      position: relative;
+
+      .login-facebook {
+        .login-facebook-button:hover {
+          background-color: #1e4392;
+        }
+        .login-facebook-icon {
+          position: absolute;
+          width: 38px;
+          // background-color: black;
+          left: 24px;
+          top: 20px;
+          padding: 7px 7px 7px 0px;
+          border-right: 1px solid rgb(104, 106, 107);
+        }
+        .login-facebook-button {
+          cursor: pointer;
+          width: 100%;
+          padding: 16px 14px 13px 56px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 16px;
+          border-radius: 3px;
+          text-align: center;
+          background-color: #3b5998;
+          color: #fff;
+          margin-bottom: 16px;
+        }
+      }
+      .login-google {
+        .login-google-icon {
+          position: absolute;
+          width: 30px;
+          // background-color: black;
+          left: 32px;
+          bottom: 52px;
+          padding: 14px 12px 14px 0px;
+          border-right: 1px solid rgb(104, 106, 107);
+        }
+        .login-google-button {
+          width: 100%;
+          padding: 16px 14px 13px 56px;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 16px;
+          // border-radius: 3px;
+          // text-align: center;
+          background-color: #fff;
+          color: rgba(0, 0, 0, 0.54);
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
 }
