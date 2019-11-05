@@ -10,7 +10,8 @@
     "react-dropzone-uploader": "^2.10.2",
     "react-flickity-component": "^3.4.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "styled-components": "^4.4.1"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",

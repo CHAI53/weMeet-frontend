@@ -1,0 +1,32 @@
+@import "reset.scss";
+
+.grid-list {
+  list-style: 0;
+  margin: 0 -16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .grid-list-item {
+    width: 25%;
+    font-size: 16px;
+
+    .grid-inner {
+      padding: 0 16px 16px 0;
+
+      .category-cards {
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%;
+        min-height: 160px;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .card-subject {
+        font-weight: bold;
+        margin-top: 8px;
+        font-weight: 500;
+      }
+    }
+  }
+}

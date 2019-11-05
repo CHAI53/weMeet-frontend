@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SignupLoginBtn from "components/SignupLoginBtn";
-import SignupInput from 'components/SignupInput';
+import SignupLoginBtn from "components/Signup/SignupLoginBtn";
+import SignupInput from 'components/Signup/SignupInput';
 import "./SignupForm.scss";
 
 class SignupForm extends Component {
@@ -35,7 +35,7 @@ class SignupForm extends Component {
             <SignupInput
               name="비밀번호" />
             </div>          
-            <div id="loc-display" class="chunk">
+            <div class="chunk">
               <div className="row-item">
                 <span className="location-icon-span">
                   <img className="location-icon"
@@ -45,8 +45,7 @@ class SignupForm extends Component {
                 <span class="text-small text-secondary text-heavy">
                   Sejong, KR
                 </span>
-                <a id="loc-change"
-                    class="link loc-change text-small"
+                <a class="link loc-change text-small"
                     href="/">(변경)</a>
               </div>
             </div>
