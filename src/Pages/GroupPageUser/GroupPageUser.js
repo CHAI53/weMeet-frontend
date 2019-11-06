@@ -6,8 +6,11 @@ import GroupMainNavbar from 'components/GroupPageUser/GroupMainNavbar';
 import Overview from 'components/GroupPageUser/Overview';
 import UpcomingEvents from 'components/GroupPageUser/UpcomingEvents';
 import Photos from 'components/GroupPageUser/Photos';
-import Discussion from 'components/GroupPageUser/Discussion';
-import Topics from 'components/GroupPageUser/Topics';
+// import Discussion from 'components/GroupPageUser/Discussion';
+import HashTag from 'components/BeforeLoginMain/HashTag';
+import Feeds from 'components/BeforeLoginMain/Feeds';
+import GroupPageFooter from 'components/GroupPageUser/GroupPageFooter';
+
 
 export class GroupPageUser extends Component {
     render() {
@@ -23,14 +26,21 @@ export class GroupPageUser extends Component {
                                 <Overview/>
                                 <UpcomingEvents/>
                                 <Photos/>
-                                <Discussion/>
+                                {/* <Discussion/> */}
                             </div>
-                            <Topics/>
+                            <div className="related-topic">
+                                <div className="topic-name">
+                                    추천 주제
+                                </div>
+                                <HashTag/>
+                            </div>
+                            <div className="feed-wrapper">
+                                <Feeds/>
+                            </div>
                         </div>
-                        <div className="neighborhood-event"></div>
                     </div>
                 </div>
-                <div className="footer"></div>
+                <GroupPageFooter/>
             </div>
         )
     }

@@ -8,10 +8,10 @@ export class Topics extends Component {
                 <div className="topics-in">
                     <h3><span></span></h3>
                     <div>
-                        <a className="topic" href>tag</a>
-                        <a className="topic" href>tag</a>
-                        <a className="topic" href>tag</a>
-                        <a className="topic" href>tag</a>
+                        <a className="topic" href="true">tag</a>
+                        <a className="topic" href="true">tag</a>
+                        <a className="topic" href="true">tag</a>
+                        <a className="topic" href="true">tag</a>
                     </div>
                 </div>
             </div>

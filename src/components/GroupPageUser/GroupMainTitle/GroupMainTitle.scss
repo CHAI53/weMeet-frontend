@@ -4,6 +4,8 @@
 }
 
 .group-main-title-in {
+    padding: 0 20px;
+    margin: 0 auto;
     max-width: 1100px;
     box-sizing: border-box;
     width: 100%;
@@ -17,6 +19,7 @@
     border-radius: 8px;
     position: relative;
     background-image: url('../../../Images/group_title_sample.jpeg');
+    background-repeat: no-repeat;
     background-position: center 40%;
 }
 
@@ -53,33 +56,54 @@
     align-items: center;
     display: flex;
     justify-content: flex-start;
+
+    .brief-icon {
+        background-image: url("../../../Images/group_location.png");
+        background-size: contain;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .brief-icon-text {}
 }
-
-.brief-icon {}
-
-.brief-icon-text {}
 
 .brief-public {
     align-items: center;
     display: flex;
     justify-content: flex-start;
     margin: 10px 0;
+
+    .brief-icon {
+        background-image: url("../../../Images/group_users.png");
+        background-size: contain;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .brief-icon-text {}
 }
-
-.brief-icon {}
-
-.brief-icon-text {}
 
 .brief-leader {
     align-items: center;
     display: flex;
     justify-content: flex-start;
     margin: 10px 0 150px 0;
+
+    .brief-icon {
+        background-image: url("../../../Images/group_user.png");
+        background-size: contain;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .brief-icon-text {}
 }
-
-.brief-icon {}
-
-.brief-icon-text {}
 
 .brief-leader-name {}
 

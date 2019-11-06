@@ -11,7 +11,7 @@ export class Discussion extends Component {
                             <h3><span></span></h3>
                         </div>
                         <div className="discussion-see-all">
-                            <a className="see-all-in" href>see_all</a>
+                            <a className="see-all-in" href="true">see_all</a>
                         </div>
                         <div className="discussion-contents">
                             <div className="discussion-input">
@@ -49,13 +49,13 @@ export class Discussion extends Component {
                                             <div className="single-discussion-middle">
                                                 <p className="single-discussion-value"></p>
                                             </div>
-                                            <div classname="single-discussion-bottom">
+                                            <div className="single-discussion-bottom">
                                                 <div className="single-discussion-bottom-in">
                                                     <div className="discussion-bottom-left">
                                                         <div className="count-reply"></div>
                                                         <div className="reply"></div>
                                                     </div>
-                                                    <div classname="discussion-bottom-right">
+                                                    <div className="discussion-bottom-right">
                                                         <button className="like-count"></button>
                                                         <button className="like-toggle">
                                                             <span className="like-toggle-heart"></span>
