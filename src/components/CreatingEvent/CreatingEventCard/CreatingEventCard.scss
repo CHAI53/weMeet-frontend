@@ -1,0 +1,24 @@
+@import "reset.scss";
+
+.creatingCard {
+  width: 340px;
+  height: 390px;
+  border-radius: 8px;
+  background-color: white;
+  padding: 20px;
+
+  .tips {
+    .tips-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    div {
+      p {
+        font-weight: bold;
+      }
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  }
+}

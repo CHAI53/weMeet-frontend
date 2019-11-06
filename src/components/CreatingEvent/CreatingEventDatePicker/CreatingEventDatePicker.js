@@ -5,18 +5,12 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./CreateEventDatePicker.scss";
 
 class CreatingEventDatePicker extends Component {
-  state = {
-    startDate: new Date()
-  };
-
   handleChange = date => {
-    this.setState({
-      startDate: date
-    });
+    this.props.onDate(date);
   };
 
   render() {
-    const { startDate } = this.state;
+    const { startDate } = this.props;
     const { handleChange } = this;
 
     return (

@@ -1,0 +1,39 @@
+@import "reset.scss";
+
+.toPay {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 70px;
+  height: 40px;
+  text-align: center;
+  background-color: $theme-color-blue;
+  opacity: 0.5;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.paymentInfo {
+  margin-top: 20px;
+
+  div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    input {
+      margin-top: 10px;
+      width: 100%;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid rgba(46, 62, 72, 0.12);
+      font-size: $default-font-size;
+      padding-left: 10px;
+    }
+  }
+}
+.wrongInfo {
+  color: red;
+}
