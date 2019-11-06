@@ -8,9 +8,11 @@ import UpcomingEvents from 'components/GroupPageUser/UpcomingEvents';
 import Photos from 'components/GroupPageUser/Photos';
 // import Discussion from 'components/GroupPageUser/Discussion';
 import HashTag from 'components/BeforeLoginMain/HashTag';
-import Feeds from 'components/BeforeLoginMain/Feeds';
+import Flickity from "react-flickity-component";
+import EventClip from "components/BeforeLoginMain/Feeds/EventClip";
+import "components/BeforeLoginMain/Feeds/flickity.scss";
+import FeedsExample from "components/BeforeLoginMain/Feeds/FeedsExample.js";
 import GroupPageFooter from 'components/GroupPageUser/GroupPageFooter';
-
 
 export class GroupPageUser extends Component {
     render() {
@@ -35,13 +37,23 @@ export class GroupPageUser extends Component {
                                 <HashTag/>
                             </div>
                             <div className="feed-wrapper">
-                                <Feeds/>
-                            </div>
+                            <Flickity>
+                                {FeedsExample.example.map(e => (
+                                    <EventClip
+                                        date={e.date}
+                                        name={e.name}
+                                        desc={e.desc}
+                                        location={e.location}
+                                        people={e.people}
+                                    />
+                                ))}
+                            </Flickity>
                         </div>
                     </div>
                 </div>
-                <GroupPageFooter/>
             </div>
+            <GroupPageFooter/>
+        </div>
         )
     }
 }
