@@ -11,15 +11,6 @@ class Feeds extends Component {
   render() {
     return (
       <div className="feeds">
-        {/* <SectionTitle/>
-                    <div className="eventclip-div">
-                        <button className="up"><img className="arrow1" src={require('./upside.png')} alt=""></img></button>
-                        <div className="event-clip-container">
-                        {this.state.example.map(e =>(
-                        <EventClip date={e.date} name={e.name} desc={e.desc} location={e.location} people={e.people}/>
-                    ))}</div>
-                    <button className="down"><img className="arrow2" src={require('./downside.png')} alt=""></img></button>
-                    </div> */}
         <SectionTitle />
         <Flickity>
           {FeedsExample.example.map(e => (

@@ -11,7 +11,7 @@ class BeforeLoginNav extends Component {
 
         <div className="nav-right">
           <span className="new-group">
-            <a href="/" className="new">
+            <a href="/groupmaking1" className="new">
               새 그룹 시작하기
             </a>
           </span>
@@ -19,7 +19,9 @@ class BeforeLoginNav extends Component {
             <a href="/login">로그인</a>
           </span>
           <span className="nav-signup">
-            <button>회원가입</button>
+            <button>
+              <a href="/signup">회원가입</a>
+            </button>
           </span>
         </div>
       </div>

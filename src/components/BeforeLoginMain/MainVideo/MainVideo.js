@@ -24,7 +24,9 @@ class MainVideo extends Component {
             </p>
           </div>
           <div className="video-in-signup" type="button">
-            <p className="video-in-signup-text">We:Meet 가입하기</p>
+            <p className="video-in-signup-text">
+              <a href="/signup">We:Meet 가입하기</a>
+            </p>
           </div>
         </div>
       </div>

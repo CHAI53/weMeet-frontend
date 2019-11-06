@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Interest.scss";
+import { NONAME } from "dns";
 // import InterestTag from "./InterestTag";
 // import InterestTagExample from "./InterestTag/InterestTagExample";
 
@@ -14,40 +15,45 @@ class Interest extends Component {
 
   HandlerPlus = e => {
     this.setState({ category: this.state.category.concat(e) }, () => {
-      console.log("category에 넣을때:", this.state.category);
-      console.log("Plus 함수 후 유무확인:", this.state.category.includes(e));
-      if (this.state.category.includes(e) === false) {
-        this.HandlerMinus(this.state.nowclick);
-      }
+      console.log("HandlerPlus:", this.state.category);
     });
   };
 
   HandlerMinus = e => {
+    let idx = this.state.category.indexOf(e);
     this.setState(
       {
-        category: this.state.category.pop(e)
+        category: this.state.category.splice(idx, 1)
       },
       () => {
-        console.log("HandlerMinus:", this.state.category);
+        console.log("HandlerMinus:", this.state.category.indexOf(e));
       }
     );
   };
 
   Handleclick = e => {
     this.setState({ nowclick: e.target.value }, () => {
-      console.log("클릭했을 때 :", this.state.nowclick);
-
-      // this.HandlerPlus(this.state.nowclick);
-      if (this.state.category.includes(e) === true) {
-        console.log("있어");
-        this.HandlerMinus(this.state.nowclick);
-      }
-      if (this.state.category.includes(e) === false) {
-        console.log("없어");
-
-        this.HandlerPlus(this.state.nowclick);
-      }
+      this.HandleOr(this.state.nowclick);
     });
+  };
+  HandleOr = e => {
+    if (this.state.category.includes(e) === true) {
+      console.log("내가있으면 요소가 삭제");
+      this.HandlerMinus(e);
+    } else if (this.state.category.includes(e) === false) {
+      console.log("플러스시작");
+      this.HandlerPlus(e);
+    }
+  };
+
+  oneofus = e => {
+    if (this.state.category.indexOf(e) !== -1) {
+      //해당 요소가 있으면
+      return this.state.category.indexOf(e);
+    } else if (this.state.category.indexOf(e) === -1) {
+      //해당 요소가 없으면
+      return undefined;
+    }
   };
 
   render() {
@@ -55,10 +61,6 @@ class Interest extends Component {
       <div className="int-box">
         <div className="interest-wrapper">
           <div className="interest-title">관심사</div>
-          {/* {InterestTagExample.example.map(e => (
-            <InterestTag category_name={e.category_name} info={this.Handler} />
-          ))}  
-          MAP함수 썼을 때*/}
 
           <ul class="ks-cboxtags">
             <ul class="ks-cboxtags">
