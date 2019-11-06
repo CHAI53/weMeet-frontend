@@ -1,0 +1,23 @@
+@import "reset.scss";
+
+.optionsWrapper {
+  margin-top: 50px;
+
+  .optionsTitle {
+    font-size: 18px;
+  }
+
+  .option-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    height: 100px;
+    border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+
+    .max-attendees {
+      display: flex;
+      font-size: 16px;
+    }
+  }
+}

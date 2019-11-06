@@ -1,0 +1,24 @@
+@import "reset.scss";
+
+.input-form {
+  position: relative;
+  margin-bottom: 50px;
+  .input-label {
+    margin-bottom: 10px;
+  }
+  input {
+    width: 600px;
+    height: 50px;
+    border-radius: 8px;
+    border: 1px solid rgba(46, 62, 72, 0.12);
+    font-size: $default-font-size;
+    padding: 20px;
+  }
+  .char-count {
+    position: absolute;
+    right: 60px;
+    bottom: 10px;
+    font-size: 12px;
+    opacity: 0.3;
+  }
+}

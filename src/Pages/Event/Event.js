@@ -16,7 +16,6 @@ class Event extends Component {
     sticky: false,
     data: mockUpData
   };
-
   // getData = () => {
   //   const { eventId } = this.props.match.params;
   //   fetch(`http://localhost:8000/api/event/${eventId}`)
@@ -38,6 +37,7 @@ class Event extends Component {
   render() {
     const { data } = this.state.data;
     const { sticky } = this.state;
+    console.log(this.props);
 
     return (
       <div className="event">

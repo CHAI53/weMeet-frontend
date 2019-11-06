@@ -1,0 +1,17 @@
+@import "reset.scss";
+
+.title {
+  width: 600px;
+  border-bottom: 1px solid rgba(46, 62, 72, 0.12);
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+
+  .create {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .groupName {
+    font-size: $default-font-size;
+  }
+}
