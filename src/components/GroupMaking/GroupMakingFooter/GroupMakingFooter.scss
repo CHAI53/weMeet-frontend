@@ -1,0 +1,55 @@
+.start-footer {
+  min-height: 30px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.45);
+  padding: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 73px;
+
+  .bounds {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+    .button-align {
+      display: flex;
+      justify-content: space-between;
+
+      .back-button {
+        background-color: #fff;
+        border: 1px solid #c5c4c4;
+        color: #757575;
+        fill: #757575;
+        padding: 10px 20px;
+        width: 206px;
+        height: 42px;
+        transition: background 0.15s;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        text-align: center;
+      }
+
+      .forward-button {
+        background-color: #f65858;
+        border: 1px solid #f65858;
+        color: #fff;
+        fill: #fff;
+        padding: 10px 20px;
+        width: 206px;
+        height: 42px;
+        transition: background 0.15s;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        text-align: center;
+      }
+    }
+  }
+}
