@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./CreatingEventOptions.scss";
 import CreatingEventCheckbox from "../CreatingEventCheckbox/CreatingEventCheckbox";
+import CreatingEventPayment from "../CreatingEventPayment/CreatingEventPayment";
 
 class CreatingEventOptions extends Component {
   constructor() {
@@ -12,16 +13,17 @@ class CreatingEventOptions extends Component {
   }
 
   handleClick = e => {
-    console.log(e);
     const name = e.target.name;
-    this.setState(prevState => ({
-      [name]: !prevState
-    }));
+    const currentState = this.state[name];
+    this.setState({
+      [name]: !currentState
+    });
   };
 
   render() {
-    const { handleClick } = this.state;
-    console.log(this.state);
+    const { handleClick } = this;
+    const { payment } = this.state;
+
     return (
       <div className="optionsWrapper">
         <div className="optionsTitle">옵션 설정</div>
@@ -33,6 +35,7 @@ class CreatingEventOptions extends Component {
           <div className="payment">이벤트 회비</div>
           <CreatingEventCheckbox name="payment" onClick={handleClick} />
         </div>
+        {payment && <CreatingEventPayment />}
       </div>
     );
   }
