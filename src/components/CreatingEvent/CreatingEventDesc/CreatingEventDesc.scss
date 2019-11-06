@@ -1,0 +1,31 @@
+@import "reset.scss";
+
+.desc-wrapper {
+  margin-top: 50px;
+  .input-label {
+    margin-bottom: 10px;
+  }
+
+  .subDescription {
+    font-size: $default-font-size;
+    color: $default-font-color;
+    margin-bottom: 10px;
+  }
+
+  .mainDesc {
+    width: 600px;
+    height: 100px;
+    border: 1px solid rgba(46, 62, 72, 0.12);
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 30px;
+    overflow: hidden;
+    line-height: 1.5;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .count {
+  }
+}

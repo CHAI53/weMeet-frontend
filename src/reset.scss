@@ -152,27 +152,15 @@ a {
       padding: 0;
     }
   }
+  input:focus {
+    outline: none;
+  }
   /* Remove excess padding and border in Firefox 4+ */
 }
 $theme-color-red: #f64060;
 $theme-color-blue: #00a2c7;
+$theme-background-color: #f6f7f8;
 $default-font-color: #757575;
 $default-font-size: 14px;
 $device-large: "only screen and (max-width : 840px)";
 $device-small: "only screen and (max-width : 640px)";
-// @font-face {
-//   font-family: "we-meet";
-//   src: url("Font/Regular.woff2") format("woff2");
-// }
-// @font-face {
-//   font-family: "we-meet";
-//   src: url("Font/Medium.woff2") format("woff2");
-// }
-// @font-face {
-//   font-family: "we-meet";
-//   src: url("Font/Bold.woff2") format("woff2");
-// }
-// @font-face {
-//   font-family: "we-meet";
-//   src: url("Font/Semibold.woff2") format("woff2");
-// }
