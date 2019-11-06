@@ -1,23 +1,26 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./SignupHeader.scss";
+import "./GroupMakingHeader.scss";
 
-class SignupHeader extends Component {
+class GroupMakingHeader extends Component {
   render() {
     return (
-      <nav id="signup-head">
-        <div class="head-logo">
+      <nav id="head">
+        <div id="head-logo">
           <Link to="/">
             <img
               src={require("Images/wemeet_transparent.png")}
               alt="logo"
               className="logo"
-            ></img>
+            />
           </Link>
         </div>
+        <button>
+          <span />
+        </button>
       </nav>
     );
   }
 }
 
-export default SignupHeader;
+export default GroupMakingHeader;

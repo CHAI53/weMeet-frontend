@@ -11,6 +11,7 @@ import Categories from "components/Categories";
 import BeforeLoginMain from "./Pages/BeforeLoginMain";
 import Login from "./Pages/Login";
 import Myprofile from "./Pages/Myprofile"
+import GroupMaking1 from "./Pages/GroupMaking1"
 
 class Routes extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class Routes extends React.Component {
           <Route exact path="/after_login_main" component={AfterLoginMain} />
           <Route exact path="/event/:id" component={Event} />
           <Route exact path="/myprofile" component={Myprofile}/>
+          <Route exact path="/groupmaking1" component={GroupMaking1} />
           </Switch>
       </Router>
     );
