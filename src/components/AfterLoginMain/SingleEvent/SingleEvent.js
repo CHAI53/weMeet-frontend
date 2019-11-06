@@ -2,7 +2,7 @@ import React from "react";
 import './SingleEvent.scss';
 
 export default function SingleEvent(props) {
-    const {key, groupName, eventName, expectMembers} = props;
+    const {groupName, eventName, expectMembers} = props;
     return (
         <li className="single-event-list">
             <div className="single-event-content">
