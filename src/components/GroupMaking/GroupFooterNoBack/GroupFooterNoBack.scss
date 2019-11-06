@@ -1,4 +1,4 @@
-.start-footer {
+.start-footer-without-back {
   min-height: 30px;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.45);
   padding: 16px;
@@ -17,23 +17,7 @@
 
     .button-align {
       display: flex;
-      justify-content: space-between;
-
-      .back-button {
-        background-color: #fff;
-        border: 1px solid #c5c4c4;
-        color: #757575;
-        fill: #757575;
-        padding: 10px 20px;
-        width: 206px;
-        height: 42px;
-        transition: background 0.15s;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.43;
-        text-align: center;
-      }
+      justify-content: flex-end;
 
       .forward-button {
         background-color: #f65858;
@@ -49,6 +33,24 @@
         font-weight: 500;
         line-height: 1.43;
         text-align: center;
+        cursor: pointer;
+      }
+
+      .forward-button:hover {
+        background-color: #f86161;
+        border: 1px solid #f86161;
+        color: #fff;
+        fill: #fff;
+        padding: 10px 20px;
+        width: 206px;
+        height: 42px;
+        transition: background 0.15s;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        text-align: center;
+        cursor: pointer;
       }
     }
   }

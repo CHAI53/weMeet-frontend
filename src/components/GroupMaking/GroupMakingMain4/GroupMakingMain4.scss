@@ -1,6 +1,5 @@
-.container {
+.container4 {
   .start-header {
-    position: sticky;
     min-height: 30px;
 
     .progress-bar {
@@ -10,7 +9,7 @@
     .progress-bar-inner {
       background-color: #0098ab;
       height: 100%;
-      width: 25%;
+      width: 100%;
     }
 
     .progress-step {
@@ -20,7 +19,7 @@
       padding: 16px 16px 24px;
       padding-bottom: 36px;
 
-      .step-count1 {
+      .step-count4 {
         text-align: center;
         font-size: 14px;
         color: #9b9b9b;
@@ -48,7 +47,7 @@
     .chunk {
       padding-bottom: 16px;
 
-      .step-headline1 {
+      .step-headline4 {
         color: #000;
         font-weight: bold;
         font-size: 42px;
@@ -58,43 +57,38 @@
 
       .topic-search {
         font-size: 16px;
-        margin-bottom: 36px;
         line-height: 1.5;
+        color: #000000;
       }
 
-      .input-wrapper {
-        position: relative;
-        display: block;
-      }
-
-      .group-name {
-        padding: 10px 20px;
-        line-height: 28px;
-        border: 1px solid #a2a2a2;
-        //#c80000 #0098ab;
-        box-shadow: none;
-        width: 100%;
-        height: 55.2px;
-        border-radius: 4px;
-        max-width: 100%;
-        margin: 0 0 4px;
-        font-size: 15px;
+      .description-step {
+        list-style-type: decimal;
+        padding-top: 16px;
+        padding-left: 16px;
+        font-size: 16px;
+        line-height: 1.5;
+        text-rendering: optimizeLegibility;
         color: #212121;
-        background: #fff;
-        display: block;
+        margin-bottom: 36px;
       }
 
-      .tiny {
-        color: #000;
-        position: absolute;
-        bottom: 8px;
-        right: 8px;
-        font-size: 12px;
-        line-height: 1.6;
-      }
+      .input-container {
+        .input-description {
+          position: relative;
+          width: 706px;
+          height: 180.5px;
 
-      .text-error {
-        display: none;
+          .description-text {
+            resize: auto;
+            background-color: #fcfcfc;
+            margin: 0;
+            border: 1px solid #a2a2a2;
+            border-radius: 4px;
+            padding: 20px;
+            color: #212121;
+            width: 100%;
+          }
+        }
       }
     }
   }

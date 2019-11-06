@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./GroupMakingMain.scss";
+import "./GroupMakingMain1.scss";
 
-class GroupMakingMain extends Component {
+class GroupMakingMain1 extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container1">
         <div className="start-header">
           <div className="progress-bar progress-horizontal">
             <div className="progress-bar-inner"></div>
@@ -30,7 +30,7 @@ class GroupMakingMain extends Component {
                 <input
                   group-name-error="error"
                   type="text"
-                  placeholder="원하시는 그룹명은 무엇인가요"
+                  placeholder="원하시는 그룹명을 적어주세요"
                   className="group-name"
                 />
                 <p char-count="true" class="tiny">
@@ -46,4 +46,4 @@ class GroupMakingMain extends Component {
   }
 }
 
-export default GroupMakingMain;
+export default GroupMakingMain1;
