@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./About.scss";
-import "react-dropzone-uploader/dist/styles.css";
+import "./library.scss";
 import Dropzone from "react-dropzone-uploader";
 
 class About extends Component {

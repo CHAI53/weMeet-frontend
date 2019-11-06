@@ -9,21 +9,17 @@ class InterestTag extends Component {
     };
   }
 
-  Handleclick = event => {
-    this.setState({ nowclick: event.target.name });
-    console.log("onClick===", this.state.nowclick);
-    // this.state.category.push(this.state.nowclick);
-    // console.log(this.test);
-    // this.setState({ category: this.state.category });
-    // this.setState({});
-    // console.log(this.state.category);
-    // this.setState({ choice: this.state.interest });
-    // console.log(this.state);
+  Handleclick = e => {
+    console.log(e.target.name);
+    this.setState({ nowclick: e.target.name }, () => {
+      // console.log("nowclick:", this.state.nowclick);
+    });
+    //console.log("Handler에 들어가기전 nowclick:", this.state.nowclick);
     this.props.info(this.state.nowclick);
-    console.log("setstateProps=====", this.props.info);
   };
 
   render() {
+    console.log(this.state);
     return (
       <button
         className="interest-tag"

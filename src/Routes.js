@@ -10,7 +10,6 @@ import Myprofile from "./Pages/Myprofile";
 import GroupMaking1 from "./Pages/GroupMaking1";
 import CreatingEvent from "./Pages/CreatingEvent";
 
-
 class Routes extends React.Component {
   render() {
     return (
@@ -30,7 +29,6 @@ class Routes extends React.Component {
           <Route exact path="/event/:id" component={Event} />
           <Route exact path="/myprofile" component={Myprofile} />
           <Route exact path="/groupmaking1" component={GroupMaking1} />
-
         </Switch>
       </Router>
     );
