@@ -29,7 +29,7 @@ class LoginMain extends Component {
           console.log(localStorage);
         }
 
-        this.props.history.push("/");
+        this.props.history.push("/after_login_main");
       });
     console.log(this.state);
   };

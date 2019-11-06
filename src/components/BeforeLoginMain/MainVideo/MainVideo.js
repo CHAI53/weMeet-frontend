@@ -6,7 +6,7 @@ class MainVideo extends Component {
     return (
       <div className="main-wrapper">
         <div className="video-wrapper">
-          <video className="main-video" loop autoPlay>
+          <video className="main-video" loop autoPlay muted>
             <source
               src="https://www.meetup.com/mu_static/ko-KR/video.dddafbfe.mp4"
               type="video/mp4"
