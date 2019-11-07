@@ -44,30 +44,48 @@
 }
 
 .main-nav-right {
-    margin-left: 355px;
-}
-
-.main-nav-right-in {
-    padding: 10px 20px;
-    border: 1px solid #BBBCBC;
-    color: rgb(117, 117, 117);
-    fill: #A7A8A9;
-    border-radius: 10px;
-}
-
-.dropdown-btn {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-}
+    justify-content: row;
+    align-items: flex-start;
+    margin-left: 355px;
 
-.chevron-down {
-    display: inline-block;
-    background-image: url('../../../Images/chevron_down.png');
-    background-size: contain;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-}
+    .main-nav-right-in {
+        padding: 10px 20px;
+        border: 1px solid #BBBCBC;
+        color: rgb(117, 117, 117);
+        fill: #A7A8A9;
+        border-radius: 10px;
+        background-color: rgb(246, 247, 248);
+        cursor: pointer;
+    
+        .dropdown-btn {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+        
+            .chevron-down {
+                display: inline-block;
+                background-image: url('../../../Images/chevron_down.png');
+                background-size: contain;
+                width: 20px;
+                height: 20px;
+                margin-left: 10px;
+            }
+        }
+    }
 
-.dropdown-list {}
+    .main-nav-right-in-event {
+        margin-left: 20px;
+        padding: 10px 20px;
+        border: 1px solid rgb(246, 88, 88);
+        color: rgb(255, 255, 255);
+        fill:  rgb(255, 255, 255);
+        border-radius: 10px;
+        background-color: rgb(246, 88, 88);
+        cursor: pointer;
+    
+        .master-event-add-btn {
+            color: white;
+        }
+    }
+}

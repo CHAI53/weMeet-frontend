@@ -1,1 +1,1 @@
-export { default } from './GroupPageFooter';
+export { default } from "./GroupPageFooter";

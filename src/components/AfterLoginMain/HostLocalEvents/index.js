@@ -1,1 +1,1 @@
-export { default } from './HostLocalEvents';
+export { default } from "./HostLocalEvents";
