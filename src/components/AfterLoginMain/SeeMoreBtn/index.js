@@ -1,1 +1,1 @@
-export { default } from './SeeMoreBtn';
+export { default } from "./SeeMoreBtn";

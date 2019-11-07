@@ -1,70 +1,69 @@
-.after-login-main-footer-wrapper{
-    background-color: #0f1721;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
+.after-login-main-footer-wrapper {
+  background-color: #0f1721;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
 
-    .after-login-main-footer-feed{
-        max-width: 960px;
-        padding: 24px 16px 8px 16px;
-        margin:0 auto;
+  .after-login-main-footer-feed {
+    max-width: 960px;
+    padding: 24px 16px 8px 16px;
+    margin: 0 auto;
 
-        .after-login-main-footer-feed-bottom-wrapper{
-            
-            font-size: 13px;
-            display: block;
+    .after-login-main-footer-feed-bottom-wrapper {
+      font-size: 13px;
+      display: block;
 
-            .after-login-main-footer-text{
-                display: inline-block;
-                margin-bottom: 16px;
-                padding-right: 11px;
-                font-weight: 400;
-                font-size: 16px;
-                margin-top: 16px;
-            }
+      .after-login-main-footer-text {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding-right: 11px;
+        font-weight: 400;
+        font-size: 16px;
+        margin-top: 16px;
+      }
 
-            .after-login-main-footer-feed-helper{
-                color: rgba(255, 255, 255, 0.7);
-                line-height: 20px;
-                .after-login-main-footer-helper-first{
-                    padding-right: 8px;
-                }
-            }
+      .after-login-main-footer-feed-helper {
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 20px;
+        .after-login-main-footer-helper-first {
+          padding-right: 8px;
         }
-
-        .after-login-main-footer-feed-follow{
-            display: block;
-            margin-bottom: 32px;
-            
-            img{
-                width:20px;
-                height:20px;
-                filter:opacity(.5) drop-shadow(0 0 0 #ffffff);
-                margin-top: 10px;
-                margin-right: 15px;
-            }
-        }
-
-        .after-login-main-footer-feed-top{
-            margin-bottom: 16px;
-
-            .after-login-main-footer-feed-top-login{
-                float: right;
-            }
-        }
-
-        .after-login-main-footer-feed-top-under{
-            padding-top: 16px;
-            margin-bottom: 30px;
-            height: 39px;
-            border-top: 1px solid rgba(255,255,255,.12);
-
-            .after-login-main-footer-text{
-                display: inline-block;
-                margin-bottom: 16px;
-                padding-right: 8px;
-                font-weight: 400;
-            }
-        }
+      }
     }
+
+    .after-login-main-footer-feed-follow {
+      display: block;
+      margin-bottom: 32px;
+
+      img {
+        width: 20px;
+        height: 20px;
+        filter: opacity(0.5) drop-shadow(0 0 0 #ffffff);
+        margin-top: 10px;
+        margin-right: 15px;
+      }
+    }
+
+    .after-login-main-footer-feed-top {
+      margin-bottom: 16px;
+
+      .after-login-main-footer-feed-top-login {
+        float: right;
+      }
+    }
+
+    .after-login-main-footer-feed-top-under {
+      padding-top: 16px;
+      margin-bottom: 30px;
+      height: 39px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+      .after-login-main-footer-text {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding-right: 8px;
+        font-weight: 400;
+      }
+    }
+  }
 }
