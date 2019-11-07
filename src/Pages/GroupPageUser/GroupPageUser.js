@@ -11,7 +11,8 @@ import Flickity from "react-flickity-component";
 import EventClip from "components/BeforeLoginMain/Feeds/EventClip";
 import "components/BeforeLoginMain/Feeds/flickity.scss";
 import FeedsExample from "components/BeforeLoginMain/Feeds/FeedsExample.js";
-import GroupPageFooter from "components/GroupPageUser/GroupPageFooter";
+// import GroupPageFooter from "components/GroupPageUser/GroupPageFooter";
+import FooterBottom from "components/BeforeLoginMain/Footer/FooterBottom";
 
 export class GroupPageUser extends Component {
   componentDidMount() {
@@ -53,7 +54,8 @@ export class GroupPageUser extends Component {
             </div>
           </div>
         </div>
-        <GroupPageFooter />
+        {/* <GroupPageFooter /> */}
+        <FooterBottom />
       </div>
     );
   }

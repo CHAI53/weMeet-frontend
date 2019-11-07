@@ -15,7 +15,7 @@ export class UpcomingEvents extends Component {
     return (
       <div className="upcoming-events">
         <div className="upcoming-events-in">
-          <Titlebar titlename="예정된 이벤트 5+개" />
+          <Titlebar titlename="예정된 이벤트" />
           <div className="upcoming-contents">
             {this.state.data.map((events, i) => {
               return (
