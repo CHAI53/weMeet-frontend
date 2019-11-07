@@ -100,7 +100,7 @@ class CreatingEvent extends Component {
       maxAttendeeVal
     };
     alert(JSON.stringify(data));
-    // fetch(`http://localhost:8000/api/create_event/${group_name}`, {
+    // fetch(`http://localhost:8000/event?group=${group_name}`, {
     //   method: "post",
     //   headers: {
     //     Authorization: localStorage.getItem("user_token")

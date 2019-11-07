@@ -20,11 +20,7 @@ class Routes extends React.Component {
           <Route exact path="/myprofile" component={Myprofile} />
           <Route exact path="/test" component={Categories} />
           <Route exact path="/after_login_main" component={AfterLoginMain} />
-          <Route
-            exact
-            path="/:group_name/create_event"
-            component={CreatingEvent}
-          />
+          <Route exact path="/:groupId/event" component={CreatingEvent} />
           <Route exact path="/event/:id" component={Event} />
         </Switch>
       </Router>
