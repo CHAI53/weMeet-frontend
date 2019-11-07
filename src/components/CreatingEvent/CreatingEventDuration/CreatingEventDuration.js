@@ -20,6 +20,7 @@ class CreatingEventDuration extends Component {
           value={select}
           onChange={handleChange}
         >
+          <option>시간을 선택하세요</option>
           <option value="1">1시간</option>
           <option value="2">2시간</option>
           <option value="3">3시간</option>

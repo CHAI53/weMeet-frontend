@@ -28,17 +28,10 @@ class CreatingEvent extends Component {
       descCount: 4000,
       wayToFind: "",
       wayCount: 4000,
-      location: "위워크 선릉역"
+      location: "위워크 선릉역",
+      maxAttendeeVal: 0
     };
   }
-  // insert into location (name,lon,lat,address) values ("위워크 삼성역2",”37.5034702”,”127.0605648”,”서울특별시 강남구 대치동 테헤란로 518”);
-  // insert into location (name,lon,lat,address) values ("위워크 삼성역",”37.5010702”,”127.0161064”,”서울특별시 삼성1동 테헤란로 507”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역2",”37.5010702”,”127.0161064”,”서울특별시 강남구 삼성동 테헤란로 427”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역3",”37.5010702”,”127.0161064”,”서울특별시 강남구 대치동 889-41”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역",”37.5010702”,”127.0161064”,”서울특별시 강남구 역삼동 테헤란로 302”);
-  // insert into location (name,lon,lat,address) values ("위워크 역삼역",”37.5010702”,”127.0161064”,”서울특별시 역삼동 테헤란로 142”);
-  // insert into location (name,lon,lat,address) values ("위워크 강남역2",”37.5010702”,”127.0161064”,”서울특별시 강남구 역삼동 테헤란로5길 7”);
-  // insert into location (name,lon,lat,address) values ("위워크 강남역",”37.5010702”,”127.0161064”,”서울특별시 서초구 서초동 강남대로 373”);
 
   handleDrop = imgFile => {
     const reader = new FileReader();
@@ -93,7 +86,8 @@ class CreatingEvent extends Component {
       endDate,
       desc,
       wayToFind,
-      location
+      location,
+      maxAttendeeVal
     } = this.state;
     const data = {
       title,
@@ -102,7 +96,8 @@ class CreatingEvent extends Component {
       endDate,
       desc,
       wayToFind,
-      location
+      location,
+      maxAttendeeVal
     };
     alert(JSON.stringify(data));
     // fetch(`http://localhost:8000/api/create_event/${group_name}`, {
@@ -133,6 +128,14 @@ class CreatingEvent extends Component {
     this.setState({ location: location });
   };
 
+  handleMaxVal = e => {
+    console.log(e.target.value);
+    const maxVal = parseInt(e.target.value);
+    e.target.value === ""
+      ? this.setState({ maxAttendeeVal: 0 })
+      : typeof maxVal === "number" && this.setState({ maxAttendeeVal: maxVal });
+  };
+
   render() {
     const {
       handleDrop,
@@ -144,7 +147,8 @@ class CreatingEvent extends Component {
       handleSubmit,
       handleCancel,
       handleWay,
-      handleLocation
+      handleLocation,
+      handleMaxVal
     } = this;
     const {
       uploadedImage,
@@ -156,9 +160,10 @@ class CreatingEvent extends Component {
       descCount,
       wayToFind,
       wayCount,
-      location
+      location,
+      maxAttendeeVal
     } = this.state;
-    console.log(this.state.location);
+
     return (
       <div className="create-event">
         <Nav />
@@ -202,7 +207,10 @@ class CreatingEvent extends Component {
                 location={location}
                 handleLocation={handleLocation}
               />
-              <CreatingEventOptions />
+              <CreatingEventOptions
+                handleMaxVal={handleMaxVal}
+                maxAttendeeVal={maxAttendeeVal}
+              />
             </div>
           </div>
           <div className="main-right">

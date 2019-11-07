@@ -1,0 +1,113 @@
+.single-upcoming {
+    margin-bottom: 20px;
+}
+
+.single-upcoming-in {
+    padding: 20px;
+    background-color:rgb(255, 255, 255);
+    border-radius: 8px;
+
+    &:hover {
+        box-shadow: 0 0 4px 0 rgba(46,62,72,.12), 0 4px 12px 0 rgba(46,62,72,.12);
+    }
+}
+
+.single-upcoming-brief {
+    cursor: pointer;
+}
+
+.single-upcoming-brief-in {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.single-upcoming-brief-left {}
+
+.single-upcoming-date {
+    color: #0098ab;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.28px;
+    line-height:20.02px;
+    word-spacing: .1em;
+    margin-bottom: 8px;
+    word-spacing:1.4px;
+}
+
+.single-upcoming-name {
+    color:rgb(33, 33, 33);
+    font-size:20px;
+    font-weight:600;
+    margin-bottom:8px;
+    max-height:56px;
+    line-height:29px;
+}
+
+.single-upcoming-place {
+    display: flex;
+    align-items: center;
+    font-size:14px;
+    font-weight:400;
+    color:rgb(117, 117, 117);
+    line-height:20.02px;
+}
+
+.place-icon {
+    display: inline-block;
+    background-image: url("../../../../Images/group_location.png");
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.single-upcoming-brief-right {}
+
+.single-upcoming-img {
+    display: inline-block;
+    background-position: 50%;
+    background-size: contain;
+    width: 180px;
+    height: 100px;
+    border-radius: 8px;
+}
+
+.single-upcoming-text {
+    margin-bottom: 20px;;
+}
+
+.single-upcoming-text-in {
+    max-height: 60px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size:14px;
+    font-weight:400;
+    line-height:20.02px;
+    padding-top: 20px;
+}
+
+.single-upcoming-attend {
+}
+
+.single-upcoming-attend-in {
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.single-attend-btn {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color:rgb(0, 152, 171);
+    font-size:14px;
+    font-weight:500;
+    border: 1px solid rgb(0, 152, 171);
+    border-radius: 10px;
+
+    &:hover {
+        color: #fff;
+        background-color: rgb(0, 152, 171);
+    }
+}
