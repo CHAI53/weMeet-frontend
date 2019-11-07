@@ -1,7 +1,20 @@
 import React, { Component } from "react";
+import { isUserLoggedIn } from "utils/common.js";
 import "./FooterBottom.scss";
 
 class FooterBottom extends Component {
+  state = {
+    userStatus: false
+  };
+
+  HanleClick = () => {
+    localStorage.removeItem("user_token");
+  };
+
+  componentDidMount() {
+    isUserLoggedIn() && this.setState({ userStatus: true });
+  }
+
   render() {
     return (
       <div className="bottom-wrapper">
@@ -18,7 +31,13 @@ class FooterBottom extends Component {
                 <a href="/signup">회원가입</a>
               </div>
               <div className="text">
-                <a href="/login">로그인</a>
+                {!this.state.userStatus ? (
+                  <a href="/login">로그인</a>
+                ) : (
+                  <a href="/" onClick={this.HanleClick}>
+                    로그아웃
+                  </a>
+                )}
               </div>
               <div className="text">
                 <a href="/">도움말</a>
