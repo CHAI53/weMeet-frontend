@@ -112,7 +112,7 @@ class About extends Component {
       );
     };
 
-    // console.log(localStorage.getItem("user_token"));
+    // 2019-11-07T23:02:29
     let year = () => {
       let date = "";
       if (this.state.data) {

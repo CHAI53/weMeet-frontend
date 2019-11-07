@@ -38,18 +38,6 @@ class Interest extends Component {
     });
   };
 
-  // HandlerMinus = e => {
-  //   let idx = this.state.category.indexOf(e);
-  //   this.setState(
-  //     {
-  //       category: this.state.category.splice(idx, 1)
-  //     },
-  //     () => {
-  //       console.log("HandlerMinus:", this.state.category.indexOf(e));
-  //     }
-  //   );
-  // };
-
   Handleclick = e => {
     this.setState({ nowclick: e.target.id }, () => {
       this.HandleOr(this.state.nowclick);
@@ -58,16 +46,6 @@ class Interest extends Component {
   HandleOr = e => {
     this.HandlerPlus(e);
   };
-
-  // oneofus = e => {
-  //   if (this.state.category.indexOf(e) !== -1) {
-  //     //해당 요소가 있으면
-  //     return this.state.category.indexOf(e);
-  //   } else if (this.state.category.indexOf(e) === -1) {
-  //     //해당 요소가 없으면
-  //     return undefined;
-  //   }
-  // };
 
   render() {
     return (
