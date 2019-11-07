@@ -1,14 +1,10 @@
-.bounds {
+#register-form {
   margin-left: auto;
   margin-right: auto;
   max-width: 840px;
   padding: 24px 16px 8px;
   width: 100%;
   text-align: center;
-
-  .link {
-    text-decoration: none;
-  }
 
   .margin-bottom {
     margin-bottom: 16px;
@@ -73,6 +69,7 @@
       border-color: #ed1c40;
       transition: background 0.15s;
       font-size: 16px;
+      height: 48px;
     }
 
     .button-primary:hover {
@@ -85,6 +82,110 @@
       text-align: center;
       padding: 0.5em;
       border-radius: 3px;
+    }
+  }
+}
+
+#register-form {
+  .login-bot {
+    height: 150px;
+    padding: 0;
+    position: relative;
+    box-shadow: none;
+
+    .login-facebook {
+      .login-facebook-button:hover {
+        background-color: #1e4392;
+      }
+      .login-facebook-icon {
+        position: absolute;
+        width: 38px;
+        left: 8px;
+        top: 4px;
+        padding: 7px 7px 7px 0px;
+        border-right: 1px solid rgb(104, 106, 107);
+      }
+      .login-facebook-button {
+        cursor: pointer;
+        width: 100%;
+        padding: 16px 14px 13px 56px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        border-radius: 3px;
+        text-align: center;
+        background-color: #3b5998;
+        color: #fff;
+        margin-bottom: 16px;
+      }
+    }
+    .login-google {
+      .login-google-button:hover {
+        background-color: #f2f2f2;
+      }
+      .login-google-icon {
+        position: absolute;
+        width: 30px;
+        left: 16px;
+        bottom: 38px;
+        padding: 14px 12px 14px 0px;
+        border-right: 1px solid rgb(104, 106, 107);
+      }
+      .login-google-button {
+        cursor: pointer;
+        width: 100%;
+        padding: 16px 14px 13px 56px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        // border-radius: 3px;
+        // text-align: center;
+        background-color: #fff;
+        color: rgba(0, 0, 0, 0.54);
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+
+.register-fieldset {
+  .signupInput {
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-weight: bold;
+
+    label {
+      display: block;
+      text-align: left;
+    }
+
+    .register-field-name {
+      background-color: #fafafa;
+      border-radius: 3px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: none;
+      margin: 0 0 4px;
+      width: 100%;
+      padding: 5px;
+      height: 48px;
+    }
+
+    .register-field-name-turn {
+      background-color: #ffffff;
+      border-radius: 3px;
+      border: 1px solid #ff911a;
+      box-shadow: none;
+      margin: 0 0 4px;
+      padding: 5px;
+      width: 100%;
+      height: 48px;
+    }
+
+    .register-error-name {
+      color: #ff911a;
+      font-size: 16px;
+      font-weight: normal;
+      text-align: left;
     }
   }
 }

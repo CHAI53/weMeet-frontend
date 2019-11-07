@@ -10,7 +10,7 @@ class Signup extends Component {
         <SignupHeader />
           <div class="register-panels">
             <div class="register-panel-center">
-              <SignupForm />
+              <SignupForm />              
             </div>
           </div>
       </div>

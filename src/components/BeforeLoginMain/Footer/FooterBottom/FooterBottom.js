@@ -7,7 +7,7 @@ class FooterBottom extends Component {
       <div className="bottom-wrapper">
         <div className="bottom-wrapper-top">
           <div className="bottom-wrapper-top-top">
-            <a href="/">새 그룹 시작하기</a>
+            <a href="/signup">새 그룹 시작하기</a>
           </div>
           <div className="bottom-wrapper-top-bottom">
             <div className="bottom-wrapper-top-bottom-group">
@@ -15,7 +15,7 @@ class FooterBottom extends Component {
                 <span>내 계정</span>
               </div>
               <div className="text">
-                <a href="/">회원가입</a>
+                <a href="/signup">회원가입</a>
               </div>
               <div className="text">
                 <a href="/login">로그인</a>

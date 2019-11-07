@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./SignupHeader.scss";
 
 class SignupHeader extends Component {
-  render(){
-    return(
-      <nav id="head">
-        <div id="head-logo">
-          <a rel="home" href="https://www.meetup.com/ko-KR/">
-            <img className="logo" alt="logo" src="https://secure.meetupstatic.com/s/img/642287997414509021596/logo/svg/logo--mSwarm--2color.svg" />
-          </a>
+  render() {
+    return (
+      <nav id="signup-head">
+        <div class="head-logo">
+          <Link to="/">
+            <img
+              src={require("Images/wemeet_transparent.png")}
+              alt="logo"
+              className="logo"
+            ></img>
+          </Link>
         </div>
       </nav>
     );
