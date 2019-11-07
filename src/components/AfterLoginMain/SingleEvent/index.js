@@ -1,1 +1,1 @@
-export { default } from './SingleEvent';
+export { default } from "./SingleEvent";

@@ -1,1 +1,1 @@
-export {default} from './AfterLoginMainFooter';
+export { default } from "./AfterLoginMainFooter";
