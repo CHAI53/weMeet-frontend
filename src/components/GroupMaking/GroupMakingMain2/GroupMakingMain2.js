@@ -17,7 +17,7 @@ class GroupMakingMain2 extends Component {
           <div className="center">
             <div className="chunk">
               <h2 className="step-headline2">
-                <span>이제 그룹에 대해서 설명해주세요</span>
+                <span>그룹에 대해서 설명해주세요</span>
               </h2>
               <p className="topic-search">
                 <span>
@@ -45,11 +45,11 @@ class GroupMakingMain2 extends Component {
                     rows="6"
                     minLength="50"
                     error="필수사항"
-                  />
+                  />{" "}
+                  <ul id="description-error">
+                    <li>필수사항</li>
+                  </ul>
                 </div>
-                <ul id="description-error">
-                  <li>필수사항</li>
-                </ul>
               </div>
               <div className="example-container">
                 <div className="example-bar">
@@ -60,11 +60,19 @@ class GroupMakingMain2 extends Component {
                       alt="lightbulb"
                     />
                   </div>
-                  <div className="lightbulb-example">
+                  <div className="example-icon">
                     <span>예시: </span>
                   </div>
                 </div>
-                <div></div>
+                <div className="description-example">
+                  <p>
+                    "이 그룹은 하이킹, 암벽등반, 캠핑, 카약, 볼더링 등에
+                    관심있는 사람을 위한 그룹입니다. 초보부터 전문가까지 레벨에
+                    상관없이 모두 환영합니다. 야외 스포츠를 사랑하는 사람들을
+                    만나기 위해 이 그룹을 시작했습니다. 다른분들과 같이 야외
+                    스포츠를 즐길 날을 기대합니다."
+                  </p>
+                </div>
                 <div></div>
               </div>
             </div>

@@ -45,7 +45,7 @@
     }
 
     .chunk {
-      padding-bottom: 16px;
+      padding-bottom: 26px;
 
       .step-headline2 {
         color: #000;
@@ -77,7 +77,7 @@
           position: relative;
           width: 706px;
           height: 180.5px;
-          margin-bottom: 36px;
+          margin-bottom: 46px;
 
           .description-text {
             resize: auto;
@@ -99,7 +99,7 @@
             font-size: 16px;
           }
         }
-        .description-error {
+        #description-error {
           display: block;
           margin: 0;
           padding: 0;
@@ -116,14 +116,36 @@
         position: relative;
         border-color: #f6f7f8;
         background-color: #f6f7f8;
+
         .example-bar {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+
           .lightbulb-container {
+            display: inline-block;
+            margin-right: 10px;
+
             .lightbulb {
+              border: 0;
+              display: block;
+              line-height: 0;
+              margin: 0;
+              padding: 0;
             }
           }
-          .lightbulb-example {
-            font-weight: bold;
+          .example-icon {
+            font-weight: 500;
+            color: #000;
+            display: inline-block;
+            align-items: center;
           }
+        }
+        .description-example {
+          margin-top: 16px;
+          font-size: 16px;
+          line-height: 1.24;
+          margin-bottom: 16px;
         }
       }
     }

@@ -61,35 +61,21 @@
         line-height: 1.5;
         color: #000000;
       }
+    }
+    .imageUpload-wrapper {
+      height: auto;
+      display: relative;
+    }
+    .upload-guide {
+      position: relative;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 16px;
 
-      .description-step {
-        list-style-type: decimal;
-        padding-top: 16px;
-        padding-left: 16px;
-        font-size: 16px;
-        line-height: 1.5;
-        text-rendering: optimizeLegibility;
-        color: #212121;
-        margin-bottom: 36px;
-      }
-
-      .input-container {
-        .input-description {
-          position: relative;
-          width: 706px;
-          height: 180.5px;
-
-          .description-text {
-            resize: auto;
-            background-color: #fcfcfc;
-            margin: 0;
-            border: 1px solid #a2a2a2;
-            border-radius: 4px;
-            padding: 20px;
-            color: #212121;
-            width: 100%;
-          }
-        }
+      p {
+        position: absolute;
+        top: 25px;
+        left: 25px;
       }
     }
   }
