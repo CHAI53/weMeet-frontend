@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { makeKorDate } from "utils/common.js";
 import "./Date.scss";
 
 class Date extends Component {
@@ -6,18 +7,18 @@ class Date extends Component {
     super(props);
     this.state = {
       time: props.date,
-      date: `${this.getDate(props.date)}일`,
-      month: `${props.date.slice(5, 7)}월`
+      date: makeKorDate(props.date, "date"),
+      month: makeKorDate(props.date, "month")
     };
   }
 
-  getDate = date => {
-    if (date[8] === "0") {
-      return date.slice(9, 10);
-    } else {
-      return date.slice(8, 10);
-    }
-  };
+  // getDate = date => {
+  //   if (date[8] === "0") {
+  //     return date.slice(9, 10);
+  //   } else {
+  //     return date.slice(8, 10);
+  //   }
+  // };
 
   render() {
     const { time, date, month } = this.state;
