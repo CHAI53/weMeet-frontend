@@ -3,12 +3,15 @@ import "./GroupMainTitle.scss";
 import GroupMainTitleData from "./GroupMainTitleData";
 
 export class GroupMainTitle extends Component {
-  constructor() {
-    super();
-    this.state = {
-      data: GroupMainTitleData
-    };
-  }
+  state = {
+    data: GroupMainTitleData
+  };
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     data: GroupMainTitleData
+  //   };
+  // }
 
   render() {
     const GroupPageTitleImg = src => ({

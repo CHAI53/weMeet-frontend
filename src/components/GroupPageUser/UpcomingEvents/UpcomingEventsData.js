@@ -5,7 +5,7 @@ const UpcomingEventsData = [
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: `https://secure.meetupstatic.com/photos/event/3/9/3/5/600_486374645.jpeg`,
+    imageurl: require("../../../Images/group_event_sample.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -67,7 +67,7 @@ const UpcomingEventsData = [
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: `https://secure.meetupstatic.com/photos/event/3/9/3/5/600_486374645.jpeg`,
+    imageurl: require("../../../Images/group_event_sample.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -129,7 +129,7 @@ const UpcomingEventsData = [
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: `https://secure.meetupstatic.com/photos/event/3/9/3/5/600_486374645.jpeg`,
+    imageurl: require("../../../Images/group_event_sample.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -191,7 +191,7 @@ const UpcomingEventsData = [
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: `https://secure.meetupstatic.com/photos/event/3/9/3/5/600_486374645.jpeg`,
+    imageurl: require("../../../Images/group_event_sample.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
