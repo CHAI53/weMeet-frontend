@@ -8597,6 +8597,13 @@ react-dom@^16.11.0:
     prop-types "^15.6.2"
     scheduler "^0.17.0"
 
+react-dropzone-uploader@^2.10.2:
+  version "2.10.2"
+  resolved "https://registry.yarnpkg.com/react-dropzone-uploader/-/react-dropzone-uploader-2.10.2.tgz#1fed6bbcc5c49feaf70d2982467fe88e2c238c99"
+  integrity sha512-m7TlDGsgQNRUewh1nZmUWKKhs9CiFB66Pbm6zfQJjc2AD2xCCZU/sgXcb8P+w7xzr8APK+5gT6orJrKzZE4f5w==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+
 react-dropzone@^10.1.10:
   version "10.1.10"
   resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-10.1.10.tgz#f340290dfc26ac09ad68abc020ab6232c23d6cf3"

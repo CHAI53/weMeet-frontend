@@ -37,7 +37,6 @@ class Event extends Component {
   render() {
     const { data } = this.state.data;
     const { sticky } = this.state;
-    console.log(this.props);
 
     return (
       <div className="event">
