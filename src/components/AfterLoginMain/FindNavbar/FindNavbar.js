@@ -29,14 +29,12 @@ export class FindNavbar extends Component {
 
   handleScroll = () => {
     // const currentScrollY = window.scrollY;
-
-    this.setState({ invertedNavbar: window.scrollY < 212 });
-
     // if (currentScrollY >= 212) {
     //   this.setState({ invertedNavbar: false });
     // } else {
     //   this.setState({ invertedNavbar: true });
     // }
+    this.setState({ invertedNavbar: window.scrollY < 212 });
   };
 
   render() {

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./GroupMainNavbar.scss";
 
 export class GroupMainNavbar extends Component {
@@ -9,6 +10,11 @@ export class GroupMainNavbar extends Component {
   componentDidMount() {
     // api 호출
   }
+
+  handleclick = () => {
+    const id = this.props.groupId;
+    this.props.history.push(`/${id}/event`);
+  };
 
   render() {
     return (
@@ -33,7 +39,10 @@ export class GroupMainNavbar extends Component {
             </div>
             <div>
               {this.state.admin && (
-                <div className="main-nav-right-in-event">
+                <div
+                  onClick={this.handleclick}
+                  className="main-nav-right-in-event"
+                >
                   <div className="master-event-add-btn">
                     <div>일정 등록</div>
                   </div>
@@ -47,4 +56,4 @@ export class GroupMainNavbar extends Component {
   }
 }
 
-export default GroupMainNavbar;
+export default withRouter(GroupMainNavbar);

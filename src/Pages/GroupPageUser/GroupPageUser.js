@@ -25,7 +25,7 @@ export class GroupPageUser extends Component {
         <AfterLogInNav />
         <div className="group-main">
           <GroupMainTitle />
-          <GroupMainNavbar />
+          <GroupMainNavbar groupId={this.props.match.params.id} />
           <div className="group-main-contents-wrapper">
             <div className="group-main-contents">
               <div className="group-main-contents-in">
