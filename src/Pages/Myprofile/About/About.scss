@@ -38,7 +38,7 @@
   }
   .about-feeds-first-right {
     .about-feeds-right-gender-active- {
-      .gender-man {
+      .gender-M {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;
@@ -47,11 +47,11 @@
         font-weight: 600;
         color: white;
       }
-      .gender-man:hover {
+      .gender-M:hover {
         background-color: #ffffff;
         color: #00a2c7;
       }
-      .gender-woman {
+      .gender-F {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;
@@ -60,7 +60,7 @@
         font-weight: 600;
         color: white;
       }
-      .gender-woman:hover {
+      .gender-F:hover {
         background-color: #ffffff;
         color: #00a2c7;
       }
@@ -79,8 +79,8 @@
       }
     }
 
-    .about-feeds-right-gender-active-man {
-      .gender-man {
+    .about-feeds-right-gender-active-M {
+      .gender-M {
         background-color: rgb(45, 93, 116);
         width: 30px;
         margin-right: 10px;
@@ -89,7 +89,7 @@
         font-weight: 600;
         color: white;
       }
-      .gender-woman {
+      .gender-F {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;
@@ -108,8 +108,8 @@
         color: white;
       }
     }
-    .about-feeds-right-gender-active-woman {
-      .gender-woman {
+    .about-feeds-right-gender-active-F {
+      .gender-F {
         background-color: rgb(45, 93, 116);
         width: 30px;
         margin-right: 10px;
@@ -118,7 +118,7 @@
         font-weight: 600;
         color: white;
       }
-      .gender-man {
+      .gender-M {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;
@@ -138,7 +138,7 @@
       }
     }
     .about-feeds-right-gender-active-other {
-      .gender-man {
+      .gender-M {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;
@@ -147,7 +147,7 @@
         font-weight: 600;
         color: white;
       }
-      .gender-woman {
+      .gender-F {
         width: 30px;
         margin-right: 10px;
         border: 1px solid #00a2c7;

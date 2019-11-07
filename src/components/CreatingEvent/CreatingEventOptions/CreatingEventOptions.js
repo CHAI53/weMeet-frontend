@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./CreatingEventOptions.scss";
 import CreatingEventCheckbox from "../CreatingEventCheckbox/CreatingEventCheckbox";
 import CreatingEventPayment from "../CreatingEventPayment/CreatingEventPayment";
+import CreatingEventMaxAttendee from "../CreatingEventMaxAttendee/CreatingEventMaxAttendee";
 
 class CreatingEventOptions extends Component {
   constructor() {
@@ -22,7 +23,8 @@ class CreatingEventOptions extends Component {
 
   render() {
     const { handleClick } = this;
-    const { payment } = this.state;
+    const { payment, maxAttendee } = this.state;
+    const { maxAttendeeVal, handleMaxVal } = this.props;
 
     return (
       <div className="optionsWrapper">
@@ -31,6 +33,12 @@ class CreatingEventOptions extends Component {
           <div className="max-attendees">최대 참석자 수</div>
           <CreatingEventCheckbox name="maxAttendee" onClick={handleClick} />
         </div>
+        {maxAttendee && (
+          <CreatingEventMaxAttendee
+            maxAttendeeVal={maxAttendeeVal}
+            handleMaxVal={handleMaxVal}
+          />
+        )}
         <div className="option-box">
           <div className="payment">이벤트 회비</div>
           <CreatingEventCheckbox name="payment" onClick={handleClick} />

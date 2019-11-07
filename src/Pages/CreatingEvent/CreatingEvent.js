@@ -28,23 +28,18 @@ class CreatingEvent extends Component {
       descCount: 4000,
       wayToFind: "",
       wayCount: 4000,
-      location: "위워크 선릉역"
+      location: "위워크 선릉역",
+      maxAttendeeVal: 0
     };
   }
-  // insert into location (name,lon,lat,address) values ("위워크 삼성역2",”37.5034702”,”127.0605648”,”서울특별시 강남구 대치동 테헤란로 518”);
-  // insert into location (name,lon,lat,address) values ("위워크 삼성역",”37.5010702”,”127.0161064”,”서울특별시 삼성1동 테헤란로 507”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역2",”37.5010702”,”127.0161064”,”서울특별시 강남구 삼성동 테헤란로 427”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역3",”37.5010702”,”127.0161064”,”서울특별시 강남구 대치동 889-41”);
-  // insert into location (name,lon,lat,address) values ("위워크 선릉역",”37.5010702”,”127.0161064”,”서울특별시 강남구 역삼동 테헤란로 302”);
-  // insert into location (name,lon,lat,address) values ("위워크 역삼역",”37.5010702”,”127.0161064”,”서울특별시 역삼동 테헤란로 142”);
-  // insert into location (name,lon,lat,address) values ("위워크 강남역2",”37.5010702”,”127.0161064”,”서울특별시 강남구 역삼동 테헤란로5길 7”);
-  // insert into location (name,lon,lat,address) values ("위워크 강남역",”37.5010702”,”127.0161064”,”서울특별시 서초구 서초동 강남대로 373”);
 
   handleDrop = imgFile => {
     const reader = new FileReader();
     reader.readAsDataURL(imgFile[0]);
     reader.onload = e => {
-      this.setState({ uploadedImage: e.target.result });
+      this.setState({ uploadedImage: e.target.result }, () => {
+        console.log(this.state.uploadedImage);
+      });
     };
   };
 
@@ -71,7 +66,9 @@ class CreatingEvent extends Component {
     const duration = parseInt(select);
     hour += duration;
     const newDate = new Date(endDate.setHours(hour));
-    this.setState({ endDate: newDate, select: select });
+    this.setState({ endDate: newDate, select: select }, () => {
+      console.log(this.state.endDate);
+    });
   };
 
   handleDesc = desc => {
@@ -85,7 +82,7 @@ class CreatingEvent extends Component {
   };
 
   handleSubmit = () => {
-    const group_name = this.props.match.params.group_name;
+    const group_id = this.props.match.params.groupId;
     const {
       title,
       uploadedImage,
@@ -93,29 +90,41 @@ class CreatingEvent extends Component {
       endDate,
       desc,
       wayToFind,
-      location
+      location,
+      maxAttendeeVal
     } = this.state;
-    const data = {
+    // { "title":"sdadasd", "mainimage":"http://127.0.0.1:8000", "introduction":"1", "findlocation":"2", "start_date":"2019-11-06T12:09:54.601Z", "end_date":"2019-11-06T12:11:54.601Z", "limit_user":"20", "loc_name":"위워크 선릉역2"}
+    let data = {
       title,
-      uploadedImage,
-      startDate,
-      endDate,
-      desc,
-      wayToFind,
-      location
+      mainimage: uploadedImage,
+      start_date: startDate,
+      end_date: endDate,
+      introduction: desc,
+      findlocation: wayToFind,
+      loc_name: location,
+      limit_user: maxAttendeeVal
     };
-    alert(JSON.stringify(data));
-    // fetch(`http://localhost:8000/api/create_event/${group_name}`, {
+    //localStorage.getItem("user_token")
+    data = JSON.stringify(data);
+    console.log(data);
+    // fetch(`http://10.58.4.169:8000/event/add?group=${group_id}`, {
     //   method: "post",
     //   headers: {
-    //     Authorization: localStorage.getItem("user_token")
+    //     Authorization:
+    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.BQaYsgMzTzB3FGNyGVccFd5LQqgXmM6zXpLVAA5V8QA"
     //   },
-    //   body: {
-    //     data
-    //   }
+    //   body: data
     // })
     //   .then(res => res.json())
-    //   .then(res => console.log(res));
+    //   .then(res => {
+    //     if (res.message === "success") {
+    //       const eventId = res.event_id;
+    //       this.props.history.push(`/event/${eventId}`);
+    //     }
+    //     // else {
+    //     //   window.location.reload();
+    //     // }
+    //   });
   };
 
   handleCancel = () => {
@@ -133,6 +142,13 @@ class CreatingEvent extends Component {
     this.setState({ location: location });
   };
 
+  handleMaxVal = e => {
+    const maxVal = parseInt(e.target.value);
+    e.target.value === ""
+      ? this.setState({ maxAttendeeVal: 0 })
+      : typeof maxVal === "number" && this.setState({ maxAttendeeVal: maxVal });
+  };
+
   render() {
     const {
       handleDrop,
@@ -144,7 +160,8 @@ class CreatingEvent extends Component {
       handleSubmit,
       handleCancel,
       handleWay,
-      handleLocation
+      handleLocation,
+      handleMaxVal
     } = this;
     const {
       uploadedImage,
@@ -156,9 +173,10 @@ class CreatingEvent extends Component {
       descCount,
       wayToFind,
       wayCount,
-      location
+      location,
+      maxAttendeeVal
     } = this.state;
-    console.log(this.state.location);
+
     return (
       <div className="create-event">
         <Nav />
@@ -202,7 +220,10 @@ class CreatingEvent extends Component {
                 location={location}
                 handleLocation={handleLocation}
               />
-              <CreatingEventOptions />
+              <CreatingEventOptions
+                handleMaxVal={handleMaxVal}
+                maxAttendeeVal={maxAttendeeVal}
+              />
             </div>
           </div>
           <div className="main-right">
