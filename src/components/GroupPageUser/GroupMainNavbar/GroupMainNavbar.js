@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import "./GroupMainNavbar.scss";
 
 export class GroupMainNavbar extends Component {
+  state = {
+    admin: true
+  };
+
+  componentDidMount() {
+    // api 호출
+  }
+
   render() {
     return (
       <div className="group-main-navbar">
@@ -24,11 +32,13 @@ export class GroupMainNavbar extends Component {
               </div>
             </div>
             <div>
-              <div className="main-nav-right-in-event">
-                <div className="master-event-add-btn">
-                  <div>일정 등록</div>
+              {this.state.admin && (
+                <div className="main-nav-right-in-event">
+                  <div className="master-event-add-btn">
+                    <div>일정 등록</div>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>

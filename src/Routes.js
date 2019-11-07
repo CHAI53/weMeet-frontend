@@ -26,7 +26,7 @@ class Routes extends React.Component {
             component={CreatingEvent}
           />
           <Route exact path="/event/:id" component={Event} />
-          <Route exact path="/group_page_user" component={GroupPageUser} />
+          <Route exact path="/group_page_user/:id" component={GroupPageUser} />
           <Route exact path="/myprofile" component={Myprofile} />
           <Route exact path="/groupmaking1" component={GroupMaking1} />
         </Switch>

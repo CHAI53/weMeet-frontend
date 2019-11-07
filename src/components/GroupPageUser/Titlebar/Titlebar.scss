@@ -1,21 +1,21 @@
 .title-bar {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .title-bar-in {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 
-    h3 {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 28px;
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
 }
 
 .see-all {
-    color:rgb(0, 152, 171);
-    cursor: pointer;
+  color: rgb(0, 152, 171);
+  cursor: pointer;
 }

@@ -14,6 +14,11 @@ import FeedsExample from "components/BeforeLoginMain/Feeds/FeedsExample.js";
 import GroupPageFooter from "components/GroupPageUser/GroupPageFooter";
 
 export class GroupPageUser extends Component {
+  componentDidMount() {
+    console.log(this.props);
+    console.log(this.props.match.params.id);
+  }
+
   render() {
     return (
       <div className="group-page">
