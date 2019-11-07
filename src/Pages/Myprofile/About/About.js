@@ -7,24 +7,22 @@ class About extends Component {
   constructor() {
     super();
     this.state = {
-      name: "김영준",
-      email: "a@a.com",
-      password: "asdfasdf",
+      password: "볼수없습니다",
       location: "Wework 2호점",
       signupdate: "2019년 10월 24일 (목)",
-      text:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      gender: ""
+      gender: "",
+      desc: "",
+      data: ""
     };
   }
 
-  genderwoman = () => {
-    this.setState({ gender: "woman" });
+  genderF = () => {
+    this.setState({ gender: "F" });
     console.log(this.state.gender);
   };
 
-  genderman = () => {
-    this.setState({ gender: "man" });
+  genderM = () => {
+    this.setState({ gender: "M" });
     console.log(this.state.gender);
   };
 
@@ -34,13 +32,26 @@ class About extends Component {
   };
 
   handleClick = e => {
-    this.setState({ text: this.state.desc });
-    console.log(this.state.text);
+    this.setState({ profile_introduction: this.state.desc });
+    const data = {
+      profile_introduction: this.state.desc,
+      gender: this.state.gender,
+      profile_photo: "aaa"
+    };
+    fetch("http://10.58.4.169:8000/user/account", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: localStorage.getItem("user_token")
+      },
+      body: JSON.stringify(data)
+      // localStorage.setItem("user_token", localStorage.user_token)
+    });
+    console.log(JSON.stringify(data));
   };
 
   setintroduction = e => {
     this.setState({ desc: e.target.value });
-    console.log(this.state.desc);
   };
 
   setDelete = () => {
@@ -59,11 +70,25 @@ class About extends Component {
     alert(this.state.password);
   };
 
+  componentDidMount() {
+    fetch("http://10.58.4.169:8000/user/account", {
+      method: "GET",
+      headers: { authorization: localStorage.getItem("user_token") }
+      // localStorage.setItem("user_token", localStorage.user_token)
+    })
+      .then(res => res.json())
+      .then(info => {
+        this.setState({
+          data: info.data
+        });
+      });
+  }
+
   render() {
     const MyUploader = () => {
       // specify upload params and url for your files
       const getUploadParams = ({ meta }) => {
-        return { url: "https://httpbin.org/post" };
+        return { url: "" };
       };
 
       // called every time a file's `status` changes
@@ -86,9 +111,21 @@ class About extends Component {
         />
       );
     };
+
+    // console.log(localStorage.getItem("user_token"));
+    let year = () => {
+      let date = "";
+      if (this.state.data) {
+        date = this.state.data.updated_at.split("T");
+        let date2 = date[0].split("-");
+        let date3 = date2[0] + "년 " + date2[1] + "월 " + date2[2] + "일 ";
+        return date3;
+      }
+    };
+
     return (
       <div className="about-wrapper">
-        <div className="about-name">{this.state.name}</div>
+        <div className="about-name">{this.state.data.name}</div>
         <div className="about-feeds">
           <Dropzone />
           <span className="profile-text">프로필 설정</span>
@@ -97,12 +134,14 @@ class About extends Component {
             <tr className="about-feeds-first-email">이메일</tr>
             <tr className="about-feeds-first-password">비밀번호</tr>
             <tr className="about-feeds-first-location">장소</tr>
-            <tr className="about-feeds-first-date">가입일</tr>
+            <tr className="about-feeds-first-date">수정날짜</tr>
             <tr className="about-feeds-first-gender">성별</tr>
           </div>
 
           <div className="about-feeds-first-right">
-            <span className="about-feeds-right-email">{this.state.email}</span>
+            <span className="about-feeds-right-email">
+              {this.state.data.email}
+            </span>
             <span className="about-feeds-right-password">
               {this.passwordlength()}
               <button className="password-button" onClick={this.showpassword}>
@@ -112,23 +151,21 @@ class About extends Component {
             <span className="about-feeds-right-location">
               {this.state.location}
             </span>
-            <span className="about-feeds-right-date">
-              {this.state.signupdate}
-            </span>
+            <span className="about-feeds-right-date">{year()}</span>
             <div
               className={`about-feeds-right-gender-active-${this.state.gender}`}
             >
               <input
-                className="gender-man"
+                className="gender-M"
                 type="button"
                 value="M"
-                onClick={this.genderman}
+                onClick={this.genderM}
               />
               <input
-                className="gender-woman"
+                className="gender-F"
                 type="button"
                 value="F"
-                onClick={this.genderwoman}
+                onClick={this.genderF}
               />
               <input
                 className="gender-other"
@@ -141,7 +178,9 @@ class About extends Component {
             <span className="about-feeds-second">자기 소개</span>
           </div>
 
-          <div className="about-feeds-introduction">{this.state.text}</div>
+          <div className="about-feeds-introduction">
+            {this.state.data.profile_introduction}
+          </div>
           <input
             className="introduction-input"
             type="textarea"

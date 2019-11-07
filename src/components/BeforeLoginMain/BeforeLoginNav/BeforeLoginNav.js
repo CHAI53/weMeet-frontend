@@ -2,6 +2,26 @@ import React, { Component } from "react";
 import "./BeforeLoginNav.scss";
 
 class BeforeLoginNav extends Component {
+  // fetch("http://10.58.4.169:8000/user/account/log-in", {
+  //   method: "POST",
+  //   headers: { "Content-Type": "application/json" },
+  //   body: JSON.stringify({
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   })
+  // })
+  //   .then(response => response.json())
+  //   .then(response => {
+  //     console.log(response);
+  //     if (response.SUCCESS === "200") {
+  //       localStorage.setItem("user_token", response.access_token);
+  //       console.log(localStorage);
+  //     }
+
+  //     this.props.history.push("/after_login_main");
+  //   });
+  // console.log(this.state);
+
   render() {
     return (
       <div className="nav-top">
