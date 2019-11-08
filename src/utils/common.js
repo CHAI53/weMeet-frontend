@@ -39,6 +39,9 @@ export const makeKorDate = (datetime, needs) => {
 
 export const verifyAttendStatus = (vacancy, attendStatus, date) => {
   if (vacancy <= 0 || attendStatus === 1 || !isValidEvent(date)) {
+    console.log("vacancy", vacancy);
+    console.log("attendStatus", attendStatus);
+    console.log("!isValidEvent(date)", !isValidEvent(date));
     return false;
   } else {
     return true;

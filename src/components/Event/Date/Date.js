@@ -12,14 +12,6 @@ class Date extends Component {
     };
   }
 
-  // getDate = date => {
-  //   if (date[8] === "0") {
-  //     return date.slice(9, 10);
-  //   } else {
-  //     return date.slice(8, 10);
-  //   }
-  // };
-
   render() {
     const { time, date, month } = this.state;
 

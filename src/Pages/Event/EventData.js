@@ -11,8 +11,8 @@ const mockUpData = {
     lat: 37.508119,
     lng: 127.023642,
     limitUser: 20,
-    startDate: "2019-11-07 19:00",
-    endDate: "2019-11-09 23:00",
+    startDate: "2019-12-05T02:28:35.000Z",
+    endDate: "2019-11-08T05:29:10.789Z",
     attendStatus: 0, //0 => 아직 참석 X, 1 => 참석
     hostInfo: {
       hostImg:

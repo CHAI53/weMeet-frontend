@@ -4,6 +4,16 @@
   margin-bottom: 0;
 }
 
+.group-main-navbar-fixed {
+  border-top: 1px solid rgba(46, 62, 72, 0.12);
+  background-color: #fff;
+  margin-bottom: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .group-main-navbar-in {
   margin: 0 auto;
   padding: 0 20px;
