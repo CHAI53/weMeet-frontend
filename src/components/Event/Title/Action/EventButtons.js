@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 
 class EventButtons extends Component {
   state = {
@@ -8,9 +9,35 @@ class EventButtons extends Component {
 
   handleClick = e => {
     if (e.target.name === "accept") {
-      this.setState({ accept: true, refuse: false });
-    } else {
-      this.setState({ accept: false, refuse: true });
+      fetch("http://locashost:8000/event/add", {
+        method: "post",
+        body: {
+          message: ""
+        }
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.message === "success") {
+            this.setState({ accept: true, refuse: false });
+          }
+        })
+        .catch(err => console.log(err));
+    }
+
+    if (e.target.name === "refuse") {
+      fetch("http://locashost:8000/event/add", {
+        method: "post",
+        body: {
+          message: ""
+        }
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.message === "success") {
+            this.setState({ accept: false, refuse: true });
+          }
+        })
+        .catch(err => console.log(err));
     }
   };
 
@@ -42,4 +69,4 @@ class EventButtons extends Component {
   }
 }
 
-export default EventButtons;
+export default withRouter(EventButtons);

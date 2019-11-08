@@ -7,6 +7,8 @@ class StickyHeader extends Component {
     const { limitUser, attendeesCount, attendStatus, title, date } = props;
     const { getDate } = this;
     this.state = {
+      accept: false,
+      refuse: false,
       timeline: {
         time: props.date,
         date: `${getDate(date)}일`,
@@ -31,9 +33,45 @@ class StickyHeader extends Component {
     }
   };
 
+  handleClick = e => {
+    if (e.target.name === "accept") {
+      fetch("http://locashost:8000/event/add", {
+        method: "post",
+        body: {
+          message: ""
+        }
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.message === "success") {
+            this.setState({ accept: true, refuse: false });
+          }
+        })
+        .catch(err => console.log(err));
+    }
+
+    if (e.target.name === "refuse") {
+      fetch("http://locashost:8000/event/add", {
+        method: "post",
+        body: {
+          message: ""
+        }
+      })
+        .then(res => res.json())
+        .then(res => {
+          if (res.message === "success") {
+            this.setState({ accept: false, refuse: true });
+          }
+        })
+        .catch(err => console.log(err));
+    }
+  };
+
   render() {
     const { time, date, month } = this.state.timeline;
     const { title, status } = this.state.title;
+    const { handleClick } = this;
+    const { accept, refuse } = this.state;
 
     return (
       <div className="sticky-header">
@@ -53,10 +91,18 @@ class StickyHeader extends Component {
         <div className="buttons">
           {status ? (
             <>
-              <button>
+              <button
+                className={!accept && "clicked"}
+                name="accept"
+                onClick={handleClick}
+              >
                 <span className="accept" />
               </button>
-              <button>
+              <button
+                className={!refuse && "clicked"}
+                name="refuse"
+                onClick={handleClick}
+              >
                 <span className="refuse" />
               </button>
             </>

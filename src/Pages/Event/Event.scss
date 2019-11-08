@@ -188,6 +188,21 @@
   .buttons {
     display: flex;
 
+    .clicked {
+      width: 130px;
+      height: 30px;
+      background-color: $theme-color-blue;
+      opacity: 0.3;
+      border-radius: 8px;
+      margin-right: 20px;
+      padding-top: 7px;
+
+      &:hover {
+        cursor: default;
+        opacity: 1;
+      }
+    }
+
     @media #{$device-small} {
       justify-content: space-around;
     }

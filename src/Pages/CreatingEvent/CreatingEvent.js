@@ -23,7 +23,7 @@ class CreatingEvent extends Component {
       uploadedImage: "",
       startDate: new Date(),
       endDate: new Date(),
-      select: "1",
+      select: "0",
       desc: "",
       descCount: 4000,
       wayToFind: "",
@@ -38,9 +38,7 @@ class CreatingEvent extends Component {
     const reader = new FileReader();
     reader.readAsDataURL(imgFile[0]);
     reader.onload = e => {
-      this.setState({ uploadedImage: e.target.result }, () => {
-        console.log(this.state.uploadedImage);
-      });
+      this.setState({ uploadedImage: e.target.result });
     };
   };
 
@@ -67,9 +65,7 @@ class CreatingEvent extends Component {
     const duration = parseInt(select);
     hour += duration;
     const newDate = new Date(endDate.setHours(hour));
-    this.setState({ endDate: newDate, select: select }, () => {
-      console.log(this.state.endDate);
-    });
+    this.setState({ endDate: newDate, select: select });
   };
 
   handleDesc = desc => {
@@ -105,31 +101,31 @@ class CreatingEvent extends Component {
       loc_name: location,
       limit_user: maxAttendeeVal
     };
-    //localStorage.getItem("user_token")
+    const user_token = localStorage.getItem("user_token");
     data = JSON.stringify(data);
     console.log(data);
-    // fetch(`http://10.58.4.169:8000/event/add?group=${group_id}`, {
-    //   method: "post",
-    //   headers: {
-    //     Authorization:
-    //       "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.BQaYsgMzTzB3FGNyGVccFd5LQqgXmM6zXpLVAA5V8QA"
-    //   },
-    //   body: data
-    // })
-    //   .then(res => res.json())
-    //   .then(res => {
-    //     if (res.message === "success") {
-    //       const eventId = res.event_id;
-    //       this.props.history.push(`/event/${eventId}`);
-    //     }
-    //     // else {
-    //     //   window.location.reload();
-    //     // }
-    //   });
-    const eventId = 1;
-    this.state.payment
-      ? this.props.history.push(`/event/${eventId}`)
-      : alert("결제 먼저 해주세요");
+    fetch(`http://10.58.0.106:8000/event/add?group=${group_id}`, {
+      method: "post",
+      headers: {
+        Authorization:
+          "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.BQaYsgMzTzB3FGNyGVccFd5LQqgXmM6zXpLVAA5V8QA"
+      },
+      body: data
+    })
+      .then(res => res.json())
+      .then(res => {
+        if (res.message === "success") {
+          const eventId = res.event_id;
+          this.props.history.push(`/event/${eventId}`);
+        }
+        // else {
+        //   window.location.reload();
+        // }
+      });
+    // const eventId = 1;
+    // this.state.payment
+    //   ? this.props.history.push(`/event/${eventId}`)
+    //   : alert("결제 먼저 해주세요");
   };
 
   handleCancel = () => {

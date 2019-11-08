@@ -40,12 +40,14 @@
     .clicked {
       width: 130px;
       height: 30px;
-      background-color: white;
+      opacity: 0.3;
+      background-color: $theme-color-blue;
       border-radius: 8px;
       margin-right: 20px;
       padding-top: 7px;
 
       &:hover {
+        opacity: 1;
         cursor: default;
       }
     }
