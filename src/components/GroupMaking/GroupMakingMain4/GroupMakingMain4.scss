@@ -1,0 +1,140 @@
+.container4 {
+  .start-header {
+    min-height: 30px;
+
+    .progress-bar {
+      background-color: #e6e6e6;
+    }
+
+    .progress-bar-inner {
+      background-color: #0098ab;
+      height: 100%;
+      width: 100%;
+    }
+
+    .progress-step {
+      margin: 0 auto;
+      justify-content: center;
+      position: relative;
+      padding: 16px 16px 24px;
+      padding-bottom: 36px;
+
+      .step-count4 {
+        text-align: center;
+        font-size: 14px;
+        color: #9b9b9b;
+        font-weight: 400;
+      }
+    }
+    .progress-horizontal {
+      width: 100%;
+      height: 12px;
+    }
+  }
+  .start-main {
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 840px;
+    width: 100%;
+
+    .center {
+      max-width: 706px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .chunk {
+      padding-bottom: 16px;
+      margin-bottom: 36px;
+
+      .step-headline4 {
+        color: #000;
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 1.24;
+        margin-bottom: 20px;
+      }
+
+      .topic-search {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #000000;
+      }
+
+      .topic-pick {
+        ul.ks-cboxtags {
+          list-style: none;
+          padding: 20px;
+        }
+
+        ul.ks-cboxtags li {
+          display: inline;
+        }
+
+        ul.ks-cboxtags li label {
+          display: inline-block;
+          background-color: rgba(255, 255, 255, 0.9);
+          border: 2px solid rgba(139, 139, 139, 0.3);
+          color: #adadad;
+          border-radius: 25px;
+          white-space: nowrap;
+          margin: 5px 5px;
+          user-select: none;
+          transition: all 0.2s;
+        }
+
+        ul.ks-cboxtags li label {
+          padding: 8px 12px;
+          cursor: pointer;
+          font-size: 18px;
+        }
+
+        ul.ks-cboxtags li label::before {
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          font-weight: 900;
+          font-size: 12px;
+          padding: 2px 6px 2px 2px;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        ul.ks-cboxtags li input[type="checkbox"]:checked + label::before {
+          transform: rotate(-360deg);
+          transition: transform 0.3s ease-in-out;
+        }
+
+        ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+          border: 2px solid #1bdbf8;
+          background-color: #12bbd4;
+          color: #fff;
+          transition: all 0.2s;
+        }
+
+        ul.ks-cboxtags li input[type="checkbox"] {
+          display: absolute;
+        }
+
+        ul.ks-cboxtags li input[type="checkbox"] {
+          position: absolute;
+          opacity: 0;
+        }
+
+        ul.ks-cboxtags li input[type="checkbox"]:focus + label {
+          border: 2px solid rgba(139, 139, 139, 0.3);
+        }
+      }
+      .complete-message {
+        //display: none;
+        font-size: 25px;
+        color: #f65858;
+        text-align: center;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

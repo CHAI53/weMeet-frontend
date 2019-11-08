@@ -1,7 +1,6 @@
 #register-form {
   margin-left: auto;
   margin-right: auto;
-  max-width: 840px;
   padding: 24px 16px 8px;
   width: 100%;
   text-align: center;
@@ -168,9 +167,22 @@
       width: 100%;
       padding: 5px;
       height: 48px;
+      font-size: 15px;
     }
 
     .register-field-name-turn {
+      background-color: #ffffff;
+      border-radius: 3px;
+      border: 1px solid #30487b;
+      box-shadow: none;
+      margin: 0 0 4px;
+      padding: 5px;
+      width: 100%;
+      height: 48px;
+      font-size: 15px;
+    }
+
+    .register-field-name-error {
       background-color: #ffffff;
       border-radius: 3px;
       border: 1px solid #ff911a;
@@ -179,6 +191,7 @@
       padding: 5px;
       width: 100%;
       height: 48px;
+      font-size: 15px;
     }
 
     .register-error-name {

@@ -8,35 +8,33 @@ class SignupForm extends Component {
       name: "",
       email: "",
       password: "",
-      classname: "register-field-name",
-      hidden: true
+      hidden: true,
+      classname: "register-field-name"
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
-    // this.loseFocus = this.loseFocus.bind(this);
+    //this.loseFocus = this.loseFocus.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange = event => {
-    this.setState({
-      [event.target.name]: event.target.value,
-      classname: "register-field-name-turn",
-      hidden: false
-    });
+    if (event.target.value.length !== 0) {
+      this.setState({
+        [event.target.name]: event.target.value
+      });
+    } else {
+      this.setState({
+        [event.target.name]: event.target.value,
+        classname: "register-field-name-error",
+        hidden: false
+      });
+    }
     console.log(event.target.value);
   };
 
-  // loseFocus = event => {
-  //   this.setState({
-  //     classname: "register-field-name"
-  //   });
-  // };
+  // handleClick = event => {
 
-  // handleClick() {
-  //   this.setState({
-  //     hidden: false
-  //   });
-  // }
+  // };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -57,12 +55,14 @@ class SignupForm extends Component {
         console.log(response, "response");
         return response.json();
       })
-      .then(res => {
-        if (res.ok) {
-          return res.blob();
+      .then(response => {
+        if (response.ok) {
+          this.props.history.push("/login");
+          return console.log("Success:", response);
         }
         throw new Error("Network response was not ok.");
       });
+    this.props.history.push("/login");
   };
 
   render() {
@@ -105,13 +105,9 @@ class SignupForm extends Component {
               className={classname}
               name="name"
               onChange={this.handleChange}
-              //onBlur={this.loseFocus}
-              // onClick={this.handleClick}
               value={name}
             />
-            {name.length === 0 && !hidden && (
-              <p class="register-error-name">공란일 수 없습니다.</p>
-            )}
+            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
           </div>
           <div className="signupInput chunk">
             <label>이메일 주소</label>
@@ -122,9 +118,7 @@ class SignupForm extends Component {
               onChange={this.handleChange}
               value={email}
             />
-            {name.length === 0 && !hidden && (
-              <p class="register-error-name">공란일 수 없습니다.</p>
-            )}
+            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
           </div>
           <div className="signupInput chunk">
             <label>비밀번호</label>
@@ -135,12 +129,10 @@ class SignupForm extends Component {
               onChange={this.handleChange}
               value={password}
             />
-            {name.length === 0 && !hidden && (
-              <p class="register-error-name">공란일 수 없습니다.</p>
-            )}
+            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
           </div>
 
-          <div class="chunk">
+          <div className="chunk">
             <div className="row-item">
               <span className="location-icon-span">
                 <img
@@ -149,16 +141,16 @@ class SignupForm extends Component {
                   src="https://cdn3.iconfinder.com/data/icons/flat-pro-basic-set-1-1/32/location-gray-512.png"
                 />
               </span>
-              <span class="text-small text-secondary text-heavy">
+              <span className="text-small text-secondary text-heavy">
                 Sejong, KR
               </span>
-              <a class="loc-change text-small" href="/">
+              <a className="loc-change text-small" href="/">
                 (변경)
               </a>
             </div>
           </div>
           <div className="chunk">
-            <p class="text-small text-secondary">
+            <p className="text-small text-secondary">
               이름이 공개되어 있습니다. 귀하의 이메일 주소를 통해 업데이트
               사항과 근처에서 We:meet을 찾을 수 있는 위치를 알려드리겠습니다.
             </p>
@@ -167,23 +159,23 @@ class SignupForm extends Component {
             <p>
               <input
                 type="submit"
-                class="button button-fullwidth button-primary text-heavy"
+                className="button button-fullwidth button-primary text-heavy"
                 value="계속"
               />
             </p>
           </div>
           <div className="chunk">
-            <p class="text-small">
+            <p className="text-small">
               '계속'을 선택하면 We:meet의
               <a
                 href="https://help.meetup.com/hc/en-us/articles/360027447252"
-                class="link"
+                className="link"
               >
                 {" "}
                 이용약관
               </a>
               에 동의하는 것으로 간주됩니다. 회원님의 정보는 We:meet의
-              <a href="https://www.meetup.com/ko-KR/privacy/" class="link">
+              <a href="https://www.meetup.com/ko-KR/privacy/" className="link">
                 {" "}
                 개인정보처리방침{" "}
               </a>

@@ -1,5 +1,19 @@
 @import "reset.scss";
 
+.loginFirst {
+  margin-top: 50px;
+  border: 1px solid $theme-color-blue;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  color: $default-font-color;
+
+  &:hover {
+    color: $theme-color-blue;
+    cursor: pointer;
+  }
+}
+
 .action {
   width: 20vw;
   @media #{$device-large} {

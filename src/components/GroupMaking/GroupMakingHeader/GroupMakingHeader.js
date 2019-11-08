@@ -5,7 +5,7 @@ import "./GroupMakingHeader.scss";
 class GroupMakingHeader extends Component {
   render() {
     return (
-      <nav id="head">
+      <nav id="group-head">
         <div id="head-logo">
           <Link to="/">
             <img

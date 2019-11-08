@@ -6,7 +6,7 @@ class SignupHeader extends Component {
   render() {
     return (
       <nav id="signup-head">
-        <div class="head-logo">
+        <div className="head-logo">
           <Link to="/">
             <img
               src={require("Images/wemeet_transparent.png")}

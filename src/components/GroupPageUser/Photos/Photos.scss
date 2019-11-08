@@ -46,10 +46,21 @@
   li:nth-child(6) {
     background-image: url("../../../Images/pics_2x3.jpeg");
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      display: absolute;
+      color: #fff;
+      opacity: 1;
+      z-index: 500;
+    }
 
     &::after {
       content: "";
       background-color: rgba(0, 0, 0, 0.7);
+      text-decoration-color: #fff;
       position: absolute;
       top: 0;
       left: 0;
