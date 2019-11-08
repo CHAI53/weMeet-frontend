@@ -15,7 +15,7 @@ class GroupMakingFooter34 extends Component {
   };
 
   handleNext = event => {
-    this.props.history.push("/after_login_main");
+    this.props.history.push("/group_page_user/1");
   };
 
   render() {
