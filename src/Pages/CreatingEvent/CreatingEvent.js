@@ -114,10 +114,11 @@ class CreatingEvent extends Component {
     })
       .then(res => res.json())
       .then(res => {
-        if (res.message === "success") {
-          const eventId = res.event_id;
-          this.props.history.push(`/event/${eventId}`);
-        }
+        this.props.history.push(`/event/${1}`);
+        // if (res.message === "success") {
+        //   console.log(res.message);
+        //   const eventId = res.event_id;
+        // }
         // else {
         //   window.location.reload();
         // }
