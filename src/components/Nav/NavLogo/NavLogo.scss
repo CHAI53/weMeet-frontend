@@ -2,10 +2,12 @@
   display: inline-flex;
 
   .logo-img {
-    width: 110px;
-    background-size: 100%;
+    width: 150px;
+    height: 50px;
+    background-position-y: bottom;
+    background-size: 90% 140%;
     background-repeat: no-repeat;
-    background-image: url("../../../Images/logo.svg");
+    background-image: url("../../../Images/wemeet_transparent.png");
 
     &:hover {
       cursor: pointer;

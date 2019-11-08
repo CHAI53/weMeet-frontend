@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "./HostLocalEvents.scss";
+import { withRouter } from "react-router-dom";
 
 export class HostLocalEvents extends Component {
+  handleclick = () => {
+    // const id = this.props.groupId;
+    this.props.history.push(`/groupmaking1`);
+  };
+
   render() {
     return (
       <div className="host-local-events">
@@ -15,7 +21,10 @@ export class HostLocalEvents extends Component {
           </p>
         </div>
         <ul className="host-local-events-list">
-          <li className="host-local-events-list-item">
+          <li
+            className="host-local-events-list-item"
+            onClick={this.handleclick}
+          >
             <div className="host-local-events-card">
               <div className="host-local-events-card-title">피트니스</div>
               <div className="host-local-events-card-subtitle">
@@ -24,7 +33,10 @@ export class HostLocalEvents extends Component {
               <div className="host-local-events-card-cta">Host events</div>
             </div>
           </li>
-          <li className="host-local-events-list-item">
+          <li
+            className="host-local-events-list-item"
+            onClick={this.handleclick}
+          >
             <div className="host-local-events-card">
               <div className="host-local-events-card-title">외식</div>
               <div className="host-local-events-card-subtitle">
@@ -33,7 +45,10 @@ export class HostLocalEvents extends Component {
               <div className="host-local-events-card-cta">Host events</div>
             </div>
           </li>
-          <li className="host-local-events-list-item">
+          <li
+            className="host-local-events-list-item"
+            onClick={this.handleclick}
+          >
             <div className="host-local-events-card">
               <div className="host-local-events-card-title">Open Source</div>
               <div className="host-local-events-card-subtitle">
@@ -42,7 +57,10 @@ export class HostLocalEvents extends Component {
               <div className="host-local-events-card-cta">Host events</div>
             </div>
           </li>
-          <li className="host-local-events-list-item">
+          <li
+            className="host-local-events-list-item"
+            onClick={this.handleclick}
+          >
             <div className="host-local-events-card">
               <div className="host-local-events-card-title">
                 새로 이사왔어요
@@ -59,4 +77,4 @@ export class HostLocalEvents extends Component {
   }
 }
 
-export default HostLocalEvents;
+export default withRouter(HostLocalEvents);
