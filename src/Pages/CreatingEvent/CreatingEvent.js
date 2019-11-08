@@ -30,7 +30,7 @@ class CreatingEvent extends Component {
       wayCount: 4000,
       location: "위워크 선릉역",
       maxAttendeeVal: 0,
-      payment: false
+      payment: true
     };
   }
 
