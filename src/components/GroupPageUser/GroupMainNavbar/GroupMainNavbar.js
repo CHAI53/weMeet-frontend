@@ -4,12 +4,22 @@ import "./GroupMainNavbar.scss";
 
 export class GroupMainNavbar extends Component {
   state = {
-    admin: true
+    admin: true,
+    invertedNavbar: true
   };
 
   componentDidMount() {
-    // api 호출
+    window.addEventListener("scroll", this.handleScroll);
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    console.log(window.scrollY);
+    this.setState({ invertedNavbar: window.scrollY < 493 });
+  };
 
   handleclick = () => {
     const id = this.props.groupId;
@@ -17,8 +27,10 @@ export class GroupMainNavbar extends Component {
   };
 
   render() {
+    let normal = "group-main-navbar";
+    let fixed = "group-main-navbar-fixed";
     return (
-      <div className="group-main-navbar">
+      <div className={this.state.invertedNavbar ? normal : fixed}>
         <div className="group-main-navbar-in">
           <div className="main-nav-left">
             <div className="main-nav-left-in">

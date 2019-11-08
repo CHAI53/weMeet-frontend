@@ -16,7 +16,9 @@ export class Photos extends Component {
                 <li></li>
                 <li></li>
                 <li></li>
-                <li></li>
+                <li>
+                  <span>+112</span>
+                </li>
               </ul>
             </div>
           </div>

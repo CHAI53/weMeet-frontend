@@ -5,7 +5,7 @@ const UpcomingEventsData = [
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: require("../../../Images/group_event_sample.jpeg"),
+    imageurl: require("../../../Images/pics_1x1.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -63,11 +63,11 @@ const UpcomingEventsData = [
   },
   {
     id: 1,
-    date: "11월 9일 (토), 오후 6:50",
+    date: "11월 16일 (토), 오후 6:50",
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: require("../../../Images/group_event_sample.jpeg"),
+    imageurl: require("../../../Images/pics_1x2.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -125,11 +125,11 @@ const UpcomingEventsData = [
   },
   {
     id: 2,
-    date: "11월 9일 (토), 오후 6:50",
+    date: "11월 23일 (토), 오후 6:50",
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: require("../../../Images/group_event_sample.jpeg"),
+    imageurl: require("../../../Images/pics_1x3.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
@@ -187,11 +187,11 @@ const UpcomingEventsData = [
   },
   {
     id: 3,
-    date: "11월 9일 (토), 오후 6:50",
+    date: "11월 30일 (토), 오후 6:50",
     name:
       "NEW PLACE FREE SATURDAY INTERNATIONAL FRIENDS MAKING BEER PARTY+CLUBBING!",
     place: "MCJUCHANGO/맥주창고",
-    imageurl: require("../../../Images/group_event_sample.jpeg"),
+    imageurl: require("../../../Images/pics_2x1.jpeg"),
     text: `
         No Entrance Fee Party - 오셔서 마음껏 파티를 즐기세요~ Enjoy the party without any entrance fee.
         Free Entrance Fee (무료입장) - 단 맥주는 구매하셔야 합니다. But you have to buy beer.
