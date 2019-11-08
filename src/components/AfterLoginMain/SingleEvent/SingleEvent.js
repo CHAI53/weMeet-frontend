@@ -9,6 +9,7 @@ function SingleEvent(props) {
     console.log(id);
     console.log(props);
   };
+
   const { groupName, eventName, expectMembers } = props;
   return (
     <li className="single-event-list">
