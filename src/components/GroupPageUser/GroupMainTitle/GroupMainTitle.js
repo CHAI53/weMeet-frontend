@@ -6,12 +6,6 @@ export class GroupMainTitle extends Component {
   state = {
     data: GroupMainTitleData
   };
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     data: GroupMainTitleData
-  //   };
-  // }
 
   render() {
     const GroupPageTitleImg = src => ({
