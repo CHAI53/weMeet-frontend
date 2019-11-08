@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./Action.scss";
 import EventStatus from "./EventStatus";
 import EventButtons from "./EventButtons";
 import EventShare from "./EventShare";
-import { verifyAttendStatus } from "utils/common.js";
+import { verifyAttendStatus } from "utils/common";
+import { isUserLoggedIn } from "utils/common";
 
 class Action extends Component {
   constructor(props) {
@@ -19,17 +21,27 @@ class Action extends Component {
     };
   }
 
+  handleClick = () => {
+    this.props.history.push("/login");
+  };
+
   render() {
     const { attendStatus, vacancy } = this.state;
+    const { handleClick } = this;
 
     return (
       <div className={attendStatus ? "action" : "no-vacancy"}>
         <EventStatus attendStatus={attendStatus} vacancy={vacancy} />
-        {attendStatus && <EventButtons />}
-        <EventShare />
+        {attendStatus && isUserLoggedIn() && <EventButtons />}
+        {!isUserLoggedIn() && (
+          <div className="loginFirst" onClick={handleClick}>
+            먼저 로그인해주세요
+          </div>
+        )}
+        {/* <EventShare /> */}
       </div>
     );
   }
 }
 
-export default Action;
+export default withRouter(Action);
