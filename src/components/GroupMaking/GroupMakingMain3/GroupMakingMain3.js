@@ -5,21 +5,19 @@ import Dropzone from "react-dropzone-uploader";
 
 class GroupMakingMain3 extends Component {
   render() {
-    const MyUploader = () => {
-      // specify upload params and url for your files
-      const getUploadParams = ({ meta }) => {
+    const Standard = () => {
+      const getUploadParams = () => {
         return { url: "https://httpbin.org/post" };
       };
 
-      // called every time a file's `status` changes
-      const handleChangeStatus = ({ meta, file }, status) => {
-        console.log(status, meta, file);
+      const handleChangeStatus = ({ meta }, status) => {
+        console.log(status, meta);
       };
 
-      // receives array of files that are done uploading when submit button is clicked
       const handleSubmit = (files, allFiles) => {
         console.log(files.map(f => f.meta));
         allFiles.forEach(f => f.remove());
+        sessionStorage.setItem("mainphoto", this.state.mainphoto);
       };
 
       return (
@@ -27,7 +25,7 @@ class GroupMakingMain3 extends Component {
           getUploadParams={getUploadParams}
           onChangeStatus={handleChangeStatus}
           onSubmit={handleSubmit}
-          accept="image/*,audio/*,video/*"
+          styles={{ dropzone: { minHeight: 200, maxHeight: 250 } }}
         />
       );
     };
@@ -57,11 +55,11 @@ class GroupMakingMain3 extends Component {
               </p>
             </div>
             <div className="imageUpload-wrapper">
-              <Dropzone />
+              <Standard />
             </div>
-            <div className="upload-guide">
+            {/* <div className="upload-guide">
               <p>여기에 원하는 이미지를 끌어다 놓아주세요</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
