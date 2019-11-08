@@ -50,7 +50,7 @@ export default class CreatingEventPayment extends Component {
 
     if (key === "name" && typeof value === "string" && value.includes("@")) {
       this.setState({ [key]: value });
-    } else if (key === "amount" && typeof parseInt(value) !== 0) {
+    } else if (key === "amount" && parseInt(value) !== 0) {
       this.setState({ [key]: value });
     } else if (key === "tel" && value.includes("-")) {
       this.setState({ [key]: value });
