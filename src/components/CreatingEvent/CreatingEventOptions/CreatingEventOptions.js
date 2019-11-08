@@ -21,8 +21,12 @@ class CreatingEventOptions extends Component {
     });
   };
 
+  handlePayment = () => {
+    this.props.handlePayment();
+  };
+
   render() {
-    const { handleClick } = this;
+    const { handleClick, handlePayment } = this;
     const { payment, maxAttendee } = this.state;
     const { maxAttendeeVal, handleMaxVal } = this.props;
 
@@ -43,7 +47,7 @@ class CreatingEventOptions extends Component {
           <div className="payment">이벤트 회비</div>
           <CreatingEventCheckbox name="payment" onClick={handleClick} />
         </div>
-        {payment && <CreatingEventPayment />}
+        {payment && <CreatingEventPayment handlePayment={handlePayment} />}
       </div>
     );
   }
