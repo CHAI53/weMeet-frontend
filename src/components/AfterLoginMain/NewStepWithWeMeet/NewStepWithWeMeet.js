@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "./NewStepWithWeMeet.scss";
+import { withRouter } from "react-router-dom";
 
 export class NewStepWithWeMeet extends Component {
+  handleclick = () => {
+    // const id = this.props.groupId;
+    this.props.history.push(`/groupmaking1`);
+  };
+
   render() {
     return (
       <div className="new-step">
@@ -14,7 +20,7 @@ export class NewStepWithWeMeet extends Component {
           </p>
         </div>
         <ul className="new-step-cards">
-          <li className="new-step-card">
+          <li className="new-step-card" onClick={this.handleclick}>
             <div className="background-green">
               <div className="new-step-card-flex">
                 <div className="new-step-card-content">
@@ -24,7 +30,7 @@ export class NewStepWithWeMeet extends Component {
               </div>
             </div>
           </li>
-          <li className="new-step-card">
+          <li className="new-step-card" onClick={this.handleclick}>
             <div className="background-yellow">
               <div className="new-step-card-flex">
                 <div className="new-step-card-content">
@@ -34,7 +40,7 @@ export class NewStepWithWeMeet extends Component {
               </div>
             </div>
           </li>
-          <li className="new-step-card">
+          <li className="new-step-card" onClick={this.handleclick}>
             <div className="background-red">
               <div className="new-step-card-flex">
                 <div className="new-step-card-content">
@@ -44,7 +50,7 @@ export class NewStepWithWeMeet extends Component {
               </div>
             </div>
           </li>
-          <li className="new-step-card">
+          <li className="new-step-card" onClick={this.handleclick}>
             <div className="background-blue">
               <div className="new-step-card-flex">
                 <div className="new-step-card-content">
@@ -60,4 +66,4 @@ export class NewStepWithWeMeet extends Component {
   }
 }
 
-export default NewStepWithWeMeet;
+export default withRouter(NewStepWithWeMeet);
