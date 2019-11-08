@@ -60,7 +60,7 @@ class GroupMakingMain2 extends Component {
                   <textarea
                     className="description-text"
                     type="text"
-                    placeholder="최소 50자 이상 작성해주세요"
+                    placeholder="최소 10자 이상 작성해주세요"
                     rows="6"
                     minLength="50"
                     error="필수사항"
