@@ -42,7 +42,7 @@ class SignupForm extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(this.state);
-    const url = "http://10.58.4.169:8000/user/account/sign-up";
+    const url = "http://10.58.0.106:8000/user/account/sign-up";
     const data = {
       name: this.state.name,
       email: this.state.email,
@@ -59,11 +59,11 @@ class SignupForm extends Component {
         return response.json();
       })
       .then(response => {
-        if (response.ok) {
-          this.props.history.push("/login");
-          return console.log("Success:", response);
+        console.log(response);
+        if (response.SUCCESS === "200") {
+          console.log("success");
         }
-        throw new Error("Network response was not ok.");
+        this.props.history.push("/login");
       });
   };
 

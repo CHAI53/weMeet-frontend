@@ -25,11 +25,11 @@ class LoginMain extends Component {
       .then(response => {
         console.log(response);
         if (response.SUCCESS === "200") {
-          localStorage.setItem("user_token", response.access_token);
+          this.props.history.push("/after_login_main");
           console.log(localStorage);
+        } else {
+          console.log("error");
         }
-
-        this.props.history.push("/after_login_main");
       });
     console.log(this.state);
   };
