@@ -7,6 +7,7 @@ function SingleEvent(props) {
     const id = props.eventId;
     props.history.push(`/event/${id}`);
   };
+
   const { groupName, eventName, expectMembers } = props;
   return (
     <li className="single-event-list">

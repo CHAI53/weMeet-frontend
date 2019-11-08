@@ -9,13 +9,24 @@ export class EventLists extends Component {
   constructor() {
     super();
     this.state = {
-      data: EventListsData
+      // data: EventListsData
+      data: null
     };
   }
 
-  // componentDidMount() {
-  //   fetch();
-  // }
+  componentDidMount() {
+    const key = `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.BQaYsgMzTzB3FGNyGVccFd5LQqgXmM6zXpLVAA5V8QA`;
+    fetch("http://10.58.0.106:8000/user/account", {
+      method: "GET",
+      headers: { Authorization: key }
+    })
+      .then(res => res.json())
+      .then(info => {
+        this.setState({
+          data: info.data
+        });
+      });
+  }
 
   createEventList = () => {
     let eventGroup = [];
@@ -25,10 +36,14 @@ export class EventLists extends Component {
       for (let j = start; j < start + 5; j++) {
         eventSingle.push(
           <SingleEvent
-            eventId={this.state.data[j].eventId}
-            groupName={this.state.data[j].groupName}
-            eventName={this.state.data[j].eventName}
-            expectMembers={this.state.data[j].expectMembers}
+            // eventId={this.state.data[j].eventId}
+            // groupName={this.state.data[j].groupName}
+            // eventName={this.state.data[j].eventName}
+            // expectMembers={this.state.data[j].expectMembers}
+            eventId={this.state.data[j].data.id}
+            groupName={this.state.data[j].data.group_id}
+            eventName={this.state.data[j].data.title}
+            expectMembers={this.state.data[j].data.attent_status}
           />
         );
       }
@@ -43,7 +58,7 @@ export class EventLists extends Component {
   };
 
   render() {
-    return <>{this.createEventList()}</>;
+    return <>{this.state.data && this.createEventList()}</>;
   }
 }
 
