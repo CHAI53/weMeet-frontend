@@ -14,12 +14,20 @@ class SignupForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      classname: "register-field-name-turn"
+    });
   }
 
   handleChange = event => {
     if (event.target.value.length !== 0) {
       this.setState({
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value,
+        className: "register-field-name"
       });
     } else {
       this.setState({
@@ -99,9 +107,12 @@ class SignupForm extends Component {
               className={classname}
               name="name"
               onChange={this.handleChange}
+              onClick={this.handleClick}
               value={name}
             />
-            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
+            {!hidden && (
+              <p className="register-error-name">공란일 수 없습니다.</p>
+            )}
           </div>
           <div className="signupInput chunk">
             <label>이메일 주소</label>
@@ -110,9 +121,12 @@ class SignupForm extends Component {
               className={classname}
               name="email"
               onChange={this.handleChange}
+              onClick={this.handleClick}
               value={email}
             />
-            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
+            {!hidden && (
+              <p className="register-error-name">공란일 수 없습니다.</p>
+            )}
           </div>
           <div className="signupInput chunk">
             <label>비밀번호</label>
@@ -121,9 +135,12 @@ class SignupForm extends Component {
               className={classname}
               name="password"
               onChange={this.handleChange}
+              onClick={this.handleClick}
               value={password}
             />
-            {!hidden && <p class="register-error-name">공란일 수 없습니다.</p>}
+            {!hidden && (
+              <p className="register-error-name">공란일 수 없습니다.</p>
+            )}
           </div>
 
           <div className="chunk">

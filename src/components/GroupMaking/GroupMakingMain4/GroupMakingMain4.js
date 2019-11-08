@@ -79,8 +79,8 @@ class GroupMakingMain4 extends Component {
                 </span>
               </p>
               <div className="topic-pick">
-                <ul class="ks-cboxtags">
-                  <ul class="ks-cboxtags">
+                <ul className="ks-cboxtags">
+                  <ul className="ks-cboxtags">
                     <li>
                       <input
                         type="checkbox"
