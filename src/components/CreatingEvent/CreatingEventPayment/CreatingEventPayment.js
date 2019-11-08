@@ -37,7 +37,7 @@ export default class CreatingEventPayment extends Component {
             msg += "에러내용 : " + rsp.error_msg;
           }
         }
-      );
+      ).then(this.props.handlePayment());
     } else {
       const { wrongInfo } = this.state;
       this.setState({ wrongInfo: true });
@@ -70,11 +70,11 @@ export default class CreatingEventPayment extends Component {
             <input onChange={handleChange} value={name} name="name" />
           </div>
           <div className="amount">
-            금액 *(원 빼고 적어주세요)
+            금액 "원" 빼고 적어주세요
             <input onChange={handleChange} value={amount} name="amount" />
           </div>
           <div className="tel">
-            전화번호 ("-"를 포함해서 적어주세요)
+            전화번호 "-"를 포함해서 적어주세요
             <input onChange={handleChange} value={tel} name="tel" />
           </div>
         </div>
