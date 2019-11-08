@@ -2,7 +2,26 @@ import React, { Component } from "react";
 import "./GroupMakingMain2.scss";
 
 class GroupMakingMain2 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      introduction: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log(event.target.value);
+    sessionStorage.setItem("introduction", this.state.introduction);
+    console.log(this.state.introduction);
+  };
+
   render() {
+    let { introduction } = this.state;
     return (
       <div className="container2">
         <div className="start-header">
@@ -45,6 +64,9 @@ class GroupMakingMain2 extends Component {
                     rows="6"
                     minLength="50"
                     error="필수사항"
+                    name="introduction"
+                    value={introduction}
+                    onChange={this.handleChange}
                   />{" "}
                   <ul id="description-error">
                     <li>필수사항</li>

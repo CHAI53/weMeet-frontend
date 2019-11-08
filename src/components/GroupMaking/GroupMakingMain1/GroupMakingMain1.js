@@ -2,7 +2,29 @@ import React, { Component } from "react";
 import "./GroupMakingMain1.scss";
 
 class GroupMakingMain1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+    console.log(event.target.value);
+  };
+
+  handleClick() {
+    sessionStorage.setItem("name", this.state.name);
+    console.log(this.state.name);
+  }
+
   render() {
+    let { name } = this.state;
     return (
       <div className="container1">
         <div className="start-header">
@@ -30,14 +52,18 @@ class GroupMakingMain1 extends Component {
                 <input
                   group-name-error="error"
                   type="text"
+                  name="name"
                   placeholder="원하시는 그룹명을 적어주세요"
                   className="group-name"
+                  onChange={this.handleChange}
+                  onClick={this.handleClick}
+                  value={name}
                 />
-                <p char-count="true" class="tiny">
-                  60
-                </p>
+                {/* <p char-count="true" className="tiny">
+                60
+              </p> */}
               </div>
-              <span class="text-error">필수 사항</span>
+              <span className="text-error">필수 사항</span>
             </div>
           </div>
         </div>

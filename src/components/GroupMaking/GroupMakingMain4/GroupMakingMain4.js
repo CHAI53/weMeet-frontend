@@ -11,21 +11,26 @@ class GroupMakingMain4 extends Component {
   }
 
   HandlerPlus = e => {
+    const { category } = this.state;
     this.setState({ category: this.state.category.concat(e) }, () => {
-      console.log("HandlerPlus:", this.state.category);
-    });
-  };
+      let categoryData = [];
+      category.forEach(id => {
+        const idObj = {};
+        idObj["id"] = id;
+        categoryData.push(idObj);
+      });
+      console.log("categoryData:", categoryData);
 
-  HandlerMinus = e => {
-    let idx = this.state.category.indexOf(e);
-    this.setState(
-      {
-        category: this.state.category.splice(idx, 1)
-      },
-      () => {
-        console.log("HandlerMinus:", this.state.category.indexOf(e));
-      }
-    );
+      fetch("http://10.58.4.169:8000/user/account/category1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: localStorage.getItem("user_token")
+        },
+        body: JSON.stringify({ category: categoryData })
+      });
+      console.log(JSON.stringify({ category: categoryData }));
+    });
   };
 
   Handleclick = e => {
@@ -33,6 +38,7 @@ class GroupMakingMain4 extends Component {
       this.HandleOr(this.state.nowclick);
     });
   };
+
   HandleOr = e => {
     if (this.state.category.includes(e) === true) {
       console.log("내가있으면 요소가 삭제");

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import "./CategoryItems.scss";
-import items from "./CategoryItemData";
+import "./GroupListItems.scss";
 
-class CategoryItems extends Component {
+class GroupListItems extends Component {
   constructor() {
     super();
     this.state = {
@@ -37,4 +36,4 @@ class CategoryItems extends Component {
   }
 }
 
-export default CategoryItems;
+export default GroupListItems;

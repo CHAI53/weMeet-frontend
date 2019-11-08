@@ -1,20 +1,31 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "./GroupFooterNoBack.scss";
 
 class GroupFooterNoBack extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.handleNext.bind(this);
+  }
+  handleNext = event => {
+    this.props.history.push("/GroupMaking2");
+  };
+
   render() {
     return (
       <div className="start-footer-without-back">
         <div className="bounds">
-          <div class="button-align">
-            <Link to="/GroupMaking2">
-              <button type="button" class="forward-button">
-                <span>
-                  <span>다음</span>
-                </span>
-              </button>
-            </Link>
+          <div className="button-align">
+            <button
+              type="button"
+              className="forward-button"
+              onClick={this.handleNext}
+            >
+              <span>
+                <span>다음</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -22,4 +33,4 @@ class GroupFooterNoBack extends Component {
   }
 }
 
-export default GroupFooterNoBack;
+export default withRouter(GroupFooterNoBack);
