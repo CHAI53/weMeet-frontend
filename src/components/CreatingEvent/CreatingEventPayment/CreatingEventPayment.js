@@ -37,7 +37,7 @@ export default class CreatingEventPayment extends Component {
             msg += "에러내용 : " + rsp.error_msg;
           }
         }
-      ).then(this.props.handlePayment());
+      );
     } else {
       const { wrongInfo } = this.state;
       this.setState({ wrongInfo: true });
