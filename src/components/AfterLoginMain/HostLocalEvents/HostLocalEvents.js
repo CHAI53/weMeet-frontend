@@ -4,7 +4,6 @@ import { withRouter } from "react-router-dom";
 
 export class HostLocalEvents extends Component {
   handleclick = () => {
-    // const id = this.props.groupId;
     this.props.history.push(`/groupmaking1`);
   };
 
