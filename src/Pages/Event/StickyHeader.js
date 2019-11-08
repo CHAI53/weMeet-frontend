@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { verifyAttendStatus } from "utils/common.js";
+import { withRouter } from "react-router-dom";
+import { verifyAttendStatus, makeKorDate, isUserLoggedIn } from "utils/common";
 
 class StickyHeader extends Component {
   constructor(props) {
@@ -9,8 +10,8 @@ class StickyHeader extends Component {
     this.state = {
       timeline: {
         time: props.date,
-        date: `${getDate(date)}일`,
-        month: `${date.slice(5, 7)}월`
+        date: makeKorDate(date, "date"),
+        month: makeKorDate(date, "month")
       },
       title: {
         status: verifyAttendStatus(
@@ -31,9 +32,14 @@ class StickyHeader extends Component {
     }
   };
 
+  handleClick = () => {
+    this.props.history.push("/login");
+  };
+
   render() {
     const { time, date, month } = this.state.timeline;
     const { title, status } = this.state.title;
+    const { handleClick } = this;
 
     return (
       <div className="sticky-header">
@@ -51,7 +57,11 @@ class StickyHeader extends Component {
         </div>
 
         <div className="buttons">
-          {status ? (
+          {!isUserLoggedIn() ? (
+            <div className="loginFirst" onClick={handleClick}>
+              먼저 로그인해주세요
+            </div>
+          ) : status ? (
             <>
               <button>
                 <span className="accept" />
@@ -69,4 +79,4 @@ class StickyHeader extends Component {
   }
 }
 
-export default StickyHeader;
+export default withRouter(StickyHeader);
