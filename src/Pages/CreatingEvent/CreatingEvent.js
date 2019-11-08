@@ -29,7 +29,8 @@ class CreatingEvent extends Component {
       wayToFind: "",
       wayCount: 4000,
       location: "위워크 선릉역",
-      maxAttendeeVal: 0
+      maxAttendeeVal: 0,
+      payment: true
     };
   }
 
@@ -125,6 +126,10 @@ class CreatingEvent extends Component {
     //     //   window.location.reload();
     //     // }
     //   });
+    const eventId = 1;
+    this.state.payment
+      ? this.props.history.push(`/event/${eventId}`)
+      : alert("결제 먼저 해주세요");
   };
 
   handleCancel = () => {
@@ -149,6 +154,12 @@ class CreatingEvent extends Component {
       : typeof maxVal === "number" && this.setState({ maxAttendeeVal: maxVal });
   };
 
+  handlePayment = () => {
+    this.setState({
+      payment: true
+    });
+  };
+
   render() {
     const {
       handleDrop,
@@ -161,7 +172,8 @@ class CreatingEvent extends Component {
       handleCancel,
       handleWay,
       handleLocation,
-      handleMaxVal
+      handleMaxVal,
+      handlePayment
     } = this;
     const {
       uploadedImage,
@@ -221,6 +233,7 @@ class CreatingEvent extends Component {
                 handleLocation={handleLocation}
               />
               <CreatingEventOptions
+                handlePayment={handlePayment}
                 handleMaxVal={handleMaxVal}
                 maxAttendeeVal={maxAttendeeVal}
               />

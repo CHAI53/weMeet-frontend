@@ -6,8 +6,6 @@ function SingleEvent(props) {
   const handleclick = () => {
     const id = props.eventId;
     props.history.push(`/event/${id}`);
-    console.log(id);
-    console.log(props);
   };
   const { groupName, eventName, expectMembers } = props;
   return (
