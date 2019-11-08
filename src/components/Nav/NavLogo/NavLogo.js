@@ -1,12 +1,16 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import "./NavLogo.scss";
 
-function NavLogo() {
+function NavLogo(props) {
+  const handleClick = () => {
+    props.history.push("/after_login_main");
+  };
   return (
-    <div className="logo">
+    <div onClick={handleClick} className="logo">
       <span className="logo-img" />
     </div>
   );
 }
 
-export default NavLogo;
+export default withRouter(NavLogo);

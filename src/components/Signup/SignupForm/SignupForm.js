@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import "./SignupForm.scss";
 
 class SignupForm extends Component {
@@ -13,8 +14,6 @@ class SignupForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    //this.loseFocus = this.loseFocus.bind(this);
-    //this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange = event => {
@@ -31,10 +30,6 @@ class SignupForm extends Component {
     }
     console.log(event.target.value);
   };
-
-  // handleClick = event => {
-
-  // };
 
   handleSubmit = event => {
     event.preventDefault();
@@ -62,7 +57,6 @@ class SignupForm extends Component {
         }
         throw new Error("Network response was not ok.");
       });
-    this.props.history.push("/login");
   };
 
   render() {
@@ -208,4 +202,4 @@ class SignupForm extends Component {
   }
 }
 
-export default SignupForm;
+export default withRouter(SignupForm);

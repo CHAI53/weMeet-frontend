@@ -7,12 +7,14 @@ import EventLists from "components/AfterLoginMain/EventLists";
 import SeeMoreBtn from "components/AfterLoginMain/SeeMoreBtn";
 import SimpleEventFilter from "components/AfterLoginMain/SimpleEventFilter";
 import AfterLoginMainFooter from "components/AfterLoginMain/AfterLoginMainFooter";
+import BeforeLoginNav from "components/BeforeLoginMain/BeforeLoginNav";
+import { isUserLoggedIn } from "utils/common";
 
 export class AfterLoginMain extends Component {
   render() {
     return (
       <div className="after-login-main-page">
-        <AfterLogInNav />
+        {isUserLoggedIn() ? <AfterLogInNav /> : <BeforeLoginNav />}
         <div className="pre-alm-page">
           <MemberHomeHead />
           <FindNavbar />
