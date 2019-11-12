@@ -16,20 +16,20 @@ class HostInfo extends Component {
   };
 
   render() {
-    const { hostImg, hostName, hostGroup } = this.props.hostInfo;
+    const { image, username, group } = this.props.hostInfo;
     const { handleClick } = this;
     const { toolTip } = this.state;
 
     return (
       <div className="host-info">
-        <img src={hostImg} className="host-img" alt="host" />
+        <img src={image} className="host-img" alt="host" />
         <div className="info">
           <span>
-            주최:<span className="link">{hostName}</span>
+            주최:<span className="link">{username}</span>
           </span>
           <span>
             그룹:
-            <span className="link">{hostGroup}</span>
+            <span className="link">{group}</span>
           </span>
           <div>
             공개 그룹

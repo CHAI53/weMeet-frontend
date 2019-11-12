@@ -14,22 +14,28 @@ import BeforeLoginNav from "components/BeforeLoginMain/BeforeLoginNav";
 import { isUserLoggedIn } from "utils/common.js";
 
 class Event extends Component {
-  state = {
-    userLog: false,
-    sticky: false,
-    data: mockUpData
+  constructor() {
+    super();
+    this.state = {
+      userLog: false,
+      sticky: false,
+      data: null
+    };
+  }
+
+  getData = () => {
+    const eventId = this.props.match.params.id;
+    fetch(`http://localhost:3030/events/${eventId}`)
+      .then(res => res.json())
+      .then(res => this.setState({ data: res.data }))
+      .catch(err => console.log(err));
   };
-  // getData = () => {
-  //   const { eventId } = this.props.match.params;
-  //   fetch(`http://localhost:8000/api/event/${eventId}`)
-  //     .then(res => res.json())
-  //     .then(res => this.setState({data: res.data}))
-  // };
 
   componentDidMount() {
-    const { handleScroll } = this;
+    const { handleScroll, getData } = this;
     window.addEventListener("scroll", handleScroll);
     isUserLoggedIn() && this.setState({ userLog: true });
+    getData();
   }
 
   handleScroll = () => {
@@ -39,9 +45,8 @@ class Event extends Component {
   };
 
   render() {
-    const { data } = this.state.data;
+    const { data } = this.state;
     const { sticky, userLog } = this.state;
-
     return (
       <div className="event">
         {!userLog ? (
@@ -53,15 +58,17 @@ class Event extends Component {
           </>
         )}
         <div className="event-header">
-          <EventHeader
-            date={data.startDate}
-            title={data.name}
-            hostInfo={data.hostInfo}
-            limitUser={data.limitUser}
-            attendeesCount={data.attendeesCount}
-            attendStatus={data.attendStatus}
-            eventId={data.id}
-          />
+          {data && (
+            <EventHeader
+              date={data.startDate}
+              title={data.name}
+              hostInfo={data.hostInfo}
+              limitUser={data.limitUser}
+              attendeesCount={data.attendeesCount}
+              attendStatus={data.attendStatus}
+              eventId={data.id}
+            />
+          )}
           {sticky && (
             <StickyHeader
               title={data.name}
@@ -76,21 +83,30 @@ class Event extends Component {
         <main>
           <div className="main-right-wrapper">
             <div className="main-right">
-              <Card
-                startDate={data.startDate}
-                endDate={data.endDate}
-                address={data.address}
-                findGroup={data.findGroup}
-                geo={{ lat: data.lat, lng: data.lng }}
-              />
-              <GoogleMap geo={{ lat: data.lat, lng: data.lng }} />
+              {data && (
+                <>
+                  <Card
+                    startDate={data.startDate}
+                    endDate={data.endDate}
+                    address={data.address}
+                    findGroup={data.findGroup}
+                    geo={{ lat: data.lat, lng: data.lng }}
+                  />
+                  <GoogleMap geo={{ lat: data.lat, lng: data.lng }} />
+                </>
+              )}
             </div>
           </div>
           <div className="main-left">
-            <EventDesc
-              detail={{ image: data.mainImage, description: data.introduction }}
-              attendeesInfo={data.attendeesInfo}
-            />
+            {data && (
+              <EventDesc
+                detail={{
+                  image: data.mainImage,
+                  description: data.introduction
+                }}
+                attendeesInfo={data.attendeesInfo}
+              />
+            )}
           </div>
         </main>
         <FooterBottom />

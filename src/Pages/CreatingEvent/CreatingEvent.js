@@ -93,13 +93,13 @@ class CreatingEvent extends Component {
     // { "title":"sdadasd", "mainimage":"http://127.0.0.1:8000", "introduction":"1", "findlocation":"2", "start_date":"2019-11-06T12:09:54.601Z", "end_date":"2019-11-06T12:11:54.601Z", "limit_user":"20", "loc_name":"위워크 선릉역2"}
     let data = {
       title,
-      mainimage: uploadedImage,
-      start_date: startDate,
-      end_date: endDate,
+      mainImage: uploadedImage,
+      startDate: startDate,
+      endDate: endDate,
       introduction: desc,
       findlocation: wayToFind,
       loc_name: location,
-      limit_user: maxAttendeeVal
+      limitUser: maxAttendeeVal
     };
     const user_token = localStorage.getItem("user_token");
     data = JSON.stringify(data);

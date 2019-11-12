@@ -6,10 +6,10 @@ export default function Timeline(props) {
 
   return (
     <div className="timeline-wrapper">
-      <div className="date">{`${makeKorDate(startDate, "year")}년 ${makeKorDate(
+      <div className="date">{`${makeKorDate(startDate, "year")} ${makeKorDate(
         startDate,
         "month"
-      )} ${makeKorDate(startDate, "day")}`}</div>
+      )} ${makeKorDate(startDate, "date")}`}</div>
       <div className="timeline">{`${makeKorDate(
         startDate,
         "hour"
