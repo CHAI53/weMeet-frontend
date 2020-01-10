@@ -52,4 +52,4 @@
 
 ### 데모 영상
 
-<a href="https://www.youtube.com/watch?v=vAgdl7VtLXY">동영상 링크</a>
+<a href="https://www.youtube.com/watch?v=UVTyS84aiC4">동영상 링크</a>
