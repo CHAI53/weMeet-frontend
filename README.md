@@ -1,6 +1,6 @@
 # Project WE:MEET
 
-
+![Alt Text](https://media.giphy.com/media/lSPWbzFUFqKuwZKEm7/giphy.gif)
 
 
 ### 프로젝트: 비슷한 관심사를 가진 사람들이 모여 그룹을 만들고 모임을 가질 수 있는 사이트 제작 
